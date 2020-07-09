@@ -1,0 +1,14 @@
+.b-user {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__aside {
+        flex-basis: 300px;
+        border: 1px solid;
+    }
+
+    &__main {
+        flex-basis: calc(100% - 300px);
+        border: 1px solid;
+    }
+}

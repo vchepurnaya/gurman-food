@@ -1,4 +1,12 @@
 header {
   border: 1px solid red;
   padding: 30px;
+
+  a {
+    display: inline-block;
+
+    & + a {
+      margin-left: 20px;
+    }
+  }
 }
