@@ -1,10 +1,4 @@
-@import 'abstracts/mixins.scss';
-
-header{
+header {
   border: 1px solid red;
   padding: 30px;
-
-    p{
-      @include test;
-    }
 }
