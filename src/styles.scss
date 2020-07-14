@@ -1,3 +1,12 @@
+@import "base/fonts.scss";
+@import "base/reset.scss";
+@import "abstracts/mixins.scss";
+@import "abstracts/variables.scss";
+
+
+
+
 *{
   box-sizing: border-box;
+  font-family: $mainFont;
 }
