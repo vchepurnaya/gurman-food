@@ -1,27 +1,42 @@
 <header class="header">
-  <img class="logo" src="" alt="Logo">
-  <div class="search">
-    <form class="search-form" action="">
-      <input class="search-form_input" type="search">
-      <input class="search-form_btn" type="submit" value="Найти">
-    </form>
+  <div class="container">
+    <div class="header-content">
+      <div class="header-logo">
+        <a class="header-logo__link" href="#" routerLink="home">
+          <img class="header-logo__link-img" src="../../../assets/logo.jpg" alt="Logo">
+          <h3 class="header-logo__link-title">Gurman Food</h3>
+        </a>
+      </div>
+      <div class="b-info">
+        <nav class="b-nav">
+          <ul l-list>
+            <li class="l-list__item">
+              <a class="l-list__item-link" href="#" routerLink="#">
+                <p class="l-list__item-link__text">Link</p>
+              </a>
+            </li>
+            <li class="l-list__item">
+              <a class="l-list__item-link" href="#" routerLink="#">
+                <p class="l-list__item-link__text">Link</p>
+              </a>
+            </li>
+            <li class="l-list__item">
+              <a class="l-list__item-link" href="#" routerLink="#">
+                <p class="l-list__item-link__text">Link</p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="b-register">
+          <button class="btn-register__sing-in" type="button" name="sing-in">
+            <p>Войти</p>
+          </button>
+          <button class="btn-register__log-in" type="button" name="register">
+            <p>Регистрация</p>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="btn">
-    <button class="btn_sign-in">Войти</button>
-    <button class="btn_log-in">Регистрация</button>
-  </div>
-  <nav class="menu">
-    <ul class="l-menu">
-      <li class="l-menu_item">
-        <a class="menu_item-main" routerLink="/">Главная</a>
-      </li>
-      <li class="l-menu_item">
-        <a class="menu_item-restaurants" routerLink="/">Рестораны</a>
-      </li>
-      <li class="l-menu_item">
-        <a class="menu_item-map" routerLink="/">Карты</a>
-      </li>
-    </ul>
-  </nav>
 </header>
 
