@@ -1,0 +1,101 @@
+@import "../../../scss/abstracts/variables.scss";
+@import "../../../scss/abstracts/mixins.scss";
+
+.header-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.header-logo {
+  
+  &__link {
+    display: flex;
+    align-items: center;
+
+    &-img {
+      width: 60px;
+    }
+
+    &-title {
+      font-family: $logoFont;
+      font-size: 55px;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      margin-left: 15px;
+    }
+  }
+}
+
+.b-info {
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.l-list {
+  margin-right: 15px;
+
+  &__item {
+    margin-left: 25px;
+    border: 3px solid $mainColor;
+    border-radius: 20px;
+    transition: border-color .3s ease-in-out ;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:hover {
+      border-color: #000;
+    }
+    
+    &-link {
+      padding: 10px 25px;
+
+      &__text {
+        font-size: 20px;
+        font-family: $secondColor;
+      }
+    }
+  }
+}
+
+.b-register{
+  width: 270px;
+  height: 52px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 15px;
+  padding: 10px 15px;
+  border: 3px solid $mainColor;
+  background-color: #000;
+  border-radius: 20px;
+  transition: box-shadow .3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 20px $secondColor;
+  }
+}
+
+.btn-register__sing-in, .btn-register__log-in  {
+
+  p {
+    color: $mainColor;
+    font-size: 20px;
+    transition: border-bottom .2s, transform .3s ease-in-out;;
+
+    &:hover {
+      border-bottom: 1px solid $mainColor;
+    }
+  }
+}
+
+
