@@ -1,0 +1,79 @@
+@import "../../../../scss/abstracts/variables.scss";
+@import "../../../../scss/abstracts/mixins.scss";
+
+.s-search {
+  padding: 50px 0;
+}
+
+.l-kitchen {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 50px;
+
+  &__item {
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: $mainColor;
+    color: #000;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+
+    &:hover {
+      background-color: #000;
+      color: $mainColor;
+    }
+
+    &-link {
+      width: 100%;
+      min-width: 200px;
+      height: 100%;
+      padding: 20px 20px;
+      text-align: left;
+
+
+      &__text {
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.b-search {
+  width: 100%;
+  border-radius: 20px;
+  background: url(../../../../assets/cover.jpg) no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+  padding: 200px 100px;
+  
+  &__content {
+    width: 100%;
+
+    &-title {
+      padding: 20px 30px;
+      background-color: rgba(0,0,0,.5);
+      font-size: 60px;
+      font-weight: 600;
+      color: $mainColor;
+      border-radius: 12px;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+
+.b-search__form {
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 4px rgba(0,0,0,.25);
+  position: relative;
+  overflow: hidden;
+  background-color: $mainColor;
+
+  &-input {
+    font-size: 20px;
+  }
+}
