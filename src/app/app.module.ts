@@ -1,12 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { UserRoutingModule } from './modules/user/user-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
-import { SearchBarComponent } from './components/home/search-bar/search-bar.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SearchBarComponent } from './components/home/search-bar/search-bar.comp
   imports: [
     BrowserModule,
     AppRoutingModule,
-    UserRoutingModule
+    UserRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
