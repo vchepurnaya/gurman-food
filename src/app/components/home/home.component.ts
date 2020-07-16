@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import { restourans } from './restourans.motck';
+import { restaurants } from './restaurants.mock';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  // restouransArray = restourans;
+  restaurantsArray = restaurants;
 
   constructor() { }
 
