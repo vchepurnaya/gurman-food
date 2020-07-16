@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchBarComponent implements OnInit {
 
-  searchtext: string = 'paris';
+  searchtext: string = '';
 
   constructor() { }
 
