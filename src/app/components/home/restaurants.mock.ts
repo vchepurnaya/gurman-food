@@ -6,7 +6,7 @@ export const restaurants: any[] = [
     menu: 'https://terrapizza.by/menu/pizza',
     webSite: 'https://terrapizza.by/',
     time: 'Вс - Чт 10:00 - 23:00, Пт-Сб 10:00 - 24:00',
-    img: 'https://media-cdn.tripadvisor.com/media/photo-s/0d/24/99/e4/  terra-pizza-13.jpg',
+    img: 'https://media-cdn.tripadvisor.com/media/photo-s/0d/24/99/e4/terra-pizza-13.jpg',
     kitchen: 'Итальянская'
   },
   {

@@ -11,14 +11,15 @@
   font-family: $mainFont;
 }
 
+html, body {
+  height: 100%;
+}
+
 .container {
   max-width: 1600px;
   margin: 0 auto;
   padding: 0 10px;
 }
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .mat-raised-button {
   background-color: black;

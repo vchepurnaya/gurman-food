@@ -30,7 +30,7 @@
 }
 
 .b-info {
-  width: 800px;
+  min-width: 900px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -56,28 +56,25 @@
     }
 
     &-link {
-      padding: 10px 25px;
+      padding: 10px 15px;
 
       &__text {
         font-size: 20px;
         font-family: $secondColor;
+        font-weight: 600;
+        text-transform: capitalize;
       }
     }
   }
 }
 
 .b-register{
-  width: 300px;
   height: 52px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: end;
-  // padding: 10px 15px;
-  // border: 3px solid $mainColor;
-  // background-color: #000;
-  // border-radius: 12px;
-  // transition: box-shadow .3s ease-in-out;
+  justify-content: space-between;
+  margin-left: 10px;
 }
 
 .btn-register__sing-in, .btn-register__log-in  {
