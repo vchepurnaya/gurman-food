@@ -1,0 +1,74 @@
+<form
+  class="f-registration"
+  action="#"
+  name="test"
+  [formGroup]="logInForm"
+  (submit)="onLogInSubmit($event)"
+>
+  <div class="f-registration__text">
+    <h2 class="f-registration__text-entry">Регистрация</h2>
+  </div>
+
+  <mat-form-field class="f-registration__line">
+    <mat-label class="f-registration__input">Имя</mat-label>
+    <input
+      type="text"
+      name="firstName"
+      formControlName="firstName"
+      placeholder="Имя"
+      class="f-registration__field"
+      matInput
+    >
+  </mat-form-field>
+
+  <mat-form-field class="f-registration__line">
+    <mat-label class="f-registration__input">Фамилия</mat-label>
+    <input
+      type="text"
+      name="lastName"
+      formControlName="lastName"
+      placeholder="Фамилия"
+      class="f-registration__field"
+      matInput
+    >
+  </mat-form-field>
+
+  <mat-form-field class="f-registration__line">
+    <mat-label class="f-registration__input">Email</mat-label>
+    <input
+      type="text"
+      name="email"
+      formControlName="email"
+      placeholder="Email"
+      class="f-registration__field"
+      matInput
+    >
+  </mat-form-field>
+
+  <mat-form-field class="f-registration__line">
+    <mat-label class="f-registration__input">Пароль</mat-label>
+    <input
+      type="password"
+      name="password"
+      formControlName="password"
+      placeholder="Пароль"
+      class="f-registration__field"
+      matInput
+    >
+  </mat-form-field>
+
+  <mat-form-field class="f-registration__line">
+    <mat-label class="f-registration__input">Повторите пароль</mat-label>
+    <input
+      type="password"
+      name="confirmPassword"
+      formControlName="confirmPassword"
+      placeholder="Повторите пароль"
+      class="f-registration__field"
+      matInput
+    >
+  </mat-form-field>
+  <div class="f-registration__btn">
+    <button class="f-registration__btn-entry" mat-raised-button>Зарегистрироваться</button>
+  </div>
+</form>

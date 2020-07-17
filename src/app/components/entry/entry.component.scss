@@ -1,0 +1,22 @@
+@import "../../../scss/abstracts/variables.scss";
+
+.f-entry {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid $bloodColor;
+  border-radius: 10px;
+  .f-entry__text {
+    display: flex;
+    justify-content: center;
+  }
+  .f-entry__input {
+    color: $bloodColor;
+    font-size: 20px;
+  }
+    .mat-raised-button {
+      background-color: black;
+      color: #ffffff;
+      font-size: 20px;
+    }
+}
