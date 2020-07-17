@@ -1,0 +1,69 @@
+<section class="s-rest">
+  <div class="container">
+    <h1 class="s-rest__title">
+      Рестораны минска
+    </h1>
+    <div class="b-rest__content">
+        <aside class="b-rest__side-bar">
+          <div class="b-rest__side-bar__item">
+            <h3 class="b-rest__side-bar__item-title">Кухня</h3>
+            <mat-selection-list class="l-filter" #shoes>
+              <!-- <p>
+                Выбрано: {{shoes.selectedOptions.selected.length}}
+              </p> -->
+              <mat-list-option class="l-filter__option"  *ngFor="let item of kitchen">
+                {{item}}
+              </mat-list-option>
+            </mat-selection-list>
+          </div>
+        </aside>
+      <div class="b-results">
+        <ul class="l-results">
+          <li class="l-results__item">
+            <div class="l-results__item-content">
+              <div class="l-results__item-content__img">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/1a/01/69/c2/caption.jpg" alt="Plan B">
+              </div>
+              <div class="l-results__item-content__info">
+                <h4 class="l-results__item-content__info-title">Plan B</h4>
+                <p class="l-results__item-content__info-text">Время работы</p>
+                <p class="l-results__item-content__info-text">Европейская</p>
+                <a href="https://planb.bar/assets/files/2020/Page_00001.jpg" class="l-results__item-content__info-menu">Меню</a>
+                <a href="tel:+375291094040" class="l-results__item-content__info-number">Позвонить</a>
+              </div>
+            </div>
+          </li>
+          <li class="l-results__item">
+            <div class="l-results__item-content">
+              <div class="l-results__item-content__img">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/06/8a/68/08/getlstd-property-photo.jpg" alt="Natvris Khe">
+              </div>
+              <div class="l-results__item-content__info">
+                <h4 class="l-results__item-content__info-title">Natvris Khe</h4>
+                <p class="l-results__item-content__info-text">Время работы</p>
+                <p class="l-results__item-content__info-text">Восточноевропейская
+                </p>
+                <a href="https://planb.bar/assets/files/2020/Page_00001.jpg" class="l-results__item-content__info-menu">Меню</a>
+                <a href="tel:+375291337337" class="l-results__item-content__info-number">Позвонить</a>
+              </div>
+            </div>
+          </li>
+          <li class="l-results__item">
+            <div class="l-results__item-content">
+              <div class="l-results__item-content__img">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/0d/24/99/e4/terra-pizza-13.jpg" alt="Terra Pizza">
+              </div>
+              <div class="l-results__item-content__info">
+                <h4 class="l-results__item-content__info-title">Terra Pizza</h4>
+                <p class="l-results__item-content__info-text">Время работы</p>
+                <p class="l-results__item-content__info-text">Итальянская</p>
+                <a href="https://planb.bar/assets/files/2020/Page_00001.jpg" class="l-results__item-content__info-menu">Меню</a>
+                <a href="tel:+375291591111" class="l-results__item-content__info-number">Позвонить</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
