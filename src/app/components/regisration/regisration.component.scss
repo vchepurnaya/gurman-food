@@ -4,19 +4,16 @@
   max-width: 300px;
   margin: 0 auto;
   padding: 10px;
-  border: 1px solid $bloodColor;
+  border: 3px solid $bloodColor;
   border-radius: 10px;
+
   .f-registration__text {
     display: flex;
     justify-content: center;
   }
+
   .f-registration__input {
     color: $bloodColor;
-    font-size: 20px;
-  }
-  .mat-raised-button {
-    background-color: black;
-    color: #ffffff;
     font-size: 20px;
   }
 }

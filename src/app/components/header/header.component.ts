@@ -17,9 +17,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
   openEntryForm() {
-    this.dialog.open(EntryComponent);
+    this.dialog.open(EntryComponent, {panelClass: 'myapp-style-dialog'});
   }
   openRegistrationForm() {
-    this.dialog.open(RegisrationComponent);
+    this.dialog.open(RegisrationComponent, {panelClass: 'myapp-style-dialog'});
   }
 }
