@@ -2,18 +2,8 @@
 
 .f-entry {
   width: 500px;
-  height: 500px;
+  height: 100%;
   margin: 0 auto;
-<<<<<<< HEAD
-  padding: 10px;
-  border: 3px solid $secondColor;
-  border-radius: 10px;
-  .f-entry__text {
-    display: flex;
-    justify-content: center;
-  }
-  .f-entry__input {
-=======
   padding: 50px;
   border: 3px solid #000;
   border-radius: 0;
@@ -27,7 +17,6 @@
   }
 
   &__input {
->>>>>>> 8575a56... Added shared folder
     color: $secondColor;
     font-size: 20px;
   }
