@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { restaurants } from './restaurants.mock';
+import { restaurants } from '@app/components/home/restaurants.mock';
 
 @Component({
   selector: 'app-home',

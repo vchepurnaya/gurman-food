@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog, MatDialogConfig} from "@angular/material/dialog";
+import { MatDialog } from "@angular/material/dialog";
 import {EntryComponent} from "../entry/entry.component";
 import {RegisrationComponent} from "../regisration/regisration.component";
 

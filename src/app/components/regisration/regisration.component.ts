@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from "@angular/forms";
+import { FormGroup, FormBuilder, Validators  } from "@angular/forms";
 
 @Component({
   selector: 'app-regisration',
@@ -15,15 +15,27 @@ export class RegisrationComponent implements OnInit {
 
   ngOnInit(): void {
     this.logInForm = this.formBuilder.group({
-      email: [null],
-      password: [null],
-      firstName: [null],
-      lastName: [null],
-      confirmPassword: [null]
+      email: [null, [
+        Validators.required,
+        Validators.pattern(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/)
+      ]],
+      password: [null, [
+        Validators.required,
+        Validators.minLength(6),
+        Validators.maxLength(20)
+        ]],
+      firstName: [null, [Validators.required]],
+      lastName: [null, [Validators.required]],
+      confirmPassword: [null, [Validators.required]],
+      login: [null, [Validators.required]]
     })
   }
 
   onLogInSubmit(event: Event) {
     event.preventDefault();
+
+    if (!this.logInForm.valid) {
+      return;
+    }
   }
 }

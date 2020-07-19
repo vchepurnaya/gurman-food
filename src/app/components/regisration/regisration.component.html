@@ -19,6 +19,9 @@
       class="f-registration__field"
       matInput
     >
+    <mat-error *ngIf="logInForm.controls.firstName.hasError('required')">
+      Заполните поле!
+    </mat-error>
   </mat-form-field>
 
   <mat-form-field class="f-registration__line">
@@ -31,18 +34,42 @@
       class="f-registration__field"
       matInput
     >
+    <mat-error *ngIf="logInForm.controls.lastName.hasError('required')">
+      Заполните поле!
+    </mat-error>
   </mat-form-field>
 
   <mat-form-field class="f-registration__line">
     <mat-label class="f-registration__input">Email</mat-label>
     <input
-      type="text"
+      type="email"
       name="email"
       formControlName="email"
       placeholder="Email"
       class="f-registration__field"
       matInput
     >
+    <mat-error *ngIf="logInForm.controls.email.hasError('required')">
+      Заполните поле!
+    </mat-error>
+    <mat-error *ngIf="logInForm.controls.email.hasError('pattern')">
+      Неправильный формат электронного адреса
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="f-registration__line">
+    <mat-label class="f-registration__input">Логин</mat-label>
+    <input
+      type="text"
+      name="login"
+      formControlName="login"
+      placeholder="Логин"
+      class="f-registration__field"
+      matInput
+    >
+    <mat-error *ngIf="logInForm.controls.login.hasError('required')">
+      Заполните поле!
+    </mat-error>
   </mat-form-field>
 
   <mat-form-field class="f-registration__line">
@@ -55,6 +82,15 @@
       class="f-registration__field"
       matInput
     >
+    <mat-error *ngIf="logInForm.controls.password.hasError('required')">
+      Заполните поле!
+    </mat-error>
+    <mat-error *ngIf="logInForm.controls.password.hasError('minlength')">
+      Пароль должен содержать минимум 6 символов
+    </mat-error>
+    <mat-error *ngIf="logInForm.controls.password.hasError('maxlength')">
+      Пароль должен содержать максимум 20 символов
+    </mat-error>
   </mat-form-field>
 
   <mat-form-field class="f-registration__line">
@@ -67,8 +103,18 @@
       class="f-registration__field"
       matInput
     >
+    <mat-error *ngIf="logInForm.controls.confirmPassword.hasError('required')">
+      Заполните поле!
+    </mat-error>
   </mat-form-field>
   <div class="f-registration__btn">
-    <button class="f-registration__btn-entry" mat-raised-button>Зарегистрироваться</button>
+    <button
+      type="submit"
+      class="f-registration__btn-entry"
+      mat-raised-button
+      [disabled]="!this.logInForm.valid"
+    >
+      Зарегистрироваться
+    </button>
   </div>
 </form>

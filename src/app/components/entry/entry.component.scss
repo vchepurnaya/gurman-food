@@ -4,14 +4,14 @@
   max-width: 300px;
   margin: 0 auto;
   padding: 10px;
-  border: 3px solid $bloodColor;
+  border: 3px solid $secondColor;
   border-radius: 10px;
   .f-entry__text {
     display: flex;
     justify-content: center;
   }
   .f-entry__input {
-    color: $bloodColor;
+    color: $secondColor;
     font-size: 20px;
   }
     .mat-raised-button {
