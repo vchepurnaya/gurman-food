@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {HomeComponent} from './components/home/home.component';
 import { RestaurantsComponent } from './components/restaurants/restaurants.component';
+import { EntryComponent } from './components/entry/entry.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,14 @@ const routes: Routes = [
   {
     path: 'user',
     loadChildren: () => import('./modules/user/user.module').then(m => m.UserModule)
+  },
+  {
+    path: 'entry',
+    component: EntryComponent
+  },
+  {
+    path: 'registration',
+    component: RestaurantsComponent
   }
 ];
 

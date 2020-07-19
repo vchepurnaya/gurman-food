@@ -108,6 +108,7 @@
     </mat-error>
   </mat-form-field>
   <div class="f-registration__btn">
+<<<<<<< HEAD
     <button
       type="submit"
       class="f-registration__btn-entry"
@@ -116,5 +117,9 @@
     >
       Зарегистрироваться
     </button>
+=======
+    <button *ngIf="!succsess" class="f-registration__btn-entry" mat-raised-button>Зарегистрироваться</button>
+    <h4 class="f-registration__succsess-text" *ngIf="succsess"> Спасибо за регистрацию </h4>
+>>>>>>> 8575a56... Added shared folder
   </div>
 </form>
