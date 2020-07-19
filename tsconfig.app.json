@@ -12,10 +12,17 @@
       "@app/services/*": [
         "app/services/*"
       ],
+<<<<<<< HEAD
       "@app/shared/*": [
         "app/shared/*"
       ]
     }
+=======
+      "@app/shared*/": [
+        "app/shared*"
+      ]
+    } 
+>>>>>>> 8575a56... Added shared folder
   },
   "files": [
     "src/main.ts",

@@ -1,19 +1,51 @@
 @import "../../../scss/abstracts/variables.scss";
 
 .f-registration {
-  max-width: 300px;
+  width: 500px;
+  height: 550px;
   margin: 0 auto;
-  padding: 10px;
-  border: 3px solid $secondColor;
-  border-radius: 10px;
+  padding: 50px;
+  border: 3px solid #000;
+  border-radius: 0;
 
-  .f-registration__text {
-    display: flex;
-    justify-content: center;
+  &__text {
+    width: 100%;
+
+    &-entry {
+      text-align: center;
+      font-size: 30px;
+    }
   }
 
-  .f-registration__input {
+  &__line {
+    display: block;
+  }
+
+  &__field {
+    font-size: 25px;
+  }
+
+  &__input {
     color: $secondColor;
     font-size: 20px;
+  }
+
+  &__btn {
+    width: 100%;
+
+    &-entry {
+      width: 100%;
+      padding: 10px 0;
+      font-size: 25px;
+    }
+  }
+
+  &__succsess-text {
+    width: 100%;
+    font-size: 22px;
+    text-align: center;
+    padding: 15px;
+    background-color: #000;
+    color: $mainColor;
   }
 }

@@ -1,5 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { FormGroup, FormBuilder} from "@angular/forms";
+=======
+import { FormGroup, FormBuilder } from "@angular/forms";
+import { Router } from "@angular/router";
+import { UserService } from '@app/services';
+import { Users } from '@app/shared/mocks'
+>>>>>>> 8575a56... Added shared folder
 
 @Component({
   selector: 'app-entry',
@@ -8,9 +15,15 @@ import { FormGroup, FormBuilder} from "@angular/forms";
 })
 export class EntryComponent implements OnInit {
   signInForm: FormGroup;
+  usersMock: any[] = Users;
+  enter = false;
+
+  
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router,
+    public userService: UserService,
   ) {}
 
   ngOnInit(): void {
@@ -22,6 +35,18 @@ export class EntryComponent implements OnInit {
 
   onSignInSubmit(event: Event) {
     event.preventDefault();
+
+    for(let key of this.usersMock) {
+      if(key.password === this.signInForm.value.password &&
+        key.email === this. signInForm.value.login) {
+        this.userService.users.push(this.usersMock)
+        console.log(this.signInForm.value)
+        console.log(this.userService.users)
+        this.router.navigate(["/"])
+        } else {
+          this.enter == true
+        };
+    }
   }
 }
 

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators  } from "@angular/forms";
 
+import { Router } from "@angular/router";
+import { UserService } from '@app/services';
+import { Users } from '@app/shared/mocks';
 @Component({
   selector: 'app-regisration',
   templateUrl: './regisration.component.html',
@@ -8,9 +11,14 @@ import { FormGroup, FormBuilder, Validators  } from "@angular/forms";
 })
 export class RegisrationComponent implements OnInit {
   logInForm: FormGroup;
+  
+  succsess = false;
+  usersMock: any[] = Users;
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    public userService: UserService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -37,5 +45,7 @@ export class RegisrationComponent implements OnInit {
     if (!this.logInForm.valid) {
       return;
     }
+    this.succsess = true;
+    this.usersMock.push(this.logInForm.value)
   }
 }

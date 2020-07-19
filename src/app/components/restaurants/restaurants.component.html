@@ -19,21 +19,21 @@
         </aside>
       <div class="b-results">
         <ul class="l-results">
-          <li class="l-results__item">
+          <li class="l-results__item" *ngFor="let item of restaurants">
             <div class="l-results__item-content">
               <div class="l-results__item-content__img">
-                <img src="https://media-cdn.tripadvisor.com/media/photo-s/1a/01/69/c2/caption.jpg" alt="Plan B">
+                <img src="{{item.img}}" alt="Plan B">
               </div>
               <div class="l-results__item-content__info">
-                <h4 class="l-results__item-content__info-title">Plan B</h4>
-                <p class="l-results__item-content__info-text">Время работы</p>
-                <p class="l-results__item-content__info-text">Европейская</p>
-                <a href="https://planb.bar/assets/files/2020/Page_00001.jpg" class="l-results__item-content__info-menu">Меню</a>
-                <a href="tel:+375291094040" class="l-results__item-content__info-number">Позвонить</a>
+                <h4 class="l-results__item-content__info-title">{{item.name}}</h4>
+                <p class="l-results__item-content__info-text">{{item.time}}</p>
+                <p class="l-results__item-content__info-text">{{item.kitchen}}</p>
+                <a href="{{item.menu}}" class="l-results__item-content__info-menu">Меню</a>
+                <a href="tel:+375291094040" class="l-results__item-content__info-number">{{item.phone}}</a>
               </div>
             </div>
           </li>
-          <li class="l-results__item">
+          <!-- <li class="l-results__item">
             <div class="l-results__item-content">
               <div class="l-results__item-content__img">
                 <img src="https://media-cdn.tripadvisor.com/media/photo-s/06/8a/68/08/getlstd-property-photo.jpg" alt="Natvris Khe">
@@ -61,7 +61,7 @@
                 <a href="tel:+375291591111" class="l-results__item-content__info-number">Позвонить</a>
               </div>
             </div>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>

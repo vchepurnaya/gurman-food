@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Restaurants } from '@app/shared/mocks';
 
 @Component({
   selector: 'app-restaurants',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RestaurantsComponent implements OnInit {
 
+  restaurants: any[] = Restaurants;
+
   kitchen: string[] = ['Русская', 'Итальянская', 'Французская', 'Немецкая', 'Китайская', 'Японская', 'Восточная'];
 
 
@@ -14,5 +17,6 @@ export class RestaurantsComponent implements OnInit {
   ) { }
   
   ngOnInit(): void {
+   
   }
 }

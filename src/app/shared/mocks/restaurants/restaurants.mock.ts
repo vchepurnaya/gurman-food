@@ -1,4 +1,4 @@
-export const restaurants: any[] = [
+export const Restaurants: any[] = [
   {
     name: 'Terra Pizza',
     adress: 'Burdeynoho 13, Minsk 220018 Belarus',
@@ -29,34 +29,34 @@ export const restaurants: any[] = [
     img: 'https://media-cdn.tripadvisor.com/media/photo-s/1a/01/69/c2/caption.jpg',
     kitchen: 'Европейская'
   },
-  {
-    name: '',
-    adress: '',
-    phone: '',
-    menu: '',
-    webSite: '',
-    time: '',
-    img: '',
-    kitchen: ''
-  },
-  {
-    name: '',
-    adress: '',
-    phone: '',
-    menu: '',
-    webSite: '',
-    time: '',
-    img: '',
-    kitchen: ''
-  },
-  {
-    name: '',
-    adress: '',
-    phone: '',
-    menu: '',
-    webSite: '',
-    time: '',
-    img: '',
-    kitchen: ''
-  }
+  // {
+  //   name: '',
+  //   adress: '',
+  //   phone: '',
+  //   menu: '',
+  //   webSite: '',
+  //   time: '',
+  //   img: '',
+  //   kitchen: ''
+  // },
+  // {
+  //   name: '',
+  //   adress: '',
+  //   phone: '',
+  //   menu: '',
+  //   webSite: '',
+  //   time: '',
+  //   img: '',
+  //   kitchen: ''
+  // },
+  // {
+  //   name: '',
+  //   adress: '',
+  //   phone: '',
+  //   menu: '',
+  //   webSite: '',
+  //   time: '',
+  //   img: '',
+  //   kitchen: ''
+  // }
 ]
