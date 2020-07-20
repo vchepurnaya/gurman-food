@@ -1,3 +1,3 @@
-import { UserDataDefinition, UserResDefinition } from './user/user';
+import { UserDataDefinition } from './user';
 
-export { UserDataDefinition, UserResDefinition };
+export { UserDataDefinition };

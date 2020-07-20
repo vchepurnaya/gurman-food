@@ -12,7 +12,8 @@ import {trigger, state, style, animate, transition
         background: 'url(../../../assets/cover.jpg) no-repeat center'
       })),
       state('closed', style({
-        background: 'url(../../../assets/cover4.jpg) no-repeat center'
+        background: 'url(../../../assets/cover4.jpg) no-repeat center',
+        backgroundSize: 'cover'
       })),
       transition('open => closed', [
         animate('1s ease-out')

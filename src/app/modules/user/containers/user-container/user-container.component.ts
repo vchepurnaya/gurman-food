@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserDataDefinition, UserResDefinition } from '@app/shared/interfaces';
+import { UserDataDefinition } from '@app/shared/interfaces';
 import { UserService } from '@app/services';
 
 @Component({

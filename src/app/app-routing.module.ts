@@ -18,14 +18,6 @@ const routes: Routes = [
     path: 'user',
     loadChildren: () => import('./modules/user/user.module').then(m => m.UserModule)
   },
-  {
-    path: 'entry',
-    component: EntryComponent
-  },
-  {
-    path: 'registration',
-    component: RestaurantsComponent
-  }
 ];
 
 @NgModule({

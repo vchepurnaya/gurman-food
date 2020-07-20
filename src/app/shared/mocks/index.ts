@@ -1,4 +1,4 @@
-import { Restaurants } from './restaurants/restaurants.mock';
-import { Users } from './users/users.mock'
+import { Restaurants } from './restaurants.mock';
+import { Users } from './users.mock'
 
 export { Restaurants, Users };
