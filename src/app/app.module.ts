@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, OnInit } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -43,4 +43,6 @@ import {MatListModule} from '@angular/material/list';
   bootstrap: [AppComponent],
   entryComponents: [EntryComponent, RegisrationComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+}

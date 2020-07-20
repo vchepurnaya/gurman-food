@@ -39,6 +39,12 @@
       font-size: 25px;
     }
   }
+
+  &__failed {
+    margin-top: 10px;
+    text-align: center;
+    color: $secondColor;
+  }
 }
 
 .mat-raised-button {

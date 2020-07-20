@@ -1,19 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormBuilder, Validators  } from "@angular/forms";
 
 import { Router } from "@angular/router";
 import { UserService } from '@app/services';
 import { Users } from '@app/shared/mocks';
+import { UserDataDefinition } from '@app/shared/interfaces'
 @Component({
   selector: 'app-regisration',
   templateUrl: './regisration.component.html',
   styleUrls: ['./regisration.component.scss']
 })
 export class RegisrationComponent implements OnInit {
+  // @Output() registration = new EventEmitter<boolean>();
   logInForm: FormGroup;
-  
+  enrty = false;
   succsess = false;
-  usersMock: any[] = Users;
+  usersMock: UserDataDefinition[] = Users;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -46,6 +48,7 @@ export class RegisrationComponent implements OnInit {
       return;
     }
     this.succsess = true;
-    this.usersMock.push(this.logInForm.value)
-  }
+    // this.registration.emit(false);
+    this.enrty = true;
+  };
 }

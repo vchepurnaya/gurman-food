@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormBuilder } from "@angular/forms";
 import { Router } from "@angular/router";
 import { UserService } from '@app/services';
 import { Users } from '@app/shared/mocks';
+import { BehaviorSubject } from 'rxjs';
+import { UserDataDefinition } from '@app/shared/interfaces'
 
 @Component({
   selector: 'app-entry',
@@ -11,8 +13,8 @@ import { Users } from '@app/shared/mocks';
 })
 export class EntryComponent implements OnInit {
   signInForm: FormGroup;
-  usersMock: any[] = Users;
-  enter = false;
+  usersMock: UserDataDefinition[] = Users;
+  enter = new BehaviorSubject(false);
 
   constructor(
     private formBuilder: FormBuilder,
@@ -32,16 +34,17 @@ export class EntryComponent implements OnInit {
 
     for(let key of this.usersMock) {
       if(key.password === this.signInForm.value.password &&
-        key.email === this. signInForm.value.login) {
-        this.userService.users.push(this.usersMock)
-        //console.log(this.signInForm.value)
+        key.email === this.signInForm.value.login) {
+        this.userService.users = {
+          data: this.usersMock
+        } 
         console.log('yes');
-        console.log(this.userService.users)
-        this.router.navigate(["/"])
+        console.log(this.userService.users);
+        this.enter.next(false);
         } else {
-          this.enter == true
-        console.log('no');
-      };
+          this.enter.next(true);
+          console.log('no');
+        };
     }
   }
 }
