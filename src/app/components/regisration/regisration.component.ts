@@ -13,7 +13,6 @@ import { UserDataDefinition } from '@app/shared/interfaces'
 export class RegisrationComponent implements OnInit {
   // @Output() registration = new EventEmitter<boolean>();
   logInForm: FormGroup;
-  enrty = false;
   succsess = false;
   usersMock: UserDataDefinition[] = Users;
 
@@ -47,8 +46,8 @@ export class RegisrationComponent implements OnInit {
     if (!this.logInForm.valid) {
       return;
     }
+
     this.succsess = true;
     // this.registration.emit(false);
-    this.enrty = true;
   };
 }

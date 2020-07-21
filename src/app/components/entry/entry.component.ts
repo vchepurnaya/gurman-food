@@ -32,11 +32,12 @@ export class EntryComponent implements OnInit {
   onSignInSubmit(event: Event) {
     event.preventDefault();
 
+
     for(let key of this.usersMock) {
       if(key.password === this.signInForm.value.password &&
         key.email === this.signInForm.value.login) {
         this.userService.users = {
-          data: this.usersMock
+          data: this.signInForm.value
         } 
         console.log('yes');
         console.log(this.userService.users);
