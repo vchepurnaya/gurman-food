@@ -1,14 +1,62 @@
-.b-user {
-    display: flex;
-    flex-wrap: wrap;
+@import "../../../../../scss/abstracts/variables.scss";
+@import "../../../../../scss/abstracts/mixins.scss";
 
-    &__aside {
-        flex-basis: 300px;
-        border: 1px solid;
-    }
+.s-user {
+  background-color: #f7f7f7;
+  padding: 100px 0;
+}
 
-    &__main {
-        flex-basis: calc(100% - 300px);
-        border: 1px solid;
+.b-user__header {
+    background-color: #fff;
+    padding: 15px;
+
+    &-content {
+        display: flex;
+        margin-bottom: 15px;
+        
+        &__img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 2px solid blueviolet;
+            margin-right: 25px;
+        }
+        
+        &__info {
+        
+            &-name {
+                font-size: 24px;
+                font-weight: 700;
+            }
+        
+            &-login {
+                font-size: 17px;
+                font-weight: 700;
+                color: #8c8c8c;
+            }
+        }     
     }
 }
+
+.l-tabs {
+
+    &__item {
+        margin-left: 20px;
+
+        &-link {
+            font-size: 20px;
+            font-weight: 700;
+            padding: 0 5px;
+            border-bottom: 2px solid transparent;
+
+            &:hover {
+                border-color: $secondColor;
+            }
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+

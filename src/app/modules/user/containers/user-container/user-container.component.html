@@ -1,17 +1,40 @@
-<div class="container">
-    <div class="b-user">
-        <aside class="b-user__aside">
-            <ul>
-                <li>
-                    <a routerLink="info">User Info</a>
-                </li>
-                <li>
-                    <a routerLink="favourites">User Favorites</a>
-                </li>
-            </ul>
-        </aside>
-        <main class="b-user__main">
-            <router-outlet></router-outlet>
-        </main>
+<section class="s-user">
+    <div class="container">
+        <div class="b-user__header">
+            <div class="b-user__header-content">
+                <div class="b-user__header-content__img">
+                    <img src="../../../../../assets/user.png" alt="USer Logo">
+                </div>
+                <div class="b-user__header-content-info">
+                    <h2 class="b-user__header-content__info-name">User Name</h2>
+                    <p class="b-user__header-content__info-login">User Login</p>
+                </div>
+            </div>
+            <nav class="n-tabs">
+                <ul class="l-tabs">
+                    <li class="l-tabs__item">
+                        <a href="" routerlink = "user" class="l-tabs__item-link">
+                            Карточка профиля
+                        </a>
+                    </li>
+                    <li class="l-tabs__item">
+                        <a href="" routerlink="" class="l-tabs__item-link">
+                             Избранное
+                        </a>
+                    </li>
+                    <li class="l-tabs__item">
+                        <a href="" routerlink="" class="l-tabs__item-link">
+                             Посещенные
+                        </a>
+                    </li>
+                    <li class="l-tabs__item">
+                        <a href="" routerlink="" class="l-tabs__item-link">
+                             Мои отзывы
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
-</div>
+</section>
+<router-outlet></router-outlet>
