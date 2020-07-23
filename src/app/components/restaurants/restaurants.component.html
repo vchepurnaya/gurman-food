@@ -29,9 +29,9 @@
               <div class="l-results__item-content__info">
                 <h4 class="l-results__item-content__info-title">{{item.name}}</h4>
                 <p class="l-results__item-content__info-text">{{item.time}}</p>
-                <p class="l-results__item-content__info-text">{{item.kitchen}}</p>
-                <a href="{{item.menu}}" class="l-results__item-content__info-menu">Меню</a>
-                <a href="tel:+375291094040" class="l-results__item-content__info-number">{{item.phone}}</a>
+                <p class="l-results__item-content__info-text">{{item.kitchen.join(', ')}}</p>
+                <a href="{{item.menuLink}}" class="l-results__item-content__info-menu">Меню</a>
+                <a href="tel:+375291094040" class="l-results__item-content__info-number">{{item.phoneNumber}}</a>
               </div>
             </div>
           </li>
