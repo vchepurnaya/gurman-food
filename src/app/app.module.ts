@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, OnInit } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { UserRoutingModule } from './modules/user/user-routing.module';
@@ -15,7 +16,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { RestaurantsComponent } from './components/restaurants/restaurants.component';
-import {MatListModule} from '@angular/material/list';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -30,11 +31,12 @@ import {MatListModule} from '@angular/material/list';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
     UserRoutingModule,
     BrowserAnimationsModule,
     MatInputModule,
     MatButtonModule,
-    FormsModule,
     ReactiveFormsModule,
     MatDialogModule,
     MatListModule

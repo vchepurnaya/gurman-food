@@ -3,26 +3,28 @@
     <h1 class="s-rest__title">
       Рестораны минска
     </h1>
+
     <div class="b-rest__content">
-        <aside class="b-rest__side-bar">
-          <div class="b-rest__side-bar__item">
-            <h3 class="b-rest__side-bar__item-title">Кухня</h3>
-            <mat-selection-list class="l-filter" #shoes>
-              <!-- <p>
-                Выбрано: {{shoes.selectedOptions.selected.length}}
-              </p> -->
-              <mat-list-option class="l-filter__option"  *ngFor="let item of kitchen">
-                {{item}}
-              </mat-list-option>
-            </mat-selection-list>
-          </div>
-        </aside>
+      <aside class="b-rest__side-bar">
+        <div class="b-rest__side-bar__item">
+          <h3 class="b-rest__side-bar__item-title">Кухня</h3>
+          <mat-selection-list class="l-filter" #shoes>
+            <!-- <p>
+              Выбрано: {{shoes.selectedOptions.selected.length}}
+            </p> -->
+            <mat-list-option class="l-filter__option" *ngFor="let item of kitchen">
+              {{item}}
+            </mat-list-option>
+          </mat-selection-list>
+        </div>
+      </aside>
+
       <div class="b-results">
         <ul class="l-results">
           <li class="l-results__item" *ngFor="let item of restaurants">
             <div class="l-results__item-content">
               <div class="l-results__item-content__img">
-                <img src="{{item.img}}" alt="Plan B">
+                <img src="{{item.img}}" title="{{item.name}}" alt="{{item.name}}">
               </div>
               <div class="l-results__item-content__info">
                 <h4 class="l-results__item-content__info-title">{{item.name}}</h4>
