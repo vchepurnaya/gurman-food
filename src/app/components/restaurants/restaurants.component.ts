@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Restaurants } from '@app/shared/mocks';
+import { ApiService } from '@app/services';
 
 @Component({
   selector: 'app-restaurants',
@@ -7,16 +7,20 @@ import { Restaurants } from '@app/shared/mocks';
   styleUrls: ['./restaurants.component.scss']
 })
 export class RestaurantsComponent implements OnInit {
-
-  restaurants: any[] = Restaurants;
-
+  restaurants: any[] = [];
   kitchen: string[] = ['Русская', 'Итальянская', 'Французская', 'Немецкая', 'Китайская', 'Японская', 'Восточная'];
 
-
   constructor(
+    private apiService: ApiService
   ) { }
-  
+
   ngOnInit(): void {
-   
+    this.apiService.getAllRestaurants()
+      .subscribe(
+        (success: { content: any[] }) => {
+          this.restaurants = success.content;
+        },
+        error => console.log(error)
+      )
   }
 }
