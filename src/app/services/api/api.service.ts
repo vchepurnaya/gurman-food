@@ -34,6 +34,12 @@ export class ApiService {
     return this.httpClient.get(this.env.apiUrl + 'api/user', { params });
   }
 
+  getRestaurantById(params: {
+    id: string
+  }) {
+    return this.httpClient.get(this.env.apiUrl + 'api/restaurants', { params });
+  }
+
   getAllRestaurants() {
     return this.httpClient.get(this.env.apiUrl + 'api/restaurants');
   }
