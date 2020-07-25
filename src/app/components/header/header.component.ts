@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from "@angular/material/dialog";
 import {EntryComponent} from "../entry/entry.component";
 import {RegisrationComponent} from "../regisration/regisration.component";
+import { EntryService } from '@app/services';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,8 @@ import {RegisrationComponent} from "../regisration/regisration.component";
 export class HeaderComponent implements OnInit {
 
   constructor(
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    public entrySerivce: EntryService
   ) { }
 
   ngOnInit(): void {

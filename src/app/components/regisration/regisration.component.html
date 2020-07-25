@@ -107,8 +107,9 @@
       Заполните поле!
     </mat-error>
   </mat-form-field>
+  <mat-dialog-content class="f-registration__line-confirm" *ngIf= "confirmPassword">*Пароли не совпадают*</mat-dialog-content>
   <div class="f-registration__btn">
-    <button *ngIf="!succsess" class="f-registration__btn-entry" mat-raised-button [disabled]="!this.logInForm.valid" type="submit">Зарегистрироваться</button>
-    <h4 class="f-registration__succsess-text" *ngIf="succsess"> Спасибо за регистрацию </h4>
+    <button *ngIf="!success" class="f-registration__btn-entry" mat-raised-button [disabled]="!this.logInForm.valid" type="submit">Зарегистрироваться</button>
+    <h4 class="f-registration__succsess-text" *ngIf="success"> Спасибо за регистрацию </h4>
   </div>
 </form>

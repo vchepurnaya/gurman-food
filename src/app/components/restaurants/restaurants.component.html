@@ -16,6 +16,30 @@
               {{item}}
             </mat-list-option>
           </mat-selection-list>
+          <h3 class="b-rest__side-bar__item-title">Тип заведения</h3>
+          <mat-selection-list class="l-filter" #shoes>
+            <mat-list-option class="l-filter__option" *ngFor="let item of type">
+              {{item}}
+            </mat-list-option>
+          </mat-selection-list>
+          <h3 class="b-rest__side-bar__item-title">Особенности ресторана</h3>
+          <mat-selection-list class="l-filter" #shoes>
+            <mat-list-option class="l-filter__option" *ngFor="let item of features">
+              {{item}}
+            </mat-list-option>
+          </mat-selection-list>
+          <h3 class="b-rest__side-bar__item-title">Время приема пищи</h3>
+          <mat-selection-list class="l-filter" #shoes>
+            <mat-list-option class="l-filter__option" *ngFor="let item of mealTime">
+              {{item}}
+            </mat-list-option>
+          </mat-selection-list>
+          <h3 class="b-rest__side-bar__item-title">Цена</h3>
+          <mat-selection-list class="l-filter" #shoes>
+            <mat-list-option class="l-filter__option" *ngFor="let item of price">
+              {{item}}
+            </mat-list-option>
+          </mat-selection-list>
         </div>
       </aside>
 
@@ -24,7 +48,7 @@
           <li class="l-results__item" *ngFor="let item of restaurants">
             <div class="l-results__item-content">
               <div class="l-results__item-content__img">
-                <img src="{{item.img}}" title="{{item.name}}" alt="{{item.name}}">
+                <img src="{{item.img[0]}}" title="{{item.name}}" alt="{{item.name}}">
               </div>
               <div class="l-results__item-content__info">
                 <h4 class="l-results__item-content__info-title">{{item.name}}</h4>
@@ -35,35 +59,6 @@
               </div>
             </div>
           </li>
-          <!-- <li class="l-results__item">
-            <div class="l-results__item-content">
-              <div class="l-results__item-content__img">
-                <img src="https://media-cdn.tripadvisor.com/media/photo-s/06/8a/68/08/getlstd-property-photo.jpg" alt="Natvris Khe">
-              </div>
-              <div class="l-results__item-content__info">
-                <h4 class="l-results__item-content__info-title">Natvris Khe</h4>
-                <p class="l-results__item-content__info-text">Время работы</p>
-                <p class="l-results__item-content__info-text">Восточноевропейская
-                </p>
-                <a href="https://planb.bar/assets/files/2020/Page_00001.jpg" class="l-results__item-content__info-menu">Меню</a>
-                <a href="tel:+375291337337" class="l-results__item-content__info-number">Позвонить</a>
-              </div>
-            </div>
-          </li>
-          <li class="l-results__item">
-            <div class="l-results__item-content">
-              <div class="l-results__item-content__img">
-                <img src="https://media-cdn.tripadvisor.com/media/photo-s/0d/24/99/e4/terra-pizza-13.jpg" alt="Terra Pizza">
-              </div>
-              <div class="l-results__item-content__info">
-                <h4 class="l-results__item-content__info-title">Terra Pizza</h4>
-                <p class="l-results__item-content__info-text">Время работы</p>
-                <p class="l-results__item-content__info-text">Итальянская</p>
-                <a href="https://planb.bar/assets/files/2020/Page_00001.jpg" class="l-results__item-content__info-menu">Меню</a>
-                <a href="tel:+375291591111" class="l-results__item-content__info-number">Позвонить</a>
-              </div>
-            </div>
-          </li> -->
         </ul>
       </div>
     </div>

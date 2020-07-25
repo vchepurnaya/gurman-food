@@ -20,6 +20,12 @@
 
   &__line {
     display: block;
+
+    &-confirm{
+      font-size: 14px ;
+      color: #f00000;
+      margin-bottom: 10px;
+    }
   }
 
   &__field {
