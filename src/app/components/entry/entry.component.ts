@@ -1,10 +1,11 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormBuilder } from "@angular/forms";
 import { Router } from "@angular/router";
-import { UserService } from '@app/services';
+import { UserService, EntryService } from '@app/services';
 import { Users } from '@app/shared/mocks';
 import { BehaviorSubject } from 'rxjs';
-import { UserDataDefinition } from '@app/shared/interfaces'
+import { UserDataDefinition } from '@app/shared/interfaces';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-entry',
@@ -20,6 +21,8 @@ export class EntryComponent implements OnInit {
     private formBuilder: FormBuilder,
     private router: Router,
     public userService: UserService,
+    public entrySerivce: EntryService,
+    public dialog: MatDialog
   ) {}
 
   ngOnInit(): void {
@@ -39,12 +42,11 @@ export class EntryComponent implements OnInit {
         this.userService.users = {
           data: this.signInForm.value
         } 
-        console.log('yes');
-        console.log(this.userService.users);
+        this.entrySerivce.entryHidden.next(true)
         this.enter.next(false);
+        this.dialog.closeAll();
         } else {
           this.enter.next(true);
-          console.log('no');
         };
     }
   }

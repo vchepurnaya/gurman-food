@@ -1,13 +1,14 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ApiService } from '@app/services';
+import {MatDialog} from '@angular/material/dialog';
 
 
 import { Router } from '@angular/router';
 import { UserService } from '@app/services';
 import { Users } from '@app/shared/mocks';
 import { UserDataDefinition } from '@app/shared/interfaces';
-
+import {EntryComponent} from "../entry/entry.component";
 
 @Component({
   selector: 'app-regisration',
@@ -15,18 +16,20 @@ import { UserDataDefinition } from '@app/shared/interfaces';
   styleUrls: ['./regisration.component.scss']
 })
 export class RegisrationComponent implements OnInit {
+  
   // @Output() registration = new EventEmitter<boolean>();
   registrationForm: FormGroup;
   succsess = false;
   usersMock: UserDataDefinition[] = Users;
   users: any[] = [];
-
+  confirmPassword = false;
 
   constructor(
     private formBuilder: FormBuilder,
     public userService: UserService,
     private router: Router,
     private apiService: ApiService
+    public dialog: MatDialog
   ) {}
 
   ngOnInit(): void {
@@ -65,5 +68,14 @@ export class RegisrationComponent implements OnInit {
 
     this.succsess = true;
     // this.registration.emit(false);
+    
+    if (this.logInForm.value.password === this.logInForm.value.confirmPassword){
+      this.success = true;
+      this.confirmPassword = false;
+      this.dialog.closeAll();
+      this.dialog.open(EntryComponent);
+    } else {
+      this.confirmPassword = true;
+    }
   };
 }
