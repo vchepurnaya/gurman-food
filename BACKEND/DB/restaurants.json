@@ -7,8 +7,11 @@
         "menuLink": "https://terrapizza.by/menu/pizza",
         "webSiteUrl": "https://terrapizza.by/",
         "time": "Вс - Чт 10:00 - 23:00, Пт-Сб 10:00 - 24:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/0d/24/99/e4/terra-pizza-13.jpg",
-        "kitchen": ["Итальянская"]
+        "img": ["https://media-cdn.tripadvisor.com/media/photo-s/0d/24/99/e4/terra-pizza-13.jpg", "https://media-cdn.tripadvisor.com/media/photo-s/0d/24/99/e4/terra-pizza-13.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/0d/24/9a/17/terra-pizza-13.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/0d/24/9a/0a/terra-pizza-13.jpg"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "264688e624a720addb2334a95ef4103384428fb9",
@@ -18,8 +21,12 @@
         "menuLink": "http://natvra.by/menu",
         "webSiteUrl": "http://natvra.by/",
         "time": "Пн - Вс 12:00 - 23:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/06/8a/68/08/getlstd-property-photo.jpg",
-        "kitchen": ["Восточноевропейская"]
+        "img": ["https://media-cdn.tripadvisor.com/media/photo-s/06/8a/68/08/getlstd-property-photo.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/06/8b/0d/ac/natvris-khe.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/06/8d/f4/68/caption.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/06/8b/0d/b6/caption.jpg"],
+        "kitchen": ["Восточноевропейская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "364688e624a720addb2334a95ef4103384428fb9",
@@ -29,8 +36,12 @@
         "menuLink": "https://planb.bar/assets/files/2020/Page_00001.jpg",
         "webSiteUrl": "http://planb.bar/",
         "time": "Пн - Пт 12:00 - 05:00  Сб-Вс 17:00 - 05:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/1a/01/69/c2/caption.jpg",
-        "kitchen": ["Европейская"]
+        "img": ["https://media-cdn.tripadvisor.com/media/photo-s/1a/01/69/c2/caption.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/09/4e/74/b2/plan-b.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/1a/01/6a/44/caption.jpg", "https://media-cdn.tripadvisor.com/media/photo-s/1a/01/6a/40/caption.jpg"],
+        "kitchen": ["Европейская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "464688e624a720addb2334a95ef4103384428fb9",
@@ -40,8 +51,12 @@
         "menuLink": "http://www.lido.by/menu/#",
         "webSiteUrl": "http://www.lido.by/#aboutPage",
         "time": "Пн - Пт 10:00 - 23:00 Сб-Вс 11:00 - 23:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-o/05/eb/29/1a/caption.jpg",
-        "kitchen": ["Европейская"]
+        "img": ["https://media-cdn.tripadvisor.com/media/photo-o/05/eb/29/1a/caption.jpg", "https://media-cdn.tripadvisor.com/media/photo-o/05/eb/29/1a/caption.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/05/eb/29/54/caption.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/05/eb/2a/12/caption.jpg"],
+        "kitchen": ["Европейская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь"],
+        "mealTime": ["Завтрак", "Обед", "Ужин"],
+        "price": ["Вкусно и не дорого","По умеренной цене"]
     },
     {
         "id": "564688e624a720addb2334a95ef4103384428fb9",
@@ -51,8 +66,12 @@
         "menuLink": "https://domrest.by/",
         "webSiteUrl": "https://domrest.by/",
         "time": "Пн - Ср 12:00 - 00:00 Чт-Вс 02:00 - 12:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/16/48/f2/dc/the-second-floor.jpg",
-        "kitchen": ["Европейская"]
+        "img": ["https://media-cdn.tripadvisor.com/media/photo-s/16/48/f2/dc/the-second-floor.jpg", "https://media-cdn.tripadvisor.com/media/photo-s/16/f7/a5/26/potato-pancakes-with.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/16/48/f2/d8/the-second-floor.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/16/f7/9d/55/grilled-rib-with-sweet.jpg"],
+        "kitchen": ["Европейская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Живая музыка"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "664688e624a720addb2334a95ef4103384428fb9",
