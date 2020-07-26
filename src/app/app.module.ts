@@ -17,6 +17,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { RestaurantsComponent } from './components/restaurants/restaurants.component';
 import { MatListModule } from '@angular/material/list';
+import { SliderComponent } from './components/slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MatListModule } from '@angular/material/list';
     SearchBarComponent,
     EntryComponent,
     RegisrationComponent,
-    RestaurantsComponent
+    RestaurantsComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
