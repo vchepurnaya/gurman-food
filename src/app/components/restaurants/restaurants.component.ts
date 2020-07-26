@@ -3,6 +3,7 @@ import { ApiService } from '@app/services';
 import { RestaurantsDefinition } from '@app/shared/interfaces'
 
 
+
 @Component({
   selector: 'app-restaurants',
   templateUrl: './restaurants.component.html',
