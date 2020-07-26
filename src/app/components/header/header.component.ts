@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from "@angular/material/dialog";
 import {EntryComponent} from "../entry/entry.component";
 import {RegisrationComponent} from "../regisration/regisration.component";
+// @ts-ignore
 import { EntryService } from '@app/services';
 
 @Component({

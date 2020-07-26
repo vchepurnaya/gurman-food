@@ -1,0 +1,40 @@
+@import "../../../scss/abstracts/variables.scss";
+@import "../../../scss/abstracts/mixins.scss";
+
+.l-restaurants {
+  display: block;
+  margin: 0 -10px;
+  height: 200px;
+
+  .l-restaurants__item {
+    padding: 0 10px;
+    margin: 10px 0;
+    width: 33.3333%;
+    height: 100px;
+
+    .l-restaurants__info {
+      border: 1px solid;
+      font-size: 20px;
+      text-align: center;
+
+      .l-restaurants__img {
+        height: 300px;
+        width: 400px;
+      }
+
+      .l-restaurants__info-web {
+        margin-right: 10px;
+        text-decoration: underline;
+      }
+
+      .l-restaurants__info-menu {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.b-title__text {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
