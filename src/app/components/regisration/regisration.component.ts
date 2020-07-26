@@ -16,7 +16,7 @@ import {EntryComponent} from "../entry/entry.component";
   styleUrls: ['./regisration.component.scss']
 })
 export class RegisrationComponent implements OnInit {
-  
+
   // @Output() registration = new EventEmitter<boolean>();
   registrationForm: FormGroup;
   succsess = false;
@@ -67,7 +67,7 @@ export class RegisrationComponent implements OnInit {
       );
 
     this.succsess = true;
-    
+
     if (this.registrationForm.value.password === this.registrationForm.value.confirmPassword){
       this.succsess = true;
       this.confirmPassword = false;

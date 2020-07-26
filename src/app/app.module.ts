@@ -50,6 +50,6 @@ import { RestPageComponent } from './components/rest-page/rest-page.component';
   bootstrap: [AppComponent],
   entryComponents: [EntryComponent, RegisrationComponent]
 })
-export class AppModule { 
+export class AppModule {
 
 }

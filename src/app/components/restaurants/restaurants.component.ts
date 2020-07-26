@@ -19,9 +19,11 @@ export class RestaurantsComponent implements OnInit {
 
   constructor(
     private apiService: ApiService
-  ) { }
+  ) {
+  }
 
   ngOnInit(): void {
+
     this.apiService.getAllRestaurants()
       .subscribe(
         (success: { content: any[] }) => {
