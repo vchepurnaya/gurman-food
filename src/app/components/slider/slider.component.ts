@@ -3,13 +3,15 @@ import { ApiService } from '@app/services';
 
 
 @Component({
-  selector: 'app-restaurants',
-  templateUrl: './restaurants.component.html',
-  styleUrls: ['./restaurants.component.scss']
+  selector: 'app-slider',
+  templateUrl: './slider.component.html',
+  styleUrls: ['./slider.component.scss']
 })
-export class RestaurantsComponent implements OnInit {
-  restaurants: any[] = [];
+export class SliderComponent implements OnInit {
+  nameRestaurants: string = 'Рестораны';
   kitchen: string[] = ['Русская', 'Итальянская', 'Французская', 'Немецкая', 'Китайская', 'Японская', 'Восточная'];
+
+  restaurants: any[] = [];
 
   constructor(
     private apiService: ApiService
