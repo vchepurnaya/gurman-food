@@ -5,7 +5,7 @@ import { UserService, EntryService } from '@app/services';
 import { Users } from '@app/shared/mocks';
 import { BehaviorSubject } from 'rxjs';
 import { UserDataDefinition } from '@app/shared/interfaces';
-import {MatDialog} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-entry',

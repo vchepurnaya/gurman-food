@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 import { UserRoutingModule } from './modules/user/user-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +17,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { RestaurantsComponent } from './components/restaurants/restaurants.component';
 import { MatListModule } from '@angular/material/list';
 import { SliderComponent } from './components/slider/slider.component';
+import { RestPageComponent } from './components/rest-page/rest-page.component';
+
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { SliderComponent } from './components/slider/slider.component';
     EntryComponent,
     RegisrationComponent,
     RestaurantsComponent,
-    SliderComponent
+    SliderComponent,
+    RestPageComponent,
   ],
   imports: [
     BrowserModule,

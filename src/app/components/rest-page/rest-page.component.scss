@@ -1,0 +1,103 @@
+@import "../../../scss/abstracts/variables.scss";
+@import "../../../scss/abstracts/mixins.scss";
+
+.s-restourant {
+  padding: 100px 0;
+  background-color: #8c8c8c;
+}
+
+.b-restourant__content {
+
+  &-info {
+    background-color: $mainColor;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  &-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;;
+  }
+
+  &-title {
+    font-size: 50px;
+    font-weight: 700;
+  }
+
+  &-buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  &-kitchen {
+    font-size: 20px;
+    color: #8c8c8c;
+  }
+
+  &-images {
+    background-color: $mainColor;
+    padding: 20px;
+    border-radius: 12px;
+  }
+}
+
+.btn-like, .btn-visited {
+ display: flex;
+ align-items: center;
+ padding: 0 10px;
+ border-right: 1px solid #8c8c8c;
+
+  &__text {
+    margin-left: 15px;
+  }
+
+  &:hover .btn-like__text {
+    text-decoration: underline;
+  }
+}
+
+.btn-visited {
+  border-right: none;
+
+  &:hover .btn-visited__text {
+    text-decoration: underline;
+  }
+}
+
+
+.btn-visited__text, .btn-like__text {
+  font-size: 20px;
+}
+
+.l-info {
+  margin-top: 20px;
+
+  &__item {
+    padding: 5px 0;
+    margin-left: 15px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &-content {
+      display: flex;
+      align-items: center;
+    }
+
+    &-text {
+      font-size: 20px;
+      margin-left: 10px;
+      border-right: 1px solid #8c8c8c;
+      padding-right: 15px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

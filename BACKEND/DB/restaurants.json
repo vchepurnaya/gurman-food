@@ -7,7 +7,8 @@
         "menuLink": "https://terrapizza.by/menu/pizza",
         "webSiteUrl": "https://terrapizza.by/",
         "time": "Вс - Чт 10:00 - 23:00, Пт-Сб 10:00 - 24:00",
-        "img": ["https://media-cdn.tripadvisor.com/media/photo-s/0d/24/99/e4/terra-pizza-13.jpg", "https://media-cdn.tripadvisor.com/media/photo-s/0d/24/99/e4/terra-pizza-13.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/0d/24/9a/17/terra-pizza-13.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/0d/24/9a/0a/terra-pizza-13.jpg"],
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/0d/24/99/e4/terra-pizza-13.jpg", "https://media-cdn.tripadvisor.com/media/photo-s/0d/24/99/e4/terra-pizza-13.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/0d/24/9a/17/terra-pizza-13.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/0d/24/9a/0a/terra-pizza-13.jpg"],
+        "kitchen": ["Итальянская"],
         "type": ["Ресторан"],
         "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
         "mealTime": ["Обед", "Ужин"],
@@ -21,7 +22,7 @@
         "menuLink": "http://natvra.by/menu",
         "webSiteUrl": "http://natvra.by/",
         "time": "Пн - Вс 12:00 - 23:00",
-        "img": ["https://media-cdn.tripadvisor.com/media/photo-s/06/8a/68/08/getlstd-property-photo.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/06/8b/0d/ac/natvris-khe.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/06/8d/f4/68/caption.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/06/8b/0d/b6/caption.jpg"],
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/06/8a/68/08/getlstd-property-photo.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/06/8b/0d/ac/natvris-khe.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/06/8d/f4/68/caption.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/06/8b/0d/b6/caption.jpg"],
         "kitchen": ["Восточноевропейская"],
         "type": ["Ресторан"],
         "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
@@ -36,7 +37,7 @@
         "menuLink": "https://planb.bar/assets/files/2020/Page_00001.jpg",
         "webSiteUrl": "http://planb.bar/",
         "time": "Пн - Пт 12:00 - 05:00  Сб-Вс 17:00 - 05:00",
-        "img": ["https://media-cdn.tripadvisor.com/media/photo-s/1a/01/69/c2/caption.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/09/4e/74/b2/plan-b.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/1a/01/6a/44/caption.jpg", "https://media-cdn.tripadvisor.com/media/photo-s/1a/01/6a/40/caption.jpg"],
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/1a/01/69/c2/caption.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/09/4e/74/b2/plan-b.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/1a/01/6a/44/caption.jpg", "https://media-cdn.tripadvisor.com/media/photo-s/1a/01/6a/40/caption.jpg"],
         "kitchen": ["Европейская"],
         "type": ["Ресторан"],
         "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
@@ -51,7 +52,7 @@
         "menuLink": "http://www.lido.by/menu/#",
         "webSiteUrl": "http://www.lido.by/#aboutPage",
         "time": "Пн - Пт 10:00 - 23:00 Сб-Вс 11:00 - 23:00",
-        "img": ["https://media-cdn.tripadvisor.com/media/photo-o/05/eb/29/1a/caption.jpg", "https://media-cdn.tripadvisor.com/media/photo-o/05/eb/29/1a/caption.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/05/eb/29/54/caption.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/05/eb/2a/12/caption.jpg"],
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-o/05/eb/29/1a/caption.jpg", "https://media-cdn.tripadvisor.com/media/photo-o/05/eb/29/1a/caption.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/05/eb/29/54/caption.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/05/eb/2a/12/caption.jpg"],
         "kitchen": ["Европейская"],
         "type": ["Ресторан"],
         "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь"],
@@ -66,7 +67,7 @@
         "menuLink": "https://domrest.by/",
         "webSiteUrl": "https://domrest.by/",
         "time": "Пн - Ср 12:00 - 00:00 Чт-Вс 02:00 - 12:00",
-        "img": ["https://media-cdn.tripadvisor.com/media/photo-s/16/48/f2/dc/the-second-floor.jpg", "https://media-cdn.tripadvisor.com/media/photo-s/16/f7/a5/26/potato-pancakes-with.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/16/48/f2/d8/the-second-floor.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/16/f7/9d/55/grilled-rib-with-sweet.jpg"],
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/16/48/f2/dc/the-second-floor.jpg", "https://media-cdn.tripadvisor.com/media/photo-s/16/f7/a5/26/potato-pancakes-with.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/16/48/f2/d8/the-second-floor.jpg", "https://media-cdn.tripadvisor.com/media/photo-f/16/f7/9d/55/grilled-rib-with-sweet.jpg"],
         "kitchen": ["Европейская"],
         "type": ["Ресторан"],
         "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Живая музыка"],
@@ -81,8 +82,12 @@
         "menuLink": "http://maithai.by/menu",
         "webSiteUrl": "http://maithai.by/",
         "time": "Пн - Вс 12:00 - 11:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/0e/de/b8/66/pad-thai.jpg",
-        "kitchen": ["Азиатская", "Тайская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/0e/de/b8/66/pad-thai.jpg"],
+        "kitchen": ["Азиатская", "Тайская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "764688e624a720addb2334a95ef4103384428fb9",
@@ -92,8 +97,12 @@
         "menuLink": "http://restoransvoi.by/menu/",
         "webSiteUrl": "http://restoransvoi.by/",
         "time": "Вс-Чт 12:00 - 00:00 Пт-Сб 12:00 - 01:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/12/e7/19/08/caption.jpg",
-        "kitchen": ["Европейская", "Русская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/12/e7/19/08/caption.jpg"],
+        "kitchen": ["Европейская", "Русская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "864688e624a720addb2334a95ef4103384428fb9",
@@ -103,8 +112,12 @@
         "menuLink": "https://www.pizzatempo.by/menu",
         "webSiteUrl": "https://www.pizzatempo.by/",
         "time": "Время работы уточняйте на официальном сайте",
-        "img": "http://tempo.by/img/Aisberg.jpg",
-        "kitchen": ["Европейская"]
+        "images": ["http://tempo.by/images/Aisberg.jpg"],
+        "kitchen": ["Европейская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "964688e624a720addb2334a95ef4103384428fb9",
@@ -114,8 +127,12 @@
         "menuLink": "https://garage.by/menu/",
         "webSiteUrl": "https://garage.by/",
         "time": "Пн-Вс 09:00 - 23:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/0d/bf/d7/5e/jack-daniels.jpg",
-        "kitchen": ["Американская", "Японская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/0d/bf/d7/5e/jack-daniels.jpg"],
+        "kitchen": ["Американская", "Японская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "614688e624a720addb2334a95ef4103384428fb9",
@@ -125,8 +142,12 @@
         "menuLink": "http://middleground.by/menu/",
         "webSiteUrl": "https://middleground.by/",
         "time": "Вс-Чт 12:00 - 00:00 Пт-Сб 12:00 - 02:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/18/31/35/18/getlstd-property-photo.jpg",
-        "kitchen": ["Американская", "Британская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/18/31/35/18/getlstd-property-photo.jpg"],
+        "kitchen": ["Американская", "Британская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "624688e624a720addb2334a95ef4103384428fb9",
@@ -136,8 +157,12 @@
         "menuLink": "http://barpass.by/wp-content/uploads/2017/05/A3C54D88-147F-429C-BD52-FABF2F9768CA-1280x960.jpg",
         "webSiteUrl": "https://www.facebook.com/grandcafe.minsk/",
         "time": "Пн - Пт 12:00 - 00:00 Сб-Вс 10:00 - 12:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/16/9a/8d/9b/tasty-food.jpg",
-        "kitchen": ["Европейская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/16/9a/8d/9b/tasty-food.jpg"],
+        "kitchen": ["Европейская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "634688e624a720addb2334a95ef4103384428fb9",
@@ -147,8 +172,12 @@
         "menuLink": "https://ember.relax.by/pricing/#content",
         "webSiteUrl": "https://ember-mediterranean-restaurant.business.site/",
         "time": "Вс-Чт 07:00 - 23:00 Пт-Сб 07:00 - 00:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/19/5b/d2/12/dry-aged-steak.jpg",
-        "kitchen": ["Средиземноморская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/19/5b/d2/12/dry-aged-steak.jpg"],
+        "kitchen": ["Средиземноморская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "644688e624a720addb2334a95ef4103384428fb9",
@@ -158,8 +187,12 @@
         "menuLink": "http://view.nrg.by/zakazat-edu",
         "webSiteUrl": "http://view.nrg.by/",
         "time": "Пн-Вс 12:00 - 23:30",
-        "img": "http://view.nrg.by/sites/default/files/img_7937_0.jpg",
-        "kitchen": ["Европейская"]
+        "images": ["http://view.nrg.by/sites/default/files/images_7937_0.jpg"],
+        "kitchen": ["Европейская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "654688e624a720addb2334a95ef4103384428fb9",
@@ -169,8 +202,12 @@
         "menuLink": "http://falcone.by/menu/",
         "webSiteUrl": "http://falcone.by",
         "time": "Сб-Ср 12:00 - 00:00 Пт- 12:00 - 02:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/02/ae/9c/45/filename-6-jpg-thumbnail0.jpg",
-        "kitchen": ["Итальянская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/02/ae/9c/45/filename-6-jpg-thumbnail0.jpg"],
+        "kitchen": ["Итальянская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "664688e624a720addb2334a85ef4103384428fb9",
@@ -180,8 +217,12 @@
         "menuLink": "https://carte.by/minsk/belvedere/",
         "webSiteUrl": "http://belvedere.by/",
         "time": "Пн-Вс 11:00 - 00:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/07/0f/ba/2d/belvedere.jpg",
-        "kitchen": ["Европейская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/07/0f/ba/2d/belvedere.jpg"],
+        "kitchen": ["Европейская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "674688e624a720addb2334a95ef4103384428fb9",
@@ -191,8 +232,12 @@
         "menuLink": "http://www.woodfire.by/news/menyu-restorana/",
         "webSiteUrl": "http://www.woodfire.by/",
         "time": "Вс-Чт 12:00 - 00:00 Пт-Сб 12:00 - 02:00",
-        "img": "http://woodfire.gusto.by/img/places/511/40/1.jpg",
-        "kitchen": ["Европейская"]
+        "images": ["http://woodfire.gusto.by/images/places/511/40/1.jpg"],
+        "kitchen": ["Европейская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "684688e624a720addb2334a95ef4103384428fb9",
@@ -202,8 +247,12 @@
         "menuLink": "https://drozdy-club.by/restoran/#s2",
         "webSiteUrl": "https://drozdy-club.by/",
         "time": "Пн-Вс 12:00 - 06:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/18/2e/d3/e6/caption.jpg",
-        "kitchen": ["Европейская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/18/2e/d3/e6/caption.jpg"],
+        "kitchen": ["Европейская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "694688e624a720addb2334a95ef4103384428fb9",
@@ -213,8 +262,12 @@
         "menuLink": "https://rest-usadba.relax.by/pricing/#content",
         "webSiteUrl": "https://rest-usadba.relax.by/#content",
         "time": "Пн-Вс 12:00 - 00:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/07/4d/64/1d/caption.jpg",
-        "kitchen": ["Русская", "Европейская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/07/4d/64/1d/caption.jpg"],
+        "kitchen": ["Русская", "Европейская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "665188e624a720addb2334a95ef4103384428fb9",
@@ -224,8 +277,12 @@
         "menuLink": "https://www.kuhmistr.by/osnovnoe-menu",
         "webSiteUrl": "https://www.kuhmistr.by/",
         "time": "Пн-Вс 12:00 - 23:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/0e/de/fd/05/caption.jpg",
-        "kitchen": ["Восточноевропейская", "Европейская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/0e/de/fd/05/caption.jpg"],
+        "kitchen": ["Восточноевропейская", "Европейская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "664288e624a720addb2334a95ef4103384428fb9",
@@ -235,8 +292,12 @@
         "menuLink": "http://kamyanitsa.by/ru/kamyanitsa/menu/",
         "webSiteUrl": "http://kamyanitsa.by/",
         "time": "Пн-Вс 12:00 - 23:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/05/f7/9d/ac/caption.jpg",
-        "kitchen": ["Восточноевропейская", "Европейская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/05/f7/9d/ac/caption.jpg"],
+        "kitchen": ["Восточноевропейская", "Европейская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "664388e624a720addb2334a95ef4103384428fb9",
@@ -246,8 +307,12 @@
         "menuLink": "https://www.traktir.by/menyu/",
         "webSiteUrl": "https://www.traktir.by/",
         "time": "Пн-Вс 12:00 - 00:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/0c/c3/17/e1/caption.jpg",
-        "kitchen": ["Европейская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/0c/c3/17/e1/caption.jpg"],
+        "kitchen": ["Европейская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "664588e624a720addb2334a95ef4103384428fb9",
@@ -257,8 +322,12 @@
         "menuLink": "https://minsk.vasilki.by/",
         "webSiteUrl": "http://www.vasilki.by/",
         "time": "Пн-Вс 09:00 - 23:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/0f/4f/05/fd/caption.jpg",
-        "kitchen": ["Белорусская", "Европейская", "Русская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/0f/4f/05/fd/caption.jpg"],
+        "kitchen": ["Белорусская", "Европейская", "Русская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "664788e624a720addb2334a95ef4103384428fb9",
@@ -268,8 +337,12 @@
         "menuLink": "https://simple.relax.by/pricing/#content",
         "webSiteUrl": "http://simple.by/",
         "time": "Пн-Вс 12:00 - 23:00",
-        "img": "https://ms1.relax.by/images/5da23058500fe4a6857e31cd0906d449/resize/w%3D1200%2Ch%3D800%2Cq%3D80%2Cwatermark%3Dtrue/place_gallery_photo/9b/5a/eb/9b5aeb8dba2d30871331b10a0c2580ab.jpg",
-        "kitchen": ["Европейская"]
+        "images": ["https://ms1.relax.by/images/5da23058500fe4a6857e31cd0906d449/resize/w%3D1200%2Ch%3D800%2Cq%3D80%2Cwatermark%3Dtrue/place_gallery_photo/9b/5a/eb/9b5aeb8dba2d30871331b10a0c2580ab.jpg"],
+        "kitchen": ["Европейская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "664888e624a720addb2334a95ef4103384428fb9",
@@ -279,8 +352,12 @@
         "menuLink": "https://neft.relax.by/pricing/#content",
         "webSiteUrl": "https://neft.relax.by/#content",
         "time": "Пн-Вс 11:00 - 06:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/1a/e0/0b/62/caption.jpg",
-        "kitchen": ["Французская", "Американская", "Европейская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/1a/e0/0b/62/caption.jpg"],
+        "kitchen": ["Французская", "Американская", "Европейская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "664688e621a720addb2334a95ef4103384428fb9",
@@ -290,8 +367,12 @@
         "menuLink": "http://astoriariverside.by/",
         "webSiteUrl": "http://astoriariverside.by/menu",
         "time": "Вс-Чт 12:00 - 23:00 Пт-Сб 12:00 - 00:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/17/1b/6b/97/caption.jpg",
-        "kitchen": ["Европейская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/17/1b/6b/97/caption.jpg"],
+        "kitchen": ["Европейская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "664688e622a720addb2334a95ef4103384428fb9",
@@ -301,8 +382,12 @@
         "menuLink": "http://www.shykari.by/menu/",
         "webSiteUrl": "http://www.shykari.by/",
         "time": "Вс-Чт 12:00 - 23:00 Пт-Сб 12:00 - 00:00",
-        "img": "https://content.onliner.by/news/original_size/3fb012ce5641acb871dfd761f2e25d98.jpeg",
-        "kitchen": ["Азиатская", "Китайская"]
+        "images": ["https://content.onliner.by/news/original_size/3fb012ce5641acb871dfd761f2e25d98.jpeg"],
+        "kitchen": ["Азиатская", "Китайская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "664688e623a720addb2334a95ef4103384428fb9",
@@ -312,8 +397,12 @@
         "menuLink": "https://ronin.by/",
         "webSiteUrl": "https://ronin.by/",
         "time": "Вс-Чт 11:00 - 00:00 Пт-Сб 11:00 - 01:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/0e/ff/cf/51/photo1jpg.jpg",
-        "kitchen": ["Азиатская", "Японская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/0e/ff/cf/51/photo1jpg.jpg"],
+        "kitchen": ["Азиатская", "Японская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "664688e625a720addb2334a95ef4103384428fb9",
@@ -323,8 +412,12 @@
         "menuLink": "http://planetsushi.by/menu/",
         "webSiteUrl": "http://planetsushi.by/",
         "time": "Вс-Чт 12:00 - 00:00 Пт-Сб 12:00 - 02:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/08/c4/18/b5/caption.jpg",
-        "kitchen": ["Японская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/08/c4/18/b5/caption.jpg"],
+        "kitchen": ["Японская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "664688e626a720addb2334a95ef4103384428fb9",
@@ -334,8 +427,12 @@
         "menuLink": "https://rest-bellarosa.relax.by/pricing/#content",
         "webSiteUrl": "https://rest-bellarosa.relax.by/#content",
         "time": "Пн-Вс 12:00 - 10:00",
-        "img": "https://ms1.relax.by/images/5da23058500fe4a6857e31cd0906d449/resize/w%3D1200%2Ch%3D800%2Cq%3D80%2Cwatermark%3Dtrue/place_gallery_photo/b2/b1/58/b2b158fb883541cb0e90e35f4702fe3d.jpg",
-        "kitchen": ["Европейская"]
+        "images": ["https://ms1.relax.by/images/5da23058500fe4a6857e31cd0906d449/resize/w%3D1200%2Ch%3D800%2Cq%3D80%2Cwatermark%3Dtrue/place_gallery_photo/b2/b1/58/b2b158fb883541cb0e90e35f4702fe3d.jpg"],
+        "kitchen": ["Европейская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "664688e627a720addb2334a95ef4103384428fb9",
@@ -345,8 +442,12 @@
         "menuLink": "https://bargodji.by/",
         "webSiteUrl": "https://bargodji.by/",
         "time": "Пн-Вс 12:00 - 23:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/17/b6/98/c7/caption.jpg",
-        "kitchen": ["Японская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/17/b6/98/c7/caption.jpg"],
+        "kitchen": ["Японская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "664688e628a720addb2334a95ef4103384428fb9",
@@ -356,8 +457,12 @@
         "menuLink": "https://www.ganbei.by/susi.75.pg",
         "webSiteUrl": "https://www.ganbei.by/",
         "time": "Вс-Чт 11:00 - 23:00 Пт-Сб 11:00 - 00:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/16/f4/ac/ad/gan-bei.jpg",
-        "kitchen": ["Азиатская", "Японская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/16/f4/ac/ad/gan-bei.jpg"],
+        "kitchen": ["Азиатская", "Японская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "664688e629a720addb2334a95ef4103384428fb9",
@@ -367,8 +472,12 @@
         "menuLink": "https://gostiny-dvor.relax.by/pricing/#content",
         "webSiteUrl": "https://gostiny-dvor.relax.by/#content",
         "time": "Пн-Вс 12:00 - 00:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/19/18/0d/7a/caption.jpg",
-        "kitchen": ["Европейская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/19/18/0d/7a/caption.jpg"],
+        "kitchen": ["Европейская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "664688e624a720addb1334a95ef4103384428fb9",
@@ -378,8 +487,12 @@
         "menuLink": "https://tokiny.by/menyu",
         "webSiteUrl": "https://tokiny.by/",
         "time": "Пн-Вс 10:00 - 23:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/1a/64/a2/57/caption.jpg",
-        "kitchen": ["Азиатская", "Японская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/1a/64/a2/57/caption.jpg"],
+        "kitchen": ["Азиатская", "Японская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "664688e624a720addb3334a95ef4103384428fb9",
@@ -389,8 +502,12 @@
         "menuLink": "https://perec.club/%d0%b0%d0%b7%d0%b8%d0%b0%d1%82%d1%81%d0%ba%d0%b0%d1%8f-%d0%ba%d1%83%d1%85%d0%bd%d1%8f/",
         "webSiteUrl": "https://perec.club/",
         "time": "Пн-Чт 12:00 - 23:00  Пт-Вс 12:00 - 02:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-p/1b/41/f2/15/caption.jpg",
-        "kitchen": ["Европейская", "Азиатская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-p/1b/41/f2/15/caption.jpg"],
+        "kitchen": ["Европейская", "Азиатская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "664688e624a720addb4334a95ef4103384428fb9",
@@ -400,8 +517,12 @@
         "menuLink": "https://www.ufontana.by/upload/documents/menu2019_ru.pdf",
         "webSiteUrl": "https://www.ufontana.by/",
         "time": "Вс-Чт 08:00 - 04:00 Пт-Сб 11:00 - 00:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/1a/d2/f6/4d/caption.jpg",
-        "kitchen": ["Восточноевропейская", "Европейская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/1a/d2/f6/4d/caption.jpg"],
+        "kitchen": ["Восточноевропейская", "Европейская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "664688e624a720addb5334a95ef4103384428fb9",
@@ -411,8 +532,12 @@
         "menuLink": "https://charlie.relax.by/",
         "webSiteUrl": "https://charlie.relax.by/",
         "time": "Пн-Вс 11:00 - 23:00",
-        "img": "https://ms1.relax.by/images/5da23058500fe4a6857e31cd0906d449/resize/w=1200,h=800,q=80,watermark=true/place_gallery_photo/25/6b/74/256b74bcbea5319ee1001d8dcba2cc3d.jpg",
-        "kitchen": ["Французская", "Европейская"]
+        "images": ["https://ms1.relax.by/images/5da23058500fe4a6857e31cd0906d449/resize/w=1200,h=800,q=80,watermark=true/place_gallery_photo/25/6b/74/256b74bcbea5319ee1001d8dcba2cc3d.jpg"],
+        "kitchen": ["Французская", "Европейская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "664688e624a720addb6334a95ef4103384428fb9",
@@ -422,8 +547,12 @@
         "menuLink": "https://briochebistro.by/r/briochebistro",
         "webSiteUrl": "https://briochebistro.by/r/briochebistro",
         "time": "Пн-Вс 08:00 - 23:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/17/fc/38/96/brioche-bistro.jpg",
-        "kitchen": ["Французская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/17/fc/38/96/brioche-bistro.jpg"],
+        "kitchen": ["Французская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "664688e624a720addb7334a95ef4103384428fb9",
@@ -433,8 +562,12 @@
         "menuLink": "http://beijinghotelminsk.com/upload/files/menu/menu_seasons.pdf",
         "webSiteUrl": "http://beijinghotelminsk.com/restaurants/restoran-sezony/",
         "time": "Пн-Вс 11:30 - 02:30 05:30 - 11:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/10/45/08/9d/getlstd-property-photo.jpg",
-        "kitchen": ["Китайская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/10/45/08/9d/getlstd-property-photo.jpg"],
+        "kitchen": ["Китайская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "664688e624a720addb8334a95ef4103384428fb9",
@@ -444,8 +577,12 @@
         "menuLink": "https://pelikane.relax.by/",
         "webSiteUrl": "https://pelikane.relax.by/",
         "time": "Пн-Вс 18:00 - 02:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/17/6d/ee/c8/pelican-piano-bar.jpg",
-        "kitchen": ["Европейская", "Французская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/17/6d/ee/c8/pelican-piano-bar.jpg"],
+        "kitchen": ["Европейская", "Французская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "664688e624a720addb9334a95ef4103384428fb9",
@@ -455,8 +592,12 @@
         "menuLink": "https://fornello.relax.by/pricing/#content",
         "webSiteUrl": "https://fornello.relax.by/#content",
         "time": "Пн-Вс 06:30 - 00:00",
-        "img": "https://ms1.relax.by/images/5da23058500fe4a6857e31cd0906d449/resize/w%3D1200%2Ch%3D800%2Cq%3D80%2Cwatermark%3Dtrue/place_gallery_photo/7b/51/6e/7b516eba50fc8fb3e8fd5728402250c6.jpg",
-        "kitchen": ["Итальянская", "Европейская"]
+        "images": ["https://ms1.relax.by/images/5da23058500fe4a6857e31cd0906d449/resize/w%3D1200%2Ch%3D800%2Cq%3D80%2Cwatermark%3Dtrue/place_gallery_photo/7b/51/6e/7b516eba50fc8fb3e8fd5728402250c6.jpg"],
+        "kitchen": ["Итальянская", "Европейская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "664688e624a720addb2334a15ef4103384428fb9",
@@ -466,8 +607,12 @@
         "menuLink": "https://secret-rooms-minsk.relax.by/pricing/#content",
         "webSiteUrl": "https://secret-rooms-minsk.relax.by/#content",
         "time": "Пн-Вс 12:00 - 00:00",
-        "img": "https://ms1.relax.by/images/5da23058500fe4a6857e31cd0906d449/resize/w%3D1200%2Ch%3D800%2Cq%3D80%2Cwatermark%3Dtrue/place_gallery_photo/49/43/28/494328c363fef12b4060ae38e37e2c66.jpg",
-        "kitchen": ["Европейская"]
+        "images": ["https://ms1.relax.by/images/5da23058500fe4a6857e31cd0906d449/resize/w%3D1200%2Ch%3D800%2Cq%3D80%2Cwatermark%3Dtrue/place_gallery_photo/49/43/28/494328c363fef12b4060ae38e37e2c66.jpg"],
+        "kitchen": ["Европейская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "664688e624a720addb2334a25ef4103384428fb9",
@@ -477,8 +622,12 @@
         "menuLink": "http://operacasino.by/restaurant",
         "webSiteUrl": "http://operacasino.by/restaurant",
         "time": "Пн-Вс 12:00 - 00:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/1b/20/f7/dc/louis-xiii.jpg",
-        "kitchen": ["Европейская", "Восточноевропейская", "Армянская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/1b/20/f7/dc/louis-xiii.jpg"],
+        "kitchen": ["Европейская", "Восточноевропейская", "Армянская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "664688e624a720addb2334a35ef4103384428fb9",
@@ -488,8 +637,12 @@
         "menuLink": "http://choco.by/dzhelsomino/menu/yaponskaya-kuhnya-japanese-cuisine",
         "webSiteUrl": "http://choco.by/dzhelsomino",
         "time": "Пн-Вс 20:00–09:00",
-        "img": "https://carte.by/source/photos/2017/05/19/23-23.jpg",
-        "kitchen": ["Русская"]
+        "images": ["https://carte.by/source/photos/2017/05/19/23-23.jpg"],
+        "kitchen": ["Русская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "664688e624a720addb2334a55ef4103384428fb9",
@@ -499,8 +652,12 @@
         "menuLink": "http://www.westfalia.by/ru/menu",
         "webSiteUrl": "http://www.westfalia.by/ru/",
         "time": "Пн-Вс 07:00–23:00",
-        "img": "https://media-cdn.tripadvisor.com/media/photo-s/0b/69/f1/d6/caption.jpg",
-        "kitchen": ["Немецкая", "Европейская"]
+        "images": ["https://media-cdn.tripadvisor.com/media/photo-s/0b/69/f1/d6/caption.jpg"],
+        "kitchen": ["Немецкая", "Европейская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     },
     {
         "id": "664688e624a720addb2334a95ef5103384428fb9",
@@ -510,8 +667,12 @@
         "menuLink": "http://panorama-restaurant.by/menu/",
         "webSiteUrl": "http://panorama-restaurant.by/",
         "time": "Вс-Ср 12:00 — 00:00 Чт-Сб 12:00 — 02:00",
-        "img": "http://panorama-restaurant.by/wp-content/uploads/photo-gallery/%D0%93%D0%BE%D1%81%D1%82%D0%B8%D0%BD%D0%B8%D1%86%D0%B0%20%D0%91%D0%B5%D0%BB%D0%B0%D1%80%D1%83%D1%81%D1%8C_136.jpg",
-        "kitchen": ["Белорусская", "Европейская"]
+        "images": ["http://panorama-restaurant.by/wp-content/uploads/photo-gallery/%D0%93%D0%BE%D1%81%D1%82%D0%B8%D0%BD%D0%B8%D1%86%D0%B0%20%D0%91%D0%B5%D0%BB%D0%B0%D1%80%D1%83%D1%81%D1%8C_136.jpg"],
+        "kitchen": ["Белорусская", "Европейская"],
+        "type": ["Ресторан"],
+        "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
+        "mealTime": ["Бранч","Обед", "Ужин"],
+        "price": ["По умеренной цене"]
     }
 ]
   

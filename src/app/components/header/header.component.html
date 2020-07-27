@@ -28,13 +28,13 @@
           </ul>
         </nav>
         <div class="b-register" >
-          <button class="btn-register__sing-in" type="button" name="sing-in" (click)="openEntryForm()" *ngIf="!(entrySerivce.entryHidden | async)">
+          <button class="btn-register__sing-in" type="button" name="sing-in" (click)="openEntryForm()" *ngIf="!(entryService.entryHidden | async)">
             <p>Вход</p>
           </button>
-          <button class="btn-register__log-in" type="button" name="register"  (click)="openRegistrationForm()" *ngIf="!(entrySerivce.entryHidden | async)">
+          <button class="btn-register__log-in" type="button" name="register"  (click)="openRegistrationForm()" *ngIf="!(entryService.entryHidden | async)">
             <p>Регистрация</p>
           </button>
-          <div class="b-register__user" *ngIf="entrySerivce.entryHidden | async">
+          <div class="b-register__user" *ngIf="entryService.entryHidden | async">
             <a href="" routerLink="user" class="b-register__user-link">
               <img src="../../../assets/user.png" alt="User image">
             </a>

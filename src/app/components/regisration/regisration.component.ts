@@ -28,7 +28,7 @@ export class RegisrationComponent implements OnInit {
     private formBuilder: FormBuilder,
     public userService: UserService,
     private router: Router,
-    private apiService: ApiService
+    private apiService: ApiService,
     public dialog: MatDialog
   ) {}
 
@@ -67,10 +67,9 @@ export class RegisrationComponent implements OnInit {
       );
 
     this.succsess = true;
-    // this.registration.emit(false);
     
-    if (this.logInForm.value.password === this.logInForm.value.confirmPassword){
-      this.success = true;
+    if (this.registrationForm.value.password === this.registrationForm.value.confirmPassword){
+      this.succsess = true;
       this.confirmPassword = false;
       this.dialog.closeAll();
       this.dialog.open(EntryComponent);
