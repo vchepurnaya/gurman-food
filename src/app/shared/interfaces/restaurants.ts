@@ -6,6 +6,10 @@ export interface RestaurantsDefinition {
   menuLink: string,
   webSiteUrl: string,
   time: string,
-  img: string,
+  img: string[],
   kitchen: string[]
+}
+
+export interface RestaurantsResult {
+  restaurants: RestaurantsDefinition[]
 }

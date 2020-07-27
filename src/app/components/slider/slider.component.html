@@ -3,20 +3,57 @@
     <div class="b-title">
       <h2 class="b-title__text">{{nameRestaurants}}</h2>
     </div>
-    <ul class="l-restaurants">
-      <li class="l-restaurants__item" *ngFor="let item of restaurants">
-        <div class="l-restaurants__info">
-          <img class="l-restaurants__img" src="{{item.img}}" title="{{item.name}}" alt="{{item.name}}">
-          <h2 class="l-restaurants__info-name">{{item.name}}</h2>
-          <a class="l-restaurants__info-web" href="{{item.webSiteUrl}}">Сайт</a>
-          <a class="l-restaurants__info-menu" href="{{item.menuLink}}">Меню</a>
-          <p class="l-restaurants__info-kitchen">Кухня: {{item.kitchen.join(', ')}}</p>
-        </div>
-      </li>
-    </ul>
-    <div class="b-button">
-      <button class="b-button__left">previous</button>
-      <button class="b-button__right">next</button>
-    </div>
+    <h3 class="b-title__filter">{{filter}}</h3>
+    <owl-carousel-o [options]="customOptions">
+      <ng-template carouselSlide *ngFor="let item of restaurants">
+        <ul class="l-restaurants">
+          <li class="l-restaurants__item">
+            <div class="l-restaurants__info">
+              <img class="l-restaurants__img" src="{{item.img}}" title="{{item.name}}" alt="{{item.name}}">
+              <h4 class="l-restaurants__info-name">{{item.name}}</h4>
+              <a class="l-restaurants__info-web" href="{{item.webSiteUrl}}">Сайт</a>
+              <a class="l-restaurants__info-menu" href="{{item.menuLink}}">Меню</a>
+              <p class="l-restaurants__info-kitchen">Кухня: {{item.kitchen}}</p>
+            </div>
+          </li>
+        </ul>
+      </ng-template>
+    </owl-carousel-o>
+    <h3 class="b-title__filter">{{filter}}</h3>
+
+    <owl-carousel-o [options]="customOptions">
+      <ng-template carouselSlide *ngFor="let item of restaurants">
+        <ul class="l-restaurants">
+          <li class="l-restaurants__item">
+            <div class="l-restaurants__info">
+              <img class="l-restaurants__img" src="{{item.img}}" title="{{item.name}}" alt="{{item.name}}">
+              <h4 class="l-restaurants__info-name">{{item.name}}</h4>
+              <a class="l-restaurants__info-web" href="{{item.webSiteUrl}}">Сайт</a>
+              <a class="l-restaurants__info-menu" href="{{item.menuLink}}">Меню</a>
+              <p class="l-restaurants__info-kitchen">Кухня: {{item.kitchen}}</p>
+            </div>
+          </li>
+        </ul>
+      </ng-template>
+    </owl-carousel-o>
+
+    <h3 class="b-title__filter">{{filter}}</h3>
+
+    <owl-carousel-o [options]="customOptions">
+      <ng-template carouselSlide *ngFor="let item of restaurants">
+        <ul class="l-restaurants">
+          <li class="l-restaurants__item">
+            <div class="l-restaurants__info">
+              <img class="l-restaurants__img" src="{{item.img}}" title="{{item.name}}" alt="{{item.name}}">
+              <h4 class="l-restaurants__info-name">{{item.name}}</h4>
+              <a class="l-restaurants__info-web" href="{{item.webSiteUrl}}">Сайт</a>
+              <a class="l-restaurants__info-menu" href="{{item.menuLink}}">Меню</a>
+              <p class="l-restaurants__info-kitchen">Кухня: {{item.kitchen}}</p>
+            </div>
+          </li>
+        </ul>
+      </ng-template>
+    </owl-carousel-o>
   </div>
 </section>
+
