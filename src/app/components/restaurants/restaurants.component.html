@@ -10,7 +10,7 @@
           <h3 class="b-rest__side-bar__item-title">Кухня</h3>
           <mat-selection-list class="l-filter" #shoes>
             <!-- <p>
-              Выбрано: {{shoes.selectedOptions.selected.length}}
+              Выбрано: {{shoes.selectedOptions.selected.join(', ')}}
             </p> -->
             <mat-list-option class="l-filter__option" *ngFor="let item of kitchen">
               {{item}}
@@ -47,15 +47,27 @@
         <ul class="l-results">
           <li class="l-results__item" *ngFor="let item of restaurants">
             <div class="l-results__item-content">
-              <div class="l-results__item-content__img">
-                <img src="{{item.img[0]}}" title="{{item.name}}" alt="{{item.name}}">
+              <div class="l-results__item-img">
+                <img src="{{item.images[0]}}" title="{{item.name}}" alt="{{item.name}}">
               </div>
-              <div class="l-results__item-content__info">
-                <h4 class="l-results__item-content__info-title">{{item.name}}</h4>
-                <p class="l-results__item-content__info-text">{{item.time}}</p>
-                <p class="l-results__item-content__info-text">{{item.kitchen.join(', ')}}</p>
-                <a href="{{item.menuLink}}" class="l-results__item-content__info-menu">Меню</a>
-                <a href="tel:+375291094040" class="l-results__item-content__info-number">{{item.phoneNumber}}</a>
+              <div class="l-results__item-info">
+                <div class="l-results__item-buttons">
+                  <h4 class="l-results__item-title">{{item.name}}</h4>
+                  <div class="b-buttons">
+                    <button class="btn-like" type="submit">
+                      <img class="btn-like__icon" src="../../../assets/heart-icon.svg" alt="like">
+                      <p class="btn-like__text">Добавить в избранные</p>
+                    </button>
+                    <button class="btn-visited" type="submit">
+                      <img class="btn-like__icon" src="../../../assets/sharei-icon.svg" alt="share">
+                      <p class="btn-visited__text">Добавить в посещенные</p>
+                    </button>
+                  </div>
+                </div>
+                <p class="l-results__item-text">{{item.time}}</p>
+                <p class="l-results__item-text">{{item.kitchen}}</p>
+                <a href="{{item.menuLink}}" class="l-results__item-menu">Меню</a>
+                <a href="tel:+375291094040" class="l-results__item-number">{{item.phoneNumber}}</a>
               </div>
             </div>
           </li>

@@ -14,7 +14,7 @@ export class SliderComponent implements OnInit {
   restaurants: any[] = [];
 
   constructor(
-    private apiService: ApiService
+    private apiService: ApiService,
   ) { }
 
   ngOnInit(): void {
