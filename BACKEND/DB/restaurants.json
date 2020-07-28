@@ -322,8 +322,8 @@
         "menuLink": "https://minsk.vasilki.by/",
         "webSiteUrl": "http://www.vasilki.by/",
         "time": "Пн-Вс 09:00 - 23:00",
+        "kitchen": ["Белорусская", "Европейская"],
         "images": ["https://media-cdn.tripadvisor.com/media/photo-s/0f/4f/05/fd/caption.jpg"],
-        "kitchen": ["Белорусская", "Европейская", "Русская"],
         "type": ["Ресторан"],
         "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
         "mealTime": ["Бранч","Обед", "Ужин"],
@@ -352,8 +352,8 @@
         "menuLink": "https://neft.relax.by/pricing/#content",
         "webSiteUrl": "https://neft.relax.by/#content",
         "time": "Пн-Вс 11:00 - 06:00",
+        "kitchen": ["Французская", "Европейская"],
         "images": ["https://media-cdn.tripadvisor.com/media/photo-s/1a/e0/0b/62/caption.jpg"],
-        "kitchen": ["Французская", "Американская", "Европейская"],
         "type": ["Ресторан"],
         "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
         "mealTime": ["Бранч","Обед", "Ужин"],
@@ -517,8 +517,8 @@
         "menuLink": "https://www.ufontana.by/upload/documents/menu2019_ru.pdf",
         "webSiteUrl": "https://www.ufontana.by/",
         "time": "Вс-Чт 08:00 - 04:00 Пт-Сб 11:00 - 00:00",
+        "kitchen": ["Восточноевропейская"],
         "images": ["https://media-cdn.tripadvisor.com/media/photo-s/1a/d2/f6/4d/caption.jpg"],
-        "kitchen": ["Восточноевропейская", "Европейская"],
         "type": ["Ресторан"],
         "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
         "mealTime": ["Бранч","Обед", "Ужин"],
@@ -622,8 +622,8 @@
         "menuLink": "http://operacasino.by/restaurant",
         "webSiteUrl": "http://operacasino.by/restaurant",
         "time": "Пн-Вс 12:00 - 00:00",
+        "kitchen": ["Восточноевропейская"],
         "images": ["https://media-cdn.tripadvisor.com/media/photo-s/1b/20/f7/dc/louis-xiii.jpg"],
-        "kitchen": ["Европейская", "Восточноевропейская", "Армянская"],
         "type": ["Ресторан"],
         "features": ["Доставка", "Еда на вынос", "Бронирование", "Подают алкоголь", "Столик на открытом воздухе"],
         "mealTime": ["Бранч","Обед", "Ужин"],
@@ -675,4 +675,3 @@
         "price": ["По умеренной цене"]
     }
 ]
-  

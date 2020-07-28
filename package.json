@@ -26,6 +26,7 @@
     "body-parse": "^0.1.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "ngx-owl-carousel-o": "^4.0.0",
     "rxjs": "~6.5.5",
     "sha1": "^1.1.1",
     "tslib": "^2.0.0",

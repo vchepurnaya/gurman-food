@@ -20,6 +20,7 @@ import { SliderComponent } from './components/slider/slider.component';
 import { RestPageComponent } from './components/rest-page/rest-page.component';
 
 
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
@@ -44,12 +45,13 @@ import { RestPageComponent } from './components/rest-page/rest-page.component';
     MatButtonModule,
     ReactiveFormsModule,
     MatDialogModule,
-    MatListModule
+    MatListModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [EntryComponent, RegisrationComponent]
 })
-export class AppModule { 
+export class AppModule {
 
 }
