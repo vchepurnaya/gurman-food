@@ -16,7 +16,7 @@ const routes: Routes = [
     component: RestaurantsComponent
   },
   {
-    path: 'rest',
+    path: 'restaurants/:id',
     component: RestPageComponent
   },
   {

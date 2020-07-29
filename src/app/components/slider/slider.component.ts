@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '@app/services';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { RestaurantsDefinition, RestaurantsResult } from '@app/shared/interfaces';
+import { RestaurantsDefinition } from '@app/shared/interfaces';
 
 @Component({
   selector: 'app-slider',
@@ -9,8 +9,8 @@ import { RestaurantsDefinition, RestaurantsResult } from '@app/shared/interfaces
   styleUrls: ['./slider.component.scss']
 })
 export class SliderComponent implements OnInit {
-  nameRestaurants: string = 'Рестораны';
-  restaurants: any[] = [];
+  nameRestaurants: string = 'Лучшие рестораны Минска';
+  restaurants: RestaurantsDefinition[] = [];
   filter: string = 'Какой-нибудь фильтр';
 
   constructor(
@@ -20,7 +20,7 @@ export class SliderComponent implements OnInit {
   ngOnInit(): void {
     this.apiService.getAllRestaurants()
       .subscribe(
-        (success: { content: any[] }) => {
+        (success: { content: RestaurantsDefinition[] }) => {
           this.restaurants = success.content;
           console.log(success.content);
         },

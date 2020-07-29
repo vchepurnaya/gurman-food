@@ -10,6 +10,3 @@ export interface RestaurantsDefinition {
   kitchen: string[]
 }
 
-export interface RestaurantsResult {
-  restaurants: RestaurantsDefinition[]
-}

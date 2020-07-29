@@ -1,5 +1,5 @@
 import { UserDataDefinition } from './user';
-import { RestaurantsDefinition, RestaurantsResult } from './restaurants';
+import { RestaurantsDefinition } from './restaurants';
 
 export { UserDataDefinition };
-export { RestaurantsDefinition, RestaurantsResult };
+export { RestaurantsDefinition };

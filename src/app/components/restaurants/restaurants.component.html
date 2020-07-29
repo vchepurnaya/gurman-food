@@ -52,7 +52,7 @@
               </div>
               <div class="l-results__item-info">
                 <div class="l-results__item-buttons">
-                  <h4 class="l-results__item-title">{{item.name}}</h4>
+                  <a [routerLink]="['restaurants', '1']" class="l-results__item-title">{{item.name}}</a>
                   <div class="b-buttons">
                     <button class="btn-like" type="submit">
                       <img class="btn-like__icon" src="../../../assets/heart-icon.svg" alt="like">

@@ -2,31 +2,75 @@
 @import "../../../scss/abstracts/mixins.scss";
 
 
-  .l-restaurants__item {
-    margin: 10px 0;
-    width: 400px;
-    height: 300px;
+.s-slider {
+  padding: 50px 20px;
+}
+.l-restaurants {
+  margin: 0 -10px;
 
-    .l-restaurants__info {
-      background-color: #ecefef;
+  &__item {
+  margin: 10px 0;
+  padding: 0 20px;
+  width: 100%;
+  height: 100%;
+
+    &-info {
       font-size: 20px;
       text-align: center;
+      height: 100%;
+    }
 
-      .l-restaurants__img {
-        height: 300px;
-        width: 400px;
+    &-background {
+      border: 1px solid;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    &-img {
+      height: 400px;
+    }
+
+    &-text {
+      padding: 10px;
+      background-color: #ecefef;
+      border-radius: 12px;
+      border: 1px solid;
+      position: relative;
+
+      img {
+        width: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
       }
+  
 
-      .l-restaurants__info-web {
+      &-name {
+        margin: 10px 0;
+      }
+  
+      &-web {
         margin-right: 10px;
         text-decoration: underline;
       }
-
-      .l-restaurants__info-menu {
+  
+      &-menu {
         text-decoration: underline;
       }
+
+      &-kitchen {
+        margin-top: 10px;
+      }
+
     }
+
   }
+}
+ 
+
 
 .b-title__text {
   text-align: center;
