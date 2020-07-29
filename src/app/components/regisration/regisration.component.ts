@@ -17,7 +17,6 @@ import {EntryComponent} from "../entry/entry.component";
 })
 export class RegisrationComponent implements OnInit {
 
-  // @Output() registration = new EventEmitter<boolean>();
   registrationForm: FormGroup;
   succsess = false;
   usersMock: UserDataDefinition[] = Users;

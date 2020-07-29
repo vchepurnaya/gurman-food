@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '@app/services';
+import { RestaurantsDefinition } from '@app/shared/interfaces'
 
 
 @Component({
@@ -8,7 +9,7 @@ import { ApiService } from '@app/services';
   styleUrls: ['./restaurants.component.scss']
 })
 export class RestaurantsComponent implements OnInit {
-  restaurants: any[] = [];
+  restaurants: RestaurantsDefinition[] = [];
   kitchen: string[] = ['Русская', 'Итальянская', 'Французская', 'Немецкая', 'Китайская', 'Японская', 'Восточная'];
   type: string[] = ['Рестораны', 'Быстрые перекусы', 'Чай и кофе', 'Булочные', 'Бар и клубы', 'Только доставка'];
   features: string[] = ['Доставка', 'Еда на вынос', 'Бронирование', 'Банкет', 'Живая музыка', 'Только доставка', 'Подают алкоголь', 'Рестораны для некурящих', 'Столик на открытом воздухе'];
@@ -26,7 +27,7 @@ export class RestaurantsComponent implements OnInit {
 
     this.apiService.getAllRestaurants()
       .subscribe(
-        (success: { content: any[] }) => {
+        (success: { content: RestaurantsDefinition[] }) => {
           this.restaurants = success.content;
         },
         error => console.log(error)
