@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '@app/services';
 import { ActivatedRoute} from '@angular/router';
-import {Subscription} from 'rxjs';
-import { HttpClient }  from '@angular/common/http';
 
 @Component({
   selector: 'app-rest-page',
@@ -10,19 +8,16 @@ import { HttpClient }  from '@angular/common/http';
   styleUrls: ['./rest-page.component.scss']
 })
 export class RestPageComponent implements OnInit {
-  id: number;
+  id: string;
 
   constructor(
     private apiService: ApiService,
-    private activateRoute: ActivatedRoute,
-    private subscription: Subscription,
-    private httpClient: HttpClient,
+    private activatedRoute: ActivatedRoute,
   ) { 
-    this.subscription = activateRoute.params.subscribe(params=>this.id=params['id']);
-   }
-
-  ngOnInit(): void {
-  
+    this.id = this.activatedRoute.snapshot.params['id'];
   }
 
+  ngOnInit(): void {
+    console.log(this.id)
+  }
 }
