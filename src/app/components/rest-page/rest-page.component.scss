@@ -1,12 +1,13 @@
-@import "../../../scss/abstracts/variables.scss";
-@import "../../../scss/abstracts/mixins.scss";
+@import "abstracts/variables.scss";
+@import "abstracts/mixins.scss";
 
 .s-restourant {
-  padding: 100px 0;
-  background-color: #8c8c8c;
+  padding: 50px 0;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .b-restourant__content {
+  margin-bottom: 30px;
 
   &-info {
     background-color: $mainColor;
@@ -40,8 +41,19 @@
 
   &-images {
     background-color: $mainColor;
-    padding: 20px;
+    padding: 20px 0;
     border-radius: 12px;
+    display: flex;
+    
+    div {
+      width: 100%;
+      padding: 0 10px;
+
+      img {
+        width: 100%;
+        font-size: 0;
+      }
+    }
   }
 }
 
@@ -58,6 +70,10 @@
   &:hover .btn-like__text {
     text-decoration: underline;
   }
+}
+
+.btn-like__icon.active, .btn-visited__icon.active {
+  fill: $secondColor;
 }
 
 .btn-visited {
@@ -100,4 +116,11 @@
       }
     }
   }
+}
+
+.b-reviews {
+  width: 760px;
+  height: 800px; 
+  overflow: hidden; 
+  border-radius: 12px;
 }

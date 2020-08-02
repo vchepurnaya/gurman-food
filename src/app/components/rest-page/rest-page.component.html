@@ -1,42 +1,42 @@
 <section class="s-restourant">
   <div class="container">
-    <div class="b-restourant__content">
+    <div class="b-restourant__content" *ngIf="restaurant">
       <div class="b-restourant__content-info">
         <div class="b-restourant__content-header">
-          <h1 class="b-restourant__content-title">Title</h1>
+          <h1 class="b-restourant__content-title">{{restaurant.name}}</h1>
           <div class="b-restourant__content-buttons">
             <button class="btn-like" type="submit">
-              <img class="btn-like__icon" src="../../../assets/heart-icon.svg" alt="like">
+              <svg class="btn-like__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg>
               <p class="btn-like__text">
                 Добавить в избранное
               </p>
             </button>
             <button class="btn-visited" type="submit">
-              <img class="btn-like__icon" src="../../../assets/sharei-icon.svg" alt="share">
+              <svg class="btn-visited__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.25 17.292l-4.5-4.364 1.857-1.858 2.643 2.506 5.643-5.784 1.857 1.857-7.5 7.643z"/></svg>
               <p class="btn-visited__text">
                 Добавить в посещенные
               </p>
             </button>
           </div>
         </div>
-        <p class="b-restourant__content-kitchen">kitchen</p>
+        <p class="b-restourant__content-kitchen">{{restaurant.kitchen}}</p>
         <ul class="l-info">
           <li class="l-info__item">
             <div class="l-info__item-content">
               <img src="../../../assets/location-icon.svg" alt="location">
-              <p class="l-info__item-text">Address</p>
+              <p class="l-info__item-text">{{restaurant.address}}</p>
             </div>
           </li>
           <li class="l-info__item">
             <div class="l-info__item-content">
               <img src="../../../assets/phone-icon.svg" alt="phone">
-              <a href="tel:1234567" class="l-info__item-text">Phone</a>
+              <a href="tel:{{restaurant.phoneNumber}}" class="l-info__item-text">{{restaurant.phoneNumber}}</a>
             </div>
           </li>
           <li class="l-info__item">
             <div class="l-info__item-content">
               <img src="../../../assets/laptop-icon.svg" alt="phone">
-              <a href="" class="l-info__item-text">Веб-сайт</a>
+              <a href="" class="l-info__item-text">Перейти на сайт</a>
             </div>
           </li>
           <li class="l-info__item">
@@ -48,17 +48,22 @@
           <li class="l-info__item">
             <div class="l-info__item-content">
               <img src="../../../assets/time-icon.svg" alt="clock">
-              <p class="l-info__item-text">Time</p>
+              <p class="l-info__item-text">{{restaurant.time}}</p>
             </div>
           </li>
         </ul>
 
       </div>
       <div class="b-restourant__content-images">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
+        <div *ngFor = "let item of restaurant.images">
+          <img src="{{item}}" alt="{{restaurant.name}}">
+        </div>
       </div>
+    </div>
+
+    <div class="b-reviews">
+      <iframe style="width:100%;height:100%;border:1px solid #e6e6e6;"
+       [src]="iframeSrc"></iframe>
     </div>
   </div>
 </section>
