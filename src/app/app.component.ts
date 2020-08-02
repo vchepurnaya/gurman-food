@@ -1,19 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ApiService, UserService } from '@app/services';
-import { FormBuilder } from '@angular/forms';
-import { Router } from '@angular/router';
-import { MatDialog } from '@angular/material/dialog';
+import { RegDefinition } from '@app/shared/interfaces';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
   title: string = 'gurman-food';
+  private destroy$ = new Subject();
 
   constructor(
-    private apiService: ApiService
+    private apiService: ApiService,
+    private userService: UserService
   ) {}
 
   ngOnInit(): void {
@@ -21,9 +23,14 @@ export class AppComponent implements OnInit {
 
     if (userEmail) {
       this.apiService.getUser(userEmail)
+        .pipe(
+          takeUntil(this.destroy$)
+        )
         .subscribe(
-          success => {
+          (success:RegDefinition) => {
             console.log(success)
+            this.userService.usersData$.next(success.content)
+
           },
           error => {
             console.log(error)
@@ -31,5 +38,9 @@ export class AppComponent implements OnInit {
         )
     }
   }
-}
 
+  ngOnDestroy(): void {
+    this.destroy$.next(true);
+    this.destroy$.complete();
+  }
+}

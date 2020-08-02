@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { UserDataDefinition } from '@app/shared/interfaces';
-import { UserService } from '@app/services';
 
 @Component({
   selector: 'app-user-container',
@@ -11,7 +10,6 @@ export class UserContainerComponent implements OnInit {
 
 
   constructor(
-    public userService: UserService
   ) { }
 
   ngOnInit(): void {

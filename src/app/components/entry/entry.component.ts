@@ -1,9 +1,8 @@
 import { Component, OnInit, OnDestroy, Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
-import { UserService, EntryService } from '@app/services';
+import { UserService } from '@app/services';
 import { BehaviorSubject } from 'rxjs';
-import { UserDataDefinition } from '@app/shared/interfaces';
 import { MatDialog } from '@angular/material/dialog';
 import { ApiService } from '@app/services';
 import { takeUntil } from 'rxjs/operators';
@@ -25,7 +24,6 @@ export class EntryComponent implements OnInit, OnDestroy {
     private formBuilder: FormBuilder,
     private router: Router,
     public userService: UserService,
-    public entrySerivce: EntryService,
     public dialog: MatDialog,
     private apiService: ApiService
   ) {}
@@ -55,20 +53,15 @@ export class EntryComponent implements OnInit, OnDestroy {
       .subscribe(
         (success: RegDefinition) => {
           localStorage.setItem('userEmail', success.content.email)
-          console.log(success.content)
-          this.toSignUp()
 
+          this.userService.usersData$.next(success.content)
+          this.enter.next(true);
+          this.dialog.closeAll();
         },
         error => {
           console.log(error)
         }
       )
-  }
-
-  toSignUp(): void {
-        this.entrySerivce.entryHidden.next(true)
-        this.enter.next(true);
-        this.dialog.closeAll();
   }
 
   ngOnDestroy(): void {

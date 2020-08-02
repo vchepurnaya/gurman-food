@@ -12,7 +12,7 @@ import { RestaurantsDefinition } from '@app/shared/interfaces'
   styleUrls: ['./restaurants.component.scss']
 })
 export class RestaurantsComponent implements OnInit, OnDestroy {
-  restaurants: any[] = [];
+  restaurants: RestaurantsDefinition[] = [];
   kitchen: string[] = ['Русская', 'Итальянская', 'Французская', 'Немецкая', 'Китайская', 'Японская', 'Восточная'];
   type: string[] = ['Рестораны', 'Быстрые перекусы', 'Чай и кофе', 'Булочные', 'Бар и клубы', 'Только доставка'];
   features: string[] = ['Доставка', 'Еда на вынос', 'Бронирование', 'Банкет', 'Живая музыка', 'Только доставка', 'Подают алкоголь', 'Рестораны для некурящих', 'Столик на открытом воздухе'];

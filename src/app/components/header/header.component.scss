@@ -45,7 +45,7 @@
     margin-left: 25px;
     border: 3px solid $mainColor;
     border-radius: 12px;
-    transition: border-color .3s ease-in-out ;
+    transition: border-color .3s ease-in-out;
 
     &:first-child {
       margin-left: 0;
@@ -68,7 +68,7 @@
   }
 }
 
-.b-register{
+.b-register {
   height: 52px;
   display: flex;
   flex-wrap: wrap;
@@ -87,24 +87,21 @@
       box-shadow: 0 0 20px $secondColor;
     }
   }
-}
 
-.btn-register__sing-in, .btn-register__log-in  {
-  padding: 10px 15px;
-  border: 3px solid $mainColor;
-  background-color: #000;
-  border-radius: 12px;
-  margin-left: 12px;
-  transition: box-shadow .3s ease-in-out;
-
-  &:hover {
-    box-shadow: 0 0 20px $secondColor;
-  }
-
-  p {
+  &__btn {
+    padding: 10px 15px;
+    border: 3px solid $mainColor;
+    background-color: #000;
+    border-radius: 12px;
+    margin-left: 12px;
+    transition: box-shadow .3s ease-in-out;
     color: $mainColor;
     font-size: 20px;
     font-weight: 600;
     text-transform: uppercase;
+
+    &:hover {
+      box-shadow: 0 0 20px $secondColor;
+    }
   }
 }

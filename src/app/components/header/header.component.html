@@ -28,17 +28,20 @@
           </ul>
         </nav>
         <div class="b-register" >
-          <button class="btn-register__sing-in" type="button" name="sing-in" (click)="openEntryForm()" *ngIf="!(entryService.entryHidden | async)">
-            <p>Вход</p>
+          <button class="b-register__btn" type="button" (click)="openEntryForm()" *ngIf="!(userService.usersData$ | async)">
+            Вход
           </button>
-          <button class="btn-register__log-in" type="button" name="register"  (click)="openRegistrationForm()" *ngIf="!(entryService.entryHidden | async)">
-            <p>Регистрация</p>
+          <button class="b-register__btn" type="button" (click)="openRegistrationForm()" *ngIf="!(userService.usersData$ | async)">
+            Регистрация
           </button>
-          <div class="b-register__user" *ngIf="entryService.entryHidden | async">
+          <div class="b-register__user" *ngIf="userService.usersData$ | async">
             <a href="" routerLink="user" class="b-register__user-link">
               <img src="../../../assets/user.png" alt="User image">
             </a>
           </div>
+          <button class="b-register__btn" type="button" (click)="onLogOffButton()" *ngIf="(userService.usersData$ | async)">
+            Выйти
+          </button>
         </div>
       </div>
     </div>
