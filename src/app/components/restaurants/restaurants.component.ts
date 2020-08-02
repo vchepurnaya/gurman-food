@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ApiService } from '@app/services';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 import { RestaurantsDefinition } from '@app/shared/interfaces'
+
 
 
 @Component({
@@ -8,7 +11,7 @@ import { RestaurantsDefinition } from '@app/shared/interfaces'
   templateUrl: './restaurants.component.html',
   styleUrls: ['./restaurants.component.scss']
 })
-export class RestaurantsComponent implements OnInit {
+export class RestaurantsComponent implements OnInit, OnDestroy {
   restaurants: RestaurantsDefinition[] = [];
   kitchen: string[] = ['Русская', 'Итальянская', 'Французская', 'Немецкая', 'Китайская', 'Японская', 'Восточная'];
   type: string[] = ['Рестораны', 'Быстрые перекусы', 'Чай и кофе', 'Булочные', 'Бар и клубы', 'Только доставка'];
@@ -16,6 +19,7 @@ export class RestaurantsComponent implements OnInit {
   mealTime: string[] = ['Завтрак', 'Бранч', 'Обед', 'Ужин'];
   price: string[] = ['Вкусно и недорого', 'По умеренной цене', 'Ретсораны высокой кухни'];
   shoes = [];
+  private destroy$ = new Subject();
 
 
   constructor(
@@ -26,11 +30,19 @@ export class RestaurantsComponent implements OnInit {
   ngOnInit(): void {
 
     this.apiService.getAllRestaurants()
+      .pipe(
+        takeUntil(this.destroy$)
+      )
       .subscribe(
         (success: { content: RestaurantsDefinition[] }) => {
           this.restaurants = success.content;
         },
         error => console.log(error)
       )
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next(true);
+    this.destroy$.complete();
   }
 }

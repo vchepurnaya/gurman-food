@@ -19,6 +19,9 @@
       class="f-entry__field"
       matInput
     >
+    <mat-error *ngIf="signInForm.controls.login.hasError('required')">
+      Заполните поле!
+    </mat-error>
   </mat-form-field>
 
   <mat-form-field class="f-entry__line">
@@ -31,6 +34,15 @@
       class="f-entry__field"
       matInput
     >
+    <mat-error *ngIf="signInForm.controls.password.hasError('required')">
+      Заполните поле!
+    </mat-error>
+    <mat-error *ngIf="signInForm.controls.password.hasError('minlength')">
+      Пароль должен содержать минимум 6 символов
+    </mat-error>
+    <mat-error *ngIf="signInForm.controls.password.hasError('maxlength')">
+      Пароль должен содержать максимум 20 символов
+    </mat-error>
   </mat-form-field>
 
   <div class="f-entry__btn">

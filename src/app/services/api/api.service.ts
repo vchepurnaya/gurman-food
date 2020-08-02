@@ -24,14 +24,13 @@ export class ApiService {
 
   signIn(body: {
     email: string;
+    password: string;
   }) {
     return this.httpClient.post(this.env.apiUrl + 'api/sign-in', body);
   }
 
-  getUser(params: {
-    email: string;
-  }) {
-    return this.httpClient.get(this.env.apiUrl + 'api/user', { params });
+  getUser(email: string) {
+    return this.httpClient.get(this.env.apiUrl + 'api/user', { params: {email} });
   }
 
   getRestaurantById(params: {

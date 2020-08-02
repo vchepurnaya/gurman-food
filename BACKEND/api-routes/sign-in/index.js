@@ -6,16 +6,16 @@ const signInHandlerPost = async (req, res) => {
     const credsToLogin = req.body;
 
     if (
-        !credsToLogin.email
+        !credsToLogin.login
         || !credsToLogin.password
         || Object.keys(credsToLogin).length !== 2
     ) {
         return responseSender(res, 422, 'You\'ve missed something important...');
     }
-    
+
     const rawData = fs.readFileSync('./BACKEND/DB/users.json');
     const users = JSON.parse(rawData);
-    const user = users.find(user => user.email === credsToLogin.email);
+    const user = users.find(user => user.login === credsToLogin.login);
 
     if (!user) {
         return responseSender(res, 401, 'Authentication failed. User not found!');
