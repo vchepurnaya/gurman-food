@@ -13,7 +13,7 @@ export class RestPageComponent implements OnInit {
   constructor(
     private apiService: ApiService,
     private activatedRoute: ActivatedRoute,
-  ) { 
+  ) {
     this.id = this.activatedRoute.snapshot.params['id'];
   }
 

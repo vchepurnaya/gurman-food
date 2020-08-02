@@ -24,6 +24,7 @@ export class ApiService {
 
   signIn(body: {
     email: string;
+    password: string;
   }) {
     return this.httpClient.post(this.env.apiUrl + 'api/sign-in', body);
   }

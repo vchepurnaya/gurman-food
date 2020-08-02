@@ -1,5 +1,10 @@
 import { UserDataDefinition } from './user';
-import { RestaurantsDefinition } from './restaurants';
+import { RestaurantsDefinition, RestaurantsResult } from './restaurants';
+import { RegDefinition } from './reg';
+
+
 
 export { UserDataDefinition };
-export { RestaurantsDefinition };
+export { RestaurantsDefinition, RestaurantsResult };
+export { RegDefinition };
+

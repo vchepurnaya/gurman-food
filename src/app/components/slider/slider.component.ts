@@ -1,17 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ApiService } from '@app/services';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { RestaurantsDefinition } from '@app/shared/interfaces';
+import { RestaurantsDefinition, RestaurantsResult } from '@app/shared/interfaces';
+import { takeUntil } from 'rxjs/operators';
+import { Subject } from 'rxjs';
+
 
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.scss']
 })
-export class SliderComponent implements OnInit {
-  nameRestaurants: string = 'Лучшие рестораны Минска';
-  restaurants: RestaurantsDefinition[] = [];
+export class SliderComponent implements OnInit, OnDestroy {
+  nameRestaurants: string = 'Рестораны';
   filter: string = 'Какой-нибудь фильтр';
+  restaurants: RestaurantsDefinition;
+  private destroy$ = new Subject();
+
 
   constructor(
     private apiService: ApiService,
@@ -19,10 +24,12 @@ export class SliderComponent implements OnInit {
 
   ngOnInit(): void {
     this.apiService.getAllRestaurants()
+      .pipe(
+        takeUntil(this.destroy$)
+      )
       .subscribe(
-        (success: { content: RestaurantsDefinition[] }) => {
-          this.restaurants = success.content;
-          console.log(success.content);
+        (success: RestaurantsResult) => {
+            this.restaurants = success.content
         },
         error => console.log(error)
       )
@@ -51,5 +58,10 @@ export class SliderComponent implements OnInit {
       }
     },
     nav: true
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next(true);
+    this.destroy$.complete();
   }
 }
