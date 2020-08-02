@@ -4,8 +4,6 @@ import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { RestaurantsDefinition } from '@app/shared/interfaces'
 
-
-
 @Component({
   selector: 'app-restaurants',
   templateUrl: './restaurants.component.html',
