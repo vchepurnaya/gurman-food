@@ -25,6 +25,10 @@
       border-radius: 12px;
       margin-bottom: 10px;
       overflow: hidden;
+
+      a {
+        display: block;
+      }
     }
 
     &-img {

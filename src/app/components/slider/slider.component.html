@@ -8,7 +8,9 @@
           <li class="l-restaurants__item">
             <div class="l-restaurants__item-info">
               <div class="l-restaurants__item-background">
-                <img class="l-restaurants__item-img" src="{{item.images[0]}}" title="{{item.name}}" alt="{{item.name}}">
+                <a [routerLink]="['/restaurants', item.id]">
+                  <img class="l-restaurants__item-img" src="{{item.images[0]}}" title="{{item.name}}" alt="{{item.name}}">
+                </a>
               </div>
               <div class="l-restaurants__item-text">
                 <h4 class="l-restaurants__item-text-name">{{item.name}}</h4>
