@@ -2,7 +2,6 @@ import { Component, OnInit, OnDestroy, Input, Output, EventEmitter } from '@angu
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 import { UserService, EntryService } from '@app/services';
-import { Users } from '@app/shared/mocks';
 import { BehaviorSubject } from 'rxjs';
 import { UserDataDefinition } from '@app/shared/interfaces';
 import { MatDialog } from '@angular/material/dialog';
@@ -18,7 +17,6 @@ import { RegDefinition } from '@app/shared/interfaces';
 })
 export class EntryComponent implements OnInit, OnDestroy {
   signInForm: FormGroup;
-  usersMock: UserDataDefinition[] = Users;
   enter = new BehaviorSubject(false);
   private destroy$ = new Subject();
 
@@ -50,8 +48,6 @@ export class EntryComponent implements OnInit, OnDestroy {
       return;
     }
 
-
-
     this.apiService.signIn(this.signInForm.value)
       .pipe(
         takeUntil(this.destroy$)
@@ -60,22 +56,8 @@ export class EntryComponent implements OnInit, OnDestroy {
         (success: RegDefinition) => {
           localStorage.setItem('userEmail', success.content.email)
           console.log(success.content)
+          this.toSignUp()
 
-          //this.userService.usersData$ = success.content.email
-
-          if (localStorage.getItem('userEmail')) {
-            this.apiService.getUser(this.signInForm.value.email)
-              .subscribe(
-                success => {
-                  console.log(success)
-                },
-                error => {
-                  console.log(error)
-                }
-              )
-          } else {
-            return;
-          }
         },
         error => {
           console.log(error)
@@ -84,20 +66,9 @@ export class EntryComponent implements OnInit, OnDestroy {
   }
 
   toSignUp(): void {
-    for (let key of this.usersMock) {
-      if (key.password === this.signInForm.value.password &&
-        key.email === this.signInForm.value.login) {
-        this.userService.users = {
-          data: this.signInForm.value
-        }
         this.entrySerivce.entryHidden.next(true)
-        this.enter.next(false);
-        this.dialog.closeAll();
-
-      } else {
         this.enter.next(true);
-      };
-    }
+        this.dialog.closeAll();
   }
 
   ngOnDestroy(): void {

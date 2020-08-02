@@ -4,7 +4,6 @@ import { ApiService } from '@app/services';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { UserService } from '@app/services';
-import { Users } from '@app/shared/mocks';
 import { UserDataDefinition } from '@app/shared/interfaces';
 import { EntryComponent } from '../entry/entry.component';
 import { Subject } from 'rxjs';
@@ -21,7 +20,6 @@ export class RegisrationComponent implements OnInit, OnDestroy {
   // @Output() registration = new EventEmitter<boolean>();
   registrationForm: FormGroup;
   succsess = false;
-  usersMock: UserDataDefinition[] = Users;
   users: any[] = [];
   confirmPassword = false;
   private destroy$ = new Subject();
