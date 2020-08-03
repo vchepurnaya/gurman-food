@@ -54,7 +54,7 @@ export class SliderComponent implements OnInit, OnDestroy {
         items: 3
       },
       940: {
-        items: 2
+        items: 3
       }
     },
     nav: true

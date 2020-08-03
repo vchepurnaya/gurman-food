@@ -21,6 +21,7 @@ import { RestPageComponent } from './components/rest-page/rest-page.component';
 
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { ToastComponent } from './components/toast/toast.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     RestaurantsComponent,
     SliderComponent,
     RestPageComponent,
+    ToastComponent,
   ],
   imports: [
     BrowserModule,

@@ -2,10 +2,13 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ApiService } from '@app/services';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { UserService } from '@app/services';
 import { EntryComponent } from '../entry/entry.component';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { RegDefinition } from '@app/shared/interfaces';
+import { ToastService } from '@app/services/toast/toast.service';
 
 @Component({
   selector: 'app-regisration',
@@ -13,14 +16,18 @@ import { takeUntil } from 'rxjs/operators';
   styleUrls: ['./regisration.component.scss']
 })
 export class RegisrationComponent implements OnInit, OnDestroy {
+
   registrationForm: FormGroup;
+  confirmPassword = false;
   private destroy$ = new Subject();
 
   constructor(
     private formBuilder: FormBuilder,
+    private router: Router,
     public userService: UserService,
     private apiService: ApiService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public toastService: ToastService
   ) {}
 
   ngOnInit(): void {
@@ -48,21 +55,38 @@ export class RegisrationComponent implements OnInit, OnDestroy {
       return;
     }
 
-    const obj = { ...this.registrationForm.value };
+    const obj = {...this.registrationForm.value};
     delete obj.confirmPassword;
+    const toastInfoSuccess = {
+      title: 'Спасибо за регистрацию!',
+      text: 'Вы успешно зарегистрированы!',
+      type: 'success'
+    }
+    const toastInfoError = {
+      title: 'Ошибка!',
+      text: 'Проверьте введенные данные! Возможно вы уже зарегистрированы!',
+      type: 'error'
+    }
 
     this.apiService.signUp(obj)
       .pipe(
         takeUntil(this.destroy$)
       )
       .subscribe(
-        () => {
-          this.dialog.closeAll();
-          this.dialog.open(EntryComponent);
+        (success: RegDefinition) => {
+          this.toastService.isToastVisible.next(toastInfoSuccess)
+          this.toSignIn()
         },
-        error => console.log(error)
+        error => {
+          this.toastService.isToastVisible.next(toastInfoError)
+        }
       );
   };
+
+  toSignIn(): void {
+    this.dialog.closeAll();
+    this.dialog.open(EntryComponent);
+  }
 
   ngOnDestroy(): void {
     this.destroy$.next(true);
