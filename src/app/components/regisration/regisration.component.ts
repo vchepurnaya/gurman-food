@@ -1,14 +1,11 @@
-import { Component, OnInit, OnDestroy, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ApiService } from '@app/services';
 import { MatDialog } from '@angular/material/dialog';
-import { Router } from '@angular/router';
 import { UserService } from '@app/services';
-import { UserDataDefinition } from '@app/shared/interfaces';
 import { EntryComponent } from '../entry/entry.component';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import  { RegDefinition } from '@app/shared/interfaces';
 
 @Component({
   selector: 'app-regisration',
@@ -16,18 +13,12 @@ import  { RegDefinition } from '@app/shared/interfaces';
   styleUrls: ['./regisration.component.scss']
 })
 export class RegisrationComponent implements OnInit, OnDestroy {
-
-  // @Output() registration = new EventEmitter<boolean>();
   registrationForm: FormGroup;
-  succsess = false;
-  users: any[] = [];
-  confirmPassword = false;
   private destroy$ = new Subject();
 
   constructor(
     private formBuilder: FormBuilder,
     public userService: UserService,
-    private router: Router,
     private apiService: ApiService,
     public dialog: MatDialog
   ) {}
@@ -50,17 +41,14 @@ export class RegisrationComponent implements OnInit, OnDestroy {
     })
   }
 
-
   onRegistrationSubmit(event: Event) {
     event.preventDefault();
 
     if (!this.registrationForm.valid) {
       return;
     }
-    /*this.userService.user$.subscribe(
-      res => console.log(res)
-    )*/
-    const obj = {...this.registrationForm.value};
+
+    const obj = { ...this.registrationForm.value };
     delete obj.confirmPassword;
 
     this.apiService.signUp(obj)
@@ -68,31 +56,13 @@ export class RegisrationComponent implements OnInit, OnDestroy {
         takeUntil(this.destroy$)
       )
       .subscribe(
-        (success: RegDefinition) => {
-          console.log(success.code, success.message)
-          this.toSignIn()
+        () => {
+          this.dialog.closeAll();
+          this.dialog.open(EntryComponent);
         },
         error => console.log(error)
       );
-
-
-
-    /*this.succsess = true;
-
-    if (this.registrationForm.value.password === this.registrationForm.value.confirmPassword){
-      this.succsess = true;
-      this.confirmPassword = false;
-
-
-    } else {
-      this.confirmPassword = true;*/
-    //}
   };
-
-  toSignIn(): void {
-    this.dialog.closeAll();
-    this.dialog.open(EntryComponent);
-  }
 
   ngOnDestroy(): void {
     this.destroy$.next(true);

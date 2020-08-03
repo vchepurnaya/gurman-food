@@ -6,12 +6,7 @@ import { UserDataDefinition } from '@app/shared/interfaces';
   providedIn: 'root'
 })
 export class UserService {
+  usersData$ = new BehaviorSubject<UserDataDefinition>(null)
 
-  usersData$ = new BehaviorSubject<
-    UserDataDefinition
-    >(null)
-
-
-  constructor() {
-  }
+  constructor() {}
 }
