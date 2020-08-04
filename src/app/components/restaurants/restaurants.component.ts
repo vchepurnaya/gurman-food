@@ -1,8 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { ApiService } from '@app/services';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { ApiService } from '@app/services';
-import { RestaurantsDefinition } from '@app/shared/interfaces'
+import { RestaurantsDefinition } from '@app/shared/interfaces';
+import { ToastService } from '@app/services/toast/toast.service';
 
 
 @Component({
@@ -20,9 +21,12 @@ export class RestaurantsComponent implements OnInit, OnDestroy {
   shoes = [];
   private destroy$ = new Subject();
 
+
   constructor(
-    private apiService: ApiService
-  ) {}
+    private apiService: ApiService,
+    private toastService: ToastService
+  ) {
+  }
 
   ngOnInit(): void {
 
@@ -34,7 +38,9 @@ export class RestaurantsComponent implements OnInit, OnDestroy {
         (success: { content: RestaurantsDefinition[] }) => {
           this.restaurants = success.content;
         },
-        error => console.log(error)
+        err => {
+          this.toastService.toPrintToast(err.error.code, err.error.message)
+        }
       )
   }
 

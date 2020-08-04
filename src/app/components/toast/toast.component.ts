@@ -13,9 +13,8 @@ export class ToastComponent implements OnInit {
 ) {}
 
   ngOnInit(): void {
-    this.toastService.isToastVisible
+    this.toastService.toastMessage$
       .subscribe(success =>{
-        console.log(success);
       })
   }
 }

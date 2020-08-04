@@ -9,6 +9,7 @@ import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { RegDefinition } from '@app/shared/interfaces';
 import { ToastService } from '@app/services/toast/toast.service';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-regisration',
@@ -28,7 +29,8 @@ export class RegisrationComponent implements OnInit, OnDestroy {
     private apiService: ApiService,
     public dialog: MatDialog,
     public toastService: ToastService
-  ) {}
+  ) {
+  }
 
   ngOnInit(): void {
     this.registrationForm = this.formBuilder.group({
@@ -40,7 +42,7 @@ export class RegisrationComponent implements OnInit, OnDestroy {
         Validators.required,
         Validators.minLength(6),
         Validators.maxLength(20)
-        ]],
+      ]],
       firstName: [null, [Validators.required]],
       lastName: [null, [Validators.required]],
       confirmPassword: [null, [Validators.required]],
@@ -57,16 +59,7 @@ export class RegisrationComponent implements OnInit, OnDestroy {
 
     const obj = {...this.registrationForm.value};
     delete obj.confirmPassword;
-    const toastInfoSuccess = {
-      title: 'Спасибо за регистрацию!',
-      text: 'Вы успешно зарегистрированы!',
-      type: 'success'
-    }
-    const toastInfoError = {
-      title: 'Ошибка!',
-      text: 'Проверьте введенные данные! Возможно вы уже зарегистрированы!',
-      type: 'error'
-    }
+
 
     this.apiService.signUp(obj)
       .pipe(
@@ -74,11 +67,11 @@ export class RegisrationComponent implements OnInit, OnDestroy {
       )
       .subscribe(
         (success: RegDefinition) => {
-          this.toastService.isToastVisible.next(toastInfoSuccess)
+          this.toastService.toPrintToast(success.code, success.message)
           this.toSignIn()
         },
-        error => {
-          this.toastService.isToastVisible.next(toastInfoError)
+        err => {
+          this.toastService.toPrintToast(err.error.code, err.error.message)
         }
       );
   };

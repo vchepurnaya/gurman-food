@@ -6,6 +6,7 @@ import { UserService } from '@app/services';
 import { MatDialog } from '@angular/material/dialog';
 import { ApiService } from '@app/services';
 import { RegDefinition } from '@app/shared/interfaces';
+import { ToastService } from '@app/services/toast/toast.service';
 
 @Component({
   selector: 'app-entry',
@@ -20,7 +21,8 @@ export class EntryComponent implements OnInit, OnDestroy {
     private formBuilder: FormBuilder,
     public userService: UserService,
     public dialog: MatDialog,
-    private apiService: ApiService
+    private apiService: ApiService,
+    private toastService: ToastService
   ) {}
 
   ngOnInit(): void {
@@ -53,8 +55,8 @@ export class EntryComponent implements OnInit, OnDestroy {
           this.userService.usersData$.next(success.content)
           this.dialog.closeAll();
         },
-        error => {
-          console.log(error)
+        err => {
+          this.toastService.toPrintToast(err.error.code, err.error.message)
         }
       )
   }

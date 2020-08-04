@@ -3,6 +3,7 @@ import { ApiService, UserService } from '@app/services';
 import { RegDefinition } from '@app/shared/interfaces';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { ToastService } from '@app/services/toast/toast.service';
 
 @Component({
   selector: 'app-root',
@@ -15,8 +16,10 @@ export class AppComponent implements OnInit, OnDestroy {
 
   constructor(
     private apiService: ApiService,
-    private userService: UserService
-  ) {}
+    private userService: UserService,
+    private toastService: ToastService
+  ) {
+  }
 
   ngOnInit(): void {
     const userEmail = localStorage.getItem('userEmail');
@@ -27,13 +30,11 @@ export class AppComponent implements OnInit, OnDestroy {
           takeUntil(this.destroy$)
         )
         .subscribe(
-          (success:RegDefinition) => {
-            console.log(success)
+          (success: RegDefinition) => {
             this.userService.usersData$.next(success.content)
-
           },
-          error => {
-            console.log(error)
+          err => {
+            this.toastService.toPrintToast(err.error.code, err.error.message)
           }
         )
     }

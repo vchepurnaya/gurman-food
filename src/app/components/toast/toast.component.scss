@@ -1,19 +1,20 @@
 .b-toast {
-  width: 400px;
+  width: 200px;
   position: fixed;
   right: 20px;
   top: 20px;
   padding: 15px 15px 15px 50px;
-  background-color: #e6f3e6;
+  border-radius: 10px;
 
   &__title {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
+    margin-bottom: 5px;
   }
 
   &__text {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   &::before {
@@ -25,23 +26,11 @@
     left: 20px;
   }
 
-  &::after {
-    width: 5px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
   &._success {
     background-color: #e6f3e6;
 
     &::before {
       content: url("~assets/success-icon.svg");
-    }
-
-    &::after {
-      background-color: #81c784;
     }
   }
 
@@ -50,22 +39,6 @@
 
     &::before {
       content: url("~assets/error-icon.svg");
-    }
-
-    &::after {
-      background-color: #f98965;
-    }
-  }
-
-  &._info {
-    background-color: #dfedfa;
-
-    &::before {
-      content: url("~assets/info-icon.svg");
-    }
-
-    &::after {
-      background-color: #62abe8;
     }
   }
 }

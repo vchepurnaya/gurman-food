@@ -4,6 +4,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 import { RestaurantsDefinition, RestaurantsResult } from '@app/shared/interfaces';
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
+import { ToastService } from '@app/services/toast/toast.service';
 
 
 @Component({
@@ -20,7 +21,9 @@ export class SliderComponent implements OnInit, OnDestroy {
 
   constructor(
     private apiService: ApiService,
-  ) { }
+    private toastService: ToastService
+  ) {
+  }
 
   ngOnInit(): void {
     this.apiService.getAllRestaurants()
@@ -29,9 +32,11 @@ export class SliderComponent implements OnInit, OnDestroy {
       )
       .subscribe(
         (success: RestaurantsResult) => {
-            this.restaurants = success.content
+          this.restaurants = success.content
         },
-        error => console.log(error)
+        err => {
+          this.toastService.toPrintToast(err.error.code, err.error.message)
+        }
       )
   }
 
