@@ -1,7 +1,7 @@
 <form
   class="f-entry"
   action="#"
-  name="test"
+  name="sign-in"
   [formGroup]="signInForm"
   (submit)="onSignInSubmit($event)"
 >
@@ -46,7 +46,6 @@
   </mat-form-field>
 
   <div class="f-entry__btn">
-    <button class="f-entry__btn-entry" mat-raised-button>Войти</button>
+    <button class="f-entry__btn-entry" type="submit" mat-raised-button>Войти</button>
   </div>
-  <h2 class="f-entry__failed" *ngIf="enter | async">Такого пользователя нету</h2>
 </form>

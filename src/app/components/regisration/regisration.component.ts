@@ -1,14 +1,15 @@
-import { Component, OnInit, OnDestroy, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ApiService } from '@app/services';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { UserService } from '@app/services';
-import { UserDataDefinition } from '@app/shared/interfaces';
 import { EntryComponent } from '../entry/entry.component';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import  { RegDefinition } from '@app/shared/interfaces';
+import { RegDefinition } from '@app/shared/interfaces';
+import { ToastService } from '@app/services/toast/toast.service';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-regisration',
@@ -17,20 +18,19 @@ import  { RegDefinition } from '@app/shared/interfaces';
 })
 export class RegisrationComponent implements OnInit, OnDestroy {
 
-  // @Output() registration = new EventEmitter<boolean>();
   registrationForm: FormGroup;
-  succsess = false;
-  users: any[] = [];
   confirmPassword = false;
   private destroy$ = new Subject();
 
   constructor(
     private formBuilder: FormBuilder,
-    public userService: UserService,
     private router: Router,
+    public userService: UserService,
     private apiService: ApiService,
-    public dialog: MatDialog
-  ) {}
+    public dialog: MatDialog,
+    public toastService: ToastService
+  ) {
+  }
 
   ngOnInit(): void {
     this.registrationForm = this.formBuilder.group({
@@ -42,7 +42,7 @@ export class RegisrationComponent implements OnInit, OnDestroy {
         Validators.required,
         Validators.minLength(6),
         Validators.maxLength(20)
-        ]],
+      ]],
       firstName: [null, [Validators.required]],
       lastName: [null, [Validators.required]],
       confirmPassword: [null, [Validators.required]],
@@ -50,18 +50,16 @@ export class RegisrationComponent implements OnInit, OnDestroy {
     })
   }
 
-
   onRegistrationSubmit(event: Event) {
     event.preventDefault();
 
     if (!this.registrationForm.valid) {
       return;
     }
-    /*this.userService.user$.subscribe(
-      res => console.log(res)
-    )*/
+
     const obj = {...this.registrationForm.value};
     delete obj.confirmPassword;
+
 
     this.apiService.signUp(obj)
       .pipe(
@@ -69,24 +67,13 @@ export class RegisrationComponent implements OnInit, OnDestroy {
       )
       .subscribe(
         (success: RegDefinition) => {
-          console.log(success.code, success.message)
+          this.toastService.toPrintToast(success.code, success.message)
           this.toSignIn()
         },
-        error => console.log(error)
+        ({error}) => {
+          this.toastService.toPrintToast(error.code, error.message)
+        }
       );
-
-
-
-    /*this.succsess = true;
-
-    if (this.registrationForm.value.password === this.registrationForm.value.confirmPassword){
-      this.succsess = true;
-      this.confirmPassword = false;
-
-
-    } else {
-      this.confirmPassword = true;*/
-    //}
   };
 
   toSignIn(): void {

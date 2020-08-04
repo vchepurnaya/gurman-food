@@ -1,13 +1,12 @@
-import { Component, OnInit, OnDestroy, Input, Output, EventEmitter } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from "@angular/forms";
-import { Router } from "@angular/router";
-import { UserService } from '@app/services';
-import { BehaviorSubject } from 'rxjs';
-import { MatDialog } from '@angular/material/dialog';
-import { ApiService } from '@app/services';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
+import { UserService } from '@app/services';
+import { MatDialog } from '@angular/material/dialog';
+import { ApiService } from '@app/services';
 import { RegDefinition } from '@app/shared/interfaces';
+import { ToastService } from '@app/services/toast/toast.service';
 
 @Component({
   selector: 'app-entry',
@@ -16,16 +15,14 @@ import { RegDefinition } from '@app/shared/interfaces';
 })
 export class EntryComponent implements OnInit, OnDestroy {
   signInForm: FormGroup;
-  enter = new BehaviorSubject(false);
   private destroy$ = new Subject();
-
 
   constructor(
     private formBuilder: FormBuilder,
-    private router: Router,
     public userService: UserService,
     public dialog: MatDialog,
-    private apiService: ApiService
+    private apiService: ApiService,
+    private toastService: ToastService
   ) {}
 
   ngOnInit(): void {
@@ -42,6 +39,7 @@ export class EntryComponent implements OnInit, OnDestroy {
   onSignInSubmit(event: Event) {
     event.preventDefault();
 
+    console.log(this.signInForm);
     if (!this.signInForm.valid) {
       return;
     }
@@ -55,11 +53,10 @@ export class EntryComponent implements OnInit, OnDestroy {
           localStorage.setItem('userEmail', success.content.email)
 
           this.userService.usersData$.next(success.content)
-          this.enter.next(true);
           this.dialog.closeAll();
         },
-        error => {
-          console.log(error)
+        ({error}) => {
+          this.toastService.toPrintToast(error.code, error.message)
         }
       )
   }

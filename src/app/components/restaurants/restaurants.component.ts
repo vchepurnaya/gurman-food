@@ -3,7 +3,9 @@ import { ActivatedRoute, Router} from '@angular/router';
 import { ApiService } from '@app/services';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { RestaurantsDefinition } from '@app/shared/interfaces'
+import { RestaurantsDefinition } from '@app/shared/interfaces';
+import { ToastService } from '@app/services/toast/toast.service';
+
 
 @Component({
   selector: 'app-restaurants',
@@ -26,6 +28,7 @@ export class RestaurantsComponent implements OnInit, OnDestroy {
     private apiService: ApiService,
     private activatedRoute: ActivatedRoute,
     private router: Router,
+    private toastService: ToastService
   ) {
   }
 
@@ -94,7 +97,9 @@ export class RestaurantsComponent implements OnInit, OnDestroy {
         (success: { content: RestaurantsDefinition[] }) => {
           this.restaurants = success.content;
         },
-        error => console.log(error)
+        ({error}) => {
+          this.toastService.toPrintToast(error.code, error.message)
+        }
       )
   }
 
