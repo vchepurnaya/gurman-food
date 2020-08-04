@@ -70,8 +70,8 @@ export class RegisrationComponent implements OnInit, OnDestroy {
           this.toastService.toPrintToast(success.code, success.message)
           this.toSignIn()
         },
-        err => {
-          this.toastService.toPrintToast(err.error.code, err.error.message)
+        ({error}) => {
+          this.toastService.toPrintToast(error.code, error.message)
         }
       );
   };

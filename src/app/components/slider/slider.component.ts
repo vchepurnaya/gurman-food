@@ -34,8 +34,8 @@ export class SliderComponent implements OnInit, OnDestroy {
         (success: RestaurantsResult) => {
           this.restaurants = success.content
         },
-        err => {
-          this.toastService.toPrintToast(err.error.code, err.error.message)
+        ({error}) => {
+          this.toastService.toPrintToast(error.code, error.message)
         }
       )
   }

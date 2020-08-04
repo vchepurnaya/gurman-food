@@ -55,8 +55,8 @@ export class EntryComponent implements OnInit, OnDestroy {
           this.userService.usersData$.next(success.content)
           this.dialog.closeAll();
         },
-        err => {
-          this.toastService.toPrintToast(err.error.code, err.error.message)
+        ({error}) => {
+          this.toastService.toPrintToast(error.code, error.message)
         }
       )
   }

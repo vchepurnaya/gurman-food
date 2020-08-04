@@ -14,18 +14,14 @@ export class ToastService {
   toPrintToast(code: number, message: string) {
 
     const toast = {
-      title: null,
+      title: 'Error!',
       text: message,
-      type: null
+      type: 'error'
     }
 
-    if (code < 400) {
+    if (code <= 400) {
       toast.title = 'Success!'
       toast.type = 'success'
-
-    } else {
-      toast.title = 'Error!'
-      toast.type = 'error'
     }
 
     this.toastMessage$.next(toast);

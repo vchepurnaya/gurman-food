@@ -38,8 +38,8 @@ export class RestaurantsComponent implements OnInit, OnDestroy {
         (success: { content: RestaurantsDefinition[] }) => {
           this.restaurants = success.content;
         },
-        err => {
-          this.toastService.toPrintToast(err.error.code, err.error.message)
+        ({error}) => {
+          this.toastService.toPrintToast(error.code, error.message)
         }
       )
   }

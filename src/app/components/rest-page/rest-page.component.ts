@@ -33,8 +33,8 @@ export class RestPageComponent implements OnInit {
           this.restaurant = success.content;
           this.iframeSrc = this.domSanitizer.bypassSecurityTrustResourceUrl('https://yandex.ru/maps-reviews-widget/' + success.content.mapId + '?comments');
         },
-        err => {
-          this.toastService.toPrintToast(err.error.code, err.error.message)
+        ({error}) => {
+          this.toastService.toPrintToast(error.code, error.message)
         }
       )
   }

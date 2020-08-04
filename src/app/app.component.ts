@@ -33,8 +33,8 @@ export class AppComponent implements OnInit, OnDestroy {
           (success: RegDefinition) => {
             this.userService.usersData$.next(success.content)
           },
-          err => {
-            this.toastService.toPrintToast(err.error.code, err.error.message)
+          ({error}) => {
+            this.toastService.toPrintToast(error.code, error.message)
           }
         )
     }
