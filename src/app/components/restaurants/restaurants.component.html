@@ -8,35 +8,44 @@
       <aside class="b-rest__side-bar">
         <div class="b-rest__side-bar__item">
           <h3 class="b-rest__side-bar__item-title">Кухня</h3>
-          <mat-selection-list class="l-filter" #shoes>
-            <!-- <p>
-              Выбрано: {{shoes.selectedOptions.selected.join(', ')}}
-            </p> -->
-            <mat-list-option class="l-filter__option" *ngFor="let item of kitchen">
+          <mat-selection-list 
+            class="l-filter" 
+            [(ngModel)]="filters.kitchen" 
+            (ngModelChange)="onFilerChange()"
+          >
+            <mat-list-option 
+              class="l-filter__option" 
+              *ngFor="let item of kitchen"
+              [value]="item"
+            >
               {{item}}
             </mat-list-option>
           </mat-selection-list>
           <h3 class="b-rest__side-bar__item-title">Тип заведения</h3>
-          <mat-selection-list class="l-filter" #shoes>
-            <mat-list-option class="l-filter__option" *ngFor="let item of type">
+          <mat-selection-list 
+            class="l-filter"
+            [(ngModel)]="filters.type" 
+            (ngModelChange)="onFilerChange()"
+          >
+            <mat-list-option 
+              *ngFor="let item of type"
+              class="l-filter__option" 
+              [value]="item"
+            >
               {{item}}
             </mat-list-option>
           </mat-selection-list>
           <h3 class="b-rest__side-bar__item-title">Особенности ресторана</h3>
-          <mat-selection-list class="l-filter" #shoes>
-            <mat-list-option class="l-filter__option" *ngFor="let item of features">
-              {{item}}
-            </mat-list-option>
-          </mat-selection-list>
-          <h3 class="b-rest__side-bar__item-title">Время приема пищи</h3>
-          <mat-selection-list class="l-filter" #shoes>
-            <mat-list-option class="l-filter__option" *ngFor="let item of mealTime">
-              {{item}}
-            </mat-list-option>
-          </mat-selection-list>
-          <h3 class="b-rest__side-bar__item-title">Цена</h3>
-          <mat-selection-list class="l-filter" #shoes>
-            <mat-list-option class="l-filter__option" *ngFor="let item of price">
+          <mat-selection-list 
+            class="l-filter"
+            [(ngModel)]="filters.features" 
+            (ngModelChange)="onFilerChange()"
+          >
+            <mat-list-option 
+              class="l-filter__option" 
+              *ngFor="let item of features"
+              [value]="item"
+            >
               {{item}}
             </mat-list-option>
           </mat-selection-list>
