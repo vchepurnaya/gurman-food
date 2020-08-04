@@ -2,10 +2,14 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ApiService } from '@app/services';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { UserService } from '@app/services';
 import { EntryComponent } from '../entry/entry.component';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { RegDefinition } from '@app/shared/interfaces';
+import { ToastService } from '@app/services/toast/toast.service';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-regisration',
@@ -13,15 +17,20 @@ import { takeUntil } from 'rxjs/operators';
   styleUrls: ['./regisration.component.scss']
 })
 export class RegisrationComponent implements OnInit, OnDestroy {
+
   registrationForm: FormGroup;
+  confirmPassword = false;
   private destroy$ = new Subject();
 
   constructor(
     private formBuilder: FormBuilder,
+    private router: Router,
     public userService: UserService,
     private apiService: ApiService,
-    public dialog: MatDialog
-  ) {}
+    public dialog: MatDialog,
+    public toastService: ToastService
+  ) {
+  }
 
   ngOnInit(): void {
     this.registrationForm = this.formBuilder.group({
@@ -33,7 +42,7 @@ export class RegisrationComponent implements OnInit, OnDestroy {
         Validators.required,
         Validators.minLength(6),
         Validators.maxLength(20)
-        ]],
+      ]],
       firstName: [null, [Validators.required]],
       lastName: [null, [Validators.required]],
       confirmPassword: [null, [Validators.required]],
@@ -48,21 +57,29 @@ export class RegisrationComponent implements OnInit, OnDestroy {
       return;
     }
 
-    const obj = { ...this.registrationForm.value };
+    const obj = {...this.registrationForm.value};
     delete obj.confirmPassword;
+
 
     this.apiService.signUp(obj)
       .pipe(
         takeUntil(this.destroy$)
       )
       .subscribe(
-        () => {
-          this.dialog.closeAll();
-          this.dialog.open(EntryComponent);
+        (success: RegDefinition) => {
+          this.toastService.toPrintToast(success.code, success.message)
+          this.toSignIn()
         },
-        error => console.log(error)
+        ({error}) => {
+          this.toastService.toPrintToast(error.code, error.message)
+        }
       );
   };
+
+  toSignIn(): void {
+    this.dialog.closeAll();
+    this.dialog.open(EntryComponent);
+  }
 
   ngOnDestroy(): void {
     this.destroy$.next(true);
