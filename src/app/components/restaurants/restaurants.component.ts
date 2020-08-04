@@ -1,8 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ApiService } from '@app/services';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { ApiService } from '@app/services';
 import { RestaurantsDefinition } from '@app/shared/interfaces'
+
 
 @Component({
   selector: 'app-restaurants',
@@ -19,11 +20,9 @@ export class RestaurantsComponent implements OnInit, OnDestroy {
   shoes = [];
   private destroy$ = new Subject();
 
-
   constructor(
     private apiService: ApiService
-  ) {
-  }
+  ) {}
 
   ngOnInit(): void {
 

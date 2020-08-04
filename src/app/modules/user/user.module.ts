@@ -5,13 +5,15 @@ import { UserContainerComponent } from './containers/user-container/user-contain
 import { UserRoutingModule } from './user-routing.module';
 import { FavouritesComponent } from './components/favourites/favourites.component';
 import { InfoComponent } from './components/info/info.component';
+import { VisitedComponent } from './components/visited/visited.component';
 
 
 @NgModule({
   declarations: [
     FavouritesComponent,
     InfoComponent,
-    UserContainerComponent
+    UserContainerComponent,
+    VisitedComponent
   ],
   imports: [
     CommonModule,

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { UserContainerComponent } from './containers/user-container/user-container.component';
 import { FavouritesComponent } from './components/favourites/favourites.component';
 import { InfoComponent } from './components/info/info.component';
+import { VisitedComponent } from './components/visited/visited.component';
 
 const routes: Routes = [{
   path: '',
@@ -20,6 +21,10 @@ const routes: Routes = [{
     {
       path: 'favourites',
       component: FavouritesComponent
+    },
+    {
+      path: 'visited',
+      component: VisitedComponent
     }
   ]
 }];
