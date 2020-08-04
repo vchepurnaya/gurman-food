@@ -42,4 +42,12 @@ export class ApiService {
   getAllRestaurants() {
     return this.httpClient.get(this.env.apiUrl + 'api/restaurants');
   }
+
+  getFilteredRestaurants(body: {
+    feature?: string[];
+    kitchen?: string[];
+    type?: string[];
+  }) {
+    return this.httpClient.post(this.env.apiUrl + 'api/restaurants/filter', body)
+  }
 }
