@@ -2,9 +2,10 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ApiService } from '@app/services';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { RestaurantsDefinition, RestaurantsResult } from '@app/shared/interfaces';
-import { takeUntil } from 'rxjs/operators';
+import { finalize, takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 import { ToastService } from '@app/services/toast/toast.service';
+import { PreloaderService } from '@app/services/preloader/preloader.service';
 
 
 @Component({
@@ -21,13 +22,15 @@ export class SliderComponent implements OnInit, OnDestroy {
 
   constructor(
     private apiService: ApiService,
-    private toastService: ToastService
+    private toastService: ToastService,
+    private preloaderService: PreloaderService
   ) {
   }
 
   ngOnInit(): void {
     this.apiService.getAllRestaurants()
       .pipe(
+        finalize(() => this.preloaderService.hide()),
         takeUntil(this.destroy$)
       )
       .subscribe(
