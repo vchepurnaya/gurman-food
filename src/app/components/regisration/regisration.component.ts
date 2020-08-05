@@ -3,13 +3,12 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ApiService } from '@app/services';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { UserService } from '@app/services';
-import { EntryComponent } from '../entry/entry.component';
+import { EntryComponent } from '@app/components/entry/entry.component';
 import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
+import { finalize, takeUntil } from 'rxjs/operators';
 import { RegDefinition } from '@app/shared/interfaces';
 import { ToastService } from '@app/services/toast/toast.service';
-import { HttpErrorResponse } from '@angular/common/http';
+import { PreloaderService } from '@app/services/preloader/preloader.service';
 
 @Component({
   selector: 'app-regisration',
@@ -25,10 +24,10 @@ export class RegisrationComponent implements OnInit, OnDestroy {
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-    public userService: UserService,
     private apiService: ApiService,
     public dialog: MatDialog,
-    public toastService: ToastService
+    public toastService: ToastService,
+    private preloaderService: PreloaderService
   ) {
   }
 
@@ -60,9 +59,10 @@ export class RegisrationComponent implements OnInit, OnDestroy {
     const obj = {...this.registrationForm.value};
     delete obj.confirmPassword;
 
-
+    this.preloaderService.show()
     this.apiService.signUp(obj)
       .pipe(
+        finalize(() => this.preloaderService.hide()),
         takeUntil(this.destroy$)
       )
       .subscribe(

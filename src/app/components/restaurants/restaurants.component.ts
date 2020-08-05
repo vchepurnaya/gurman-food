@@ -2,9 +2,10 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router} from '@angular/router';
 import { ApiService } from '@app/services';
 import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
+import { takeUntil, finalize } from 'rxjs/operators';
 import { RestaurantsDefinition } from '@app/shared/interfaces';
 import { ToastService } from '@app/services/toast/toast.service';
+import { PreloaderService } from '@app/services/preloader/preloader.service';
 
 
 @Component({
@@ -28,14 +29,17 @@ export class RestaurantsComponent implements OnInit, OnDestroy {
     private apiService: ApiService,
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    private toastService: ToastService
+    private toastService: ToastService,
+    private  preloaderService: PreloaderService
   ) {
   }
 
   ngOnInit(): void {
+    this.preloaderService.show()
     this.activatedRoute.queryParams
       .pipe(
-        takeUntil(this.destroy$)
+        finalize(() => this.preloaderService.hide()),
+        takeUntil(this.destroy$),
       )
       .subscribe(
         res=> {
@@ -44,9 +48,9 @@ export class RestaurantsComponent implements OnInit, OnDestroy {
           if(keys.length) {
             const filterValue = keys.reduce((acc, item)=>{
               const decodedParam: string[] = decodeURI(res[item]).split(',');
-        
+
               acc[item] = decodedParam;
-        
+
               return acc;
             }, {});
 
@@ -76,13 +80,13 @@ export class RestaurantsComponent implements OnInit, OnDestroy {
 
       if(this.filters[item].length){
         const encodedParam: string = encodeURI(this.filters[item].join(','));
-  
+
         acc[item] = encodedParam;
-      } 
+      }
 
       return acc;
     }, {});
-    
+
     this.router.navigate(['/restaurants'], {
       queryParams: filterValue
     });
@@ -91,6 +95,7 @@ export class RestaurantsComponent implements OnInit, OnDestroy {
   getAllRestaurants():void {
     this.apiService.getAllRestaurants()
       .pipe(
+        finalize(() => this.preloaderService.hide()),
         takeUntil(this.destroy$)
       )
       .subscribe(
@@ -102,6 +107,7 @@ export class RestaurantsComponent implements OnInit, OnDestroy {
   getFilteredRestaurants(body: {}):void {
       this.apiService.getFilteredRestaurants(body)
         .pipe(
+          finalize(() => this.preloaderService.hide()),
           takeUntil(this.destroy$)
         )
         .subscribe(

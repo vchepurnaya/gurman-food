@@ -1,9 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ApiService } from '@app/services';
 import { ActivatedRoute } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { RestaurantsDefinition } from '@app/shared/interfaces';
 import { ToastService } from '@app/services/toast/toast.service';
+import { Subject } from 'rxjs';
+import { finalize, takeUntil } from 'rxjs/operators';
+import { PreloaderService } from '@app/services/preloader/preloader.service';
 
 
 @Component({
@@ -11,16 +14,18 @@ import { ToastService } from '@app/services/toast/toast.service';
   templateUrl: './rest-page.component.html',
   styleUrls: ['./rest-page.component.scss']
 })
-export class RestPageComponent implements OnInit {
+export class RestPageComponent implements OnInit, OnDestroy {
   restaurant: RestaurantsDefinition = null;
   id: string;
   iframeSrc: SafeResourceUrl = null;
+  private destroy$ = new Subject();
 
   constructor(
     private apiService: ApiService,
     private activatedRoute: ActivatedRoute,
     private domSanitizer: DomSanitizer,
-    private toastService: ToastService
+    private toastService: ToastService,
+    private preloaderService: PreloaderService
   ) {
     this.id = this.activatedRoute.snapshot.params['id'];
   }
@@ -28,6 +33,10 @@ export class RestPageComponent implements OnInit {
   ngOnInit(): void {
 
     this.apiService.getRestaurantById({id: this.id})
+      .pipe(
+        finalize(() => this.preloaderService.hide()),
+        takeUntil(this.destroy$)
+      )
       .subscribe(
         (success: { content: RestaurantsDefinition }) => {
           this.restaurant = success.content;
@@ -37,5 +46,10 @@ export class RestPageComponent implements OnInit {
           this.toastService.toPrintToast(error.code, error.message)
         }
       )
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next(true);
+    this.destroy$.complete();
   }
 }

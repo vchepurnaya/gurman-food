@@ -2,8 +2,9 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ApiService, UserService } from '@app/services';
 import { RegDefinition } from '@app/shared/interfaces';
 import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
+import { finalize, takeUntil } from 'rxjs/operators';
 import { ToastService } from '@app/services/toast/toast.service';
+import { PreloaderService } from '@app/services/preloader/preloader.service';
 
 @Component({
   selector: 'app-root',
@@ -17,9 +18,9 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(
     private apiService: ApiService,
     private userService: UserService,
-    private toastService: ToastService
-  ) {
-  }
+    private toastService: ToastService,
+    private preloaderService: PreloaderService
+  ) {}
 
   ngOnInit(): void {
     const userEmail = localStorage.getItem('userEmail');
@@ -27,6 +28,7 @@ export class AppComponent implements OnInit, OnDestroy {
     if (userEmail) {
       this.apiService.getUser(userEmail)
         .pipe(
+          finalize(() => this.preloaderService.hide()),
           takeUntil(this.destroy$)
         )
         .subscribe(
