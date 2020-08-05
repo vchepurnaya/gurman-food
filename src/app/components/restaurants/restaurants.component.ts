@@ -38,27 +38,27 @@ export class RestaurantsComponent implements OnInit, OnDestroy {
         takeUntil(this.destroy$)
       )
       .subscribe(
-        res=>{
-          const keys: string[] = Object.keys(res)
+        res=> {
+          const keys: string[] = Object.keys(res);
 
           if(keys.length) {
             const filterValue = keys.reduce((acc, item)=>{
               const decodedParam: string[] = decodeURI(res[item]).split(',');
         
-              acc[item] = decodedParam
+              acc[item] = decodedParam;
         
-              return acc
-            }, {})
+              return acc;
+            }, {});
 
             this.filters = {
               ...this.filters,
               ...filterValue
             }
 
-            this.getFilteredRestaurants(filterValue)
+            this.getFilteredRestaurants(filterValue);
 
           } else {
-            this.getAllRestaurants()
+            this.getAllRestaurants();
           }
         }
     )
@@ -70,22 +70,22 @@ export class RestaurantsComponent implements OnInit, OnDestroy {
     this.destroy$.complete();
   }
 
-  onFilerChange():void {
+  onFilerChange(): void {
     const keys = Object.keys(this.filters)
-    const filterValue = keys.reduce((acc, item)=>{
+    const filterValue = keys.reduce((acc, item) => {
 
       if(this.filters[item].length){
         const encodedParam: string = encodeURI(this.filters[item].join(','));
   
-        acc[item] = encodedParam
+        acc[item] = encodedParam;
       } 
 
-      return acc
-    },{})
+      return acc;
+    }, {});
     
     this.router.navigate(['/restaurants'], {
       queryParams: filterValue
-    })
+    });
   }
 
   getAllRestaurants():void {
@@ -94,12 +94,8 @@ export class RestaurantsComponent implements OnInit, OnDestroy {
         takeUntil(this.destroy$)
       )
       .subscribe(
-        (success: { content: RestaurantsDefinition[] }) => {
-          this.restaurants = success.content;
-        },
-        ({error}) => {
-          this.toastService.toPrintToast(error.code, error.message)
-        }
+        (success: { content: RestaurantsDefinition[] }) => this.restaurants = success.content,
+        ({error}) => this.toastService.toPrintToast(error.code, error.message)
       )
   }
 
@@ -109,10 +105,8 @@ export class RestaurantsComponent implements OnInit, OnDestroy {
           takeUntil(this.destroy$)
         )
         .subscribe(
-          (success: { content: RestaurantsDefinition[] }) => {
-            this.restaurants = success.content;
-          },
-          error => console.log(error)
+          (success: { content: RestaurantsDefinition[] }) => this.restaurants = success.content,
+          ({error}) => this.toastService.toPrintToast(error.code, error.message)
         )
   }
 }
