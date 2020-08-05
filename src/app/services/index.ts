@@ -1,4 +1,9 @@
-import { UserService } from './user/user.service';
 import { ApiService } from './api/api.service';
+import { UserService } from './user/user.service';
+import { ToastService } from './toast/toast.service';
 
-export { UserService, ApiService };
+export {
+    ApiService,
+    UserService,
+    ToastService
+};
