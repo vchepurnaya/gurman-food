@@ -1,0 +1,16 @@
+@import "abstracts/variables.scss";
+@import "abstracts/mixins.scss";
+
+  .l-favourites {
+    padding: 10px;
+
+    &__item {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -10px;
+
+      &:nth-child(n+2) {
+        margin-top: 50px;
+      }
+    }
+  }

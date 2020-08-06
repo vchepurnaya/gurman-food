@@ -1,1 +1,9 @@
-<p>favourites works!</p>
+<section class="s-favourites">
+  <div class="container">
+    <ul class="l-favourites">
+      <li class="l-favourites__item" *ngFor="let restaurant of restaurants">
+        <app-restaurant-item [item]="restaurant"></app-restaurant-item>
+      </li>
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,80 @@
+@import "abstracts/variables.scss";
+@import "abstracts/mixins.scss";
+
+.b-restaurant {
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__img {
+    width: 350px;
+    height: 200px;
+    font-size: 0;
+
+    & img {
+      width: 350px;
+      height: 220px;
+    }
+  }
+
+  &__info {
+    width: 820px;
+    padding: 20px;
+  }
+
+  &__title {
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-size: 20px;
+    color: #8c8c8c;
+    padding: 10px 0;
+  }
+
+  &__menu, &__number {
+    display: inline-block;
+    font-size: 20px;
+    border-bottom: 1px solid;
+    padding: 10px 0 3px;
+  }
+
+  &__number {
+    margin-left: 20px;
+  }
+}
+
+.b-buttons {
+  display: flex;
+}
+
+.btn-like {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+
+  &:hover {
+    color: $secondColor;
+    fill: $secondColor;
+  }
+
+  &__text {
+    font-size: 18px;
+    margin-left: 10px;
+  }
+
+  &:hover .btn-like__text {
+    text-decoration: underline;
+  }
+}

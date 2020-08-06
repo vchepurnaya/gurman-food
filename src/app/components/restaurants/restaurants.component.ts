@@ -30,7 +30,7 @@ export class RestaurantsComponent implements OnInit, OnDestroy {
     private activatedRoute: ActivatedRoute,
     private router: Router,
     private toastService: ToastService,
-    private  preloaderService: PreloaderService
+    private preloaderService: PreloaderService,
   ) {
   }
 
@@ -67,7 +67,6 @@ export class RestaurantsComponent implements OnInit, OnDestroy {
         }
     )
   }
-
 
   ngOnDestroy(): void {
     this.destroy$.next(true);

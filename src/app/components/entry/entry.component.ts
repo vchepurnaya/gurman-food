@@ -41,7 +41,6 @@ export class EntryComponent implements OnInit, OnDestroy {
   onSignInSubmit(event: Event) {
     event.preventDefault();
 
-    console.log(this.signInForm);
     if (!this.signInForm.valid) {
       return;
     }
