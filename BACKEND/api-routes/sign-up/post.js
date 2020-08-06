@@ -29,6 +29,7 @@ const registerHandlerPost = async (req, res) => {
 
     userToSave.id = sha1(Date.now());
     userToSave.password = bcrypt.hashSync(userToSave.password, saltRounds);
+    userToSave.favorites = [];
     users.push(userToSave)
 
     try {
