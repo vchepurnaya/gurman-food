@@ -5,6 +5,7 @@ import { RestaurantsDefinition } from '@app/shared/interfaces';
 import { ApiService } from '@app/services';
 import { PreloaderService } from '@app/services/preloader/preloader.service';
 import { ToastService } from '@app/services';
+import { UserService } from '@app/services';
 
 @Component({
   selector: 'app-favourites',
@@ -18,17 +19,20 @@ export class FavouritesComponent implements OnInit, OnDestroy {
   constructor(
     private apiService: ApiService,
     private preloaderService: PreloaderService,
-    private toastService: ToastService
+    private toastService: ToastService,
+    private userService: UserService
   ) { }
 
   ngOnInit(): void {
-      this.apiService.getAllRestaurants()
+      this.apiService.getFavouriteRestaurants(
+        {userEmail: this.userService.usersData$.value.email}
+      )
         .pipe(
           finalize(() => this.preloaderService.hide()),
           takeUntil(this.destroy$)
         )
         .subscribe(
-          (success: { content: RestaurantsDefinition[] }) => this.restaurants = success.content.slice(0,5),
+          (success: { content: RestaurantsDefinition[] }) => this.restaurants = success.content,
           ({error}) => this.toastService.toPrintToast(error.code, error.message)
         )
     }

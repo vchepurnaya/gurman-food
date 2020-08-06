@@ -20,6 +20,10 @@ const userFavoritesHandlerPost = (req, res) => {
         return responseSender(res, 404, 'User doesn\'t exist!');
     }
 
+    if (user.favorites.includes(id)) {
+      return responseSender(res, 409, 'This restaurant is already in favourites!');
+    }
+
     const updatedUsers = users.map(u => {
         if (u.email === userEmail) {
             u.favorites.push(id);
