@@ -1,11 +1,19 @@
 <section class="s-rest">
   <div class="container">
+
     <h1 class="s-rest__title">
       Рестораны минска
     </h1>
 
+    <div class="b-filters">
+      <button type="button" class="btn-open-filters" (click)="openFilters()">
+        <div>Поиск по фильтрам</div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
+      </button>
+    </div>
+
     <div class="b-rest__content">
-      <aside class="b-rest__side-bar">
+      <aside class="b-rest__side-bar" (click)="closeFilters($event)">
         <div class="b-rest__side-bar__item">
           <h3 class="b-rest__side-bar__item-title">Кухня</h3>
           <mat-selection-list 
@@ -59,7 +67,7 @@
           <li class="l-results__item" *ngFor="let item of restaurants">
             <div class="l-results__item-content">
               <div class="l-results__item-img">
-                <a [routerLink]="['/restaurants', item.id]">
+                <a [routerLink]="['/restaurants', item.id]" class="l-results__item-link">
                   <img src="{{item.images[0]}}" title="{{item.name}}" alt="{{item.name}}">
                 </a>
               </div>
