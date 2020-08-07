@@ -1,7 +1,15 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router} from '@angular/router';
-import { ApiService, PreloaderService, ToastService } from '@app/services';
-import { RestaurantsDefinition } from '@app/shared/interfaces';
+import {
+  ApiService,
+  PreloaderService,
+  ToastService,
+  UserService
+} from '@app/services';
+import {
+  RestaurantsDefinition,
+  UserDataDefinition
+} from '@app/shared/interfaces';
 import { Subject } from 'rxjs';
 import { takeUntil, finalize } from 'rxjs/operators';
 
@@ -44,18 +52,24 @@ export class RestaurantsComponent implements OnInit, OnDestroy {
     type: [],
     features: []
   };
+  userData: UserDataDefinition = null;
   private destroy$ = new Subject();
 
   constructor(
     private apiService: ApiService,
     private activatedRoute: ActivatedRoute,
     private router: Router,
+    public userService: UserService,
     private toastService: ToastService,
     private preloaderService: PreloaderService,
   ) {
   }
 
   ngOnInit(): void {
+    this.userService.usersData$
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(res => this.userData = res);
+
     this.activatedRoute.queryParams
       .pipe(
         finalize(() => this.preloaderService.hide()),

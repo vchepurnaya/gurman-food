@@ -1,6 +1,11 @@
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
-import { RestaurantsDefinition } from '@app/shared/interfaces';
-import { ApiService, ToastService, UserService, PreloaderService } from '@app/services';
+import { RestaurantsDefinition, UserDataDefinition } from '@app/shared/interfaces';
+import {
+  ApiService,
+  ToastService,
+  UserService,
+  PreloaderService
+} from '@app/services';
 import { finalize, takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 
@@ -11,6 +16,7 @@ import { Subject } from 'rxjs';
 })
 export class RestaurantItemComponent implements OnInit, OnDestroy {
   @Input() item: RestaurantsDefinition = null;
+  @Input() userdata: UserDataDefinition;
   userEmail: string = null;
   isInFavourites = false;
   private destroy$ = new Subject();
@@ -24,14 +30,10 @@ export class RestaurantItemComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.userService.usersData$
-      .pipe(takeUntil(this.destroy$))
-      .subscribe(res => {
-        if (res) {
-          console.log(res);
-          this.userEmail = res.email
-        }
-      })
+    if (this.userdata) {
+      this.userEmail = this.userdata.email;
+      this.isInFavourites = this.userdata.favorites.includes(this.item.id)
+    }
   }
 
   setAsFavorite(id: string) {

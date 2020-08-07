@@ -4,9 +4,10 @@ export interface RegDefinition {
   content: {
     firstName: string;
     lastName: string;
+    id: string;
     login: string;
     email: string;
-    id: string;
+    favorites: string[];
   }
 }
 

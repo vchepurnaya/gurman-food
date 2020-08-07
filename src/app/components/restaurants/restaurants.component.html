@@ -8,7 +8,9 @@
     <div class="b-filters">
       <button type="button" class="btn-open-filters" (click)="openFilters()">
         <div>Поиск по фильтрам</div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/>
+        </svg>
       </button>
     </div>
 
@@ -65,14 +67,17 @@
       <div class="b-results">
         <ul class="l-results">
           <li class="l-results__item" *ngFor="let item of restaurants">
-            <app-restaurant-item [item]="item"></app-restaurant-item>
+            <app-restaurant-item
+              [item]="item"
+              [userdata]="userData"
+            ></app-restaurant-item>
           </li>
         </ul>
       </div>
     </div>
     <div class="b-to-top">
       <a class="b-to-top__link" routerLink="/restaurants" onclick="window.scroll(0,0);">
-        <img class="b-to-top__img" src="assets/button-up.svg" alt="button-up">
+        <img class="b-to-top__img" src="assets/button-up.svg" alt="Up" title="Up">
       </a>
     </div>
   </div>
