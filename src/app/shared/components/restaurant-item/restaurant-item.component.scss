@@ -78,6 +78,15 @@
   align-items: center;
   padding: 0 10px;
 
+  &__icon {
+    width: 24px;
+    height: 24px;
+
+    &._favorite {
+      fill: #f44336;
+    }
+  }
+
   &__text {
     font-size: 18px;
     margin-left: 10px;

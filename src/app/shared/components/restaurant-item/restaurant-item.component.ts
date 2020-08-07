@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnDestroy } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy, OnChanges } from '@angular/core';
 import { RestaurantsDefinition, UserDataDefinition } from '@app/shared/interfaces';
 import {
   ApiService,
@@ -14,9 +14,9 @@ import { Subject } from 'rxjs';
   templateUrl: './restaurant-item.component.html',
   styleUrls: ['./restaurant-item.component.scss']
 })
-export class RestaurantItemComponent implements OnInit, OnDestroy {
+export class RestaurantItemComponent implements OnInit, OnChanges, OnDestroy {
   @Input() item: RestaurantsDefinition = null;
-  @Input() userdata: UserDataDefinition;
+  @Input() userData: UserDataDefinition;
   userEmail: string = null;
   isInFavourites = false;
   private destroy$ = new Subject();
@@ -30,9 +30,14 @@ export class RestaurantItemComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    if (this.userdata) {
-      this.userEmail = this.userdata.email;
-      this.isInFavourites = this.userdata.favorites.includes(this.item.id)
+  }
+
+  ngOnChanges(changes): void {
+    const userData = changes.userData.currentValue;
+
+    if (userData) {
+      this.userEmail = userData.email;
+      this.isInFavourites = userData.favorites.includes(this.item.id)
     }
   }
 
@@ -46,7 +51,14 @@ export class RestaurantItemComponent implements OnInit, OnDestroy {
         takeUntil(this.destroy$)
       )
       .subscribe((res: { code: number, message: string; content: boolean; }) => {
-        this.isInFavourites = res.content
+        if (res.content) {
+          this.userData.favorites.push(id);
+        } else {
+          this.userData.favorites =
+            this.userData.favorites.filter(favId => favId !== id);
+        }
+
+        this.userService.usersData$.next({...this.userData});
         this.toastService.toPrintToast(res.code, res.message)
       },
         ({error}) => this.toastService.toPrintToast(error.code, error.message)

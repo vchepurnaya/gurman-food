@@ -4,7 +4,7 @@ import { UserContainerComponent } from './containers/user-container/user-contain
 import { UserRoutingModule } from './user-routing.module';
 import { FavouritesComponent } from './components/favourites/favourites.component';
 import { InfoComponent } from './components/info/info.component';
-import { SharedModule } from '../../shared/shared.module';
+import { SharedModule } from '@app/shared/shared.module';
 
 
 @NgModule({
@@ -13,10 +13,10 @@ import { SharedModule } from '../../shared/shared.module';
     InfoComponent,
     UserContainerComponent,
   ],
-    imports: [
-        CommonModule,
-        UserRoutingModule,
-        SharedModule
-    ]
+  imports: [
+    CommonModule,
+    UserRoutingModule,
+    SharedModule
+  ]
 })
 export class UserModule { }
