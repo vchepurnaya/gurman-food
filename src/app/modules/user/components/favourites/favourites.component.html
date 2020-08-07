@@ -2,7 +2,10 @@
   <div class="container">
     <ul class="l-favourites">
       <li class="l-favourites__item" *ngFor="let restaurant of restaurants">
-        <app-restaurant-item [item]="restaurant"></app-restaurant-item>
+        <app-restaurant-item
+          [item]="restaurant"
+          [userData]="userData"
+        ></app-restaurant-item>
       </li>
     </ul>
   </div>
