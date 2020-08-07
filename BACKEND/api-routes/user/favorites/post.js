@@ -20,9 +20,14 @@ const userFavoritesHandlerPost = (req, res) => {
         return responseSender(res, 404, 'User doesn\'t exist!');
     }
 
+    const isInFavorites = user.favorites.includes(id);
     const updatedUsers = users.map(u => {
         if (u.email === userEmail) {
-            u.favorites.push(id);
+            if (isInFavorites) {
+                u.favorites = u.favorites.filter(favId => favId !== id);    
+            } else {
+                u.favorites.push(id);
+            }
         }
 
         return u;
@@ -30,7 +35,12 @@ const userFavoritesHandlerPost = (req, res) => {
 
     try {
         fs.writeFileSync('./BACKEND/DB/users.json', JSON.stringify(updatedUsers));
-        responseSender(res, 200, 'The restaurant added to your favorites!');
+        responseSender(
+            res,
+            200,
+            'The restaurant ' + (isInFavorites ? 'was removed from' : 'was added to') + ' your favorites!',
+            !isInFavorites
+        );
 
     } catch (err) {
         responseSender(res, 500, err.message);

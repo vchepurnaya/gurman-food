@@ -19,11 +19,11 @@ import { MatListModule } from '@angular/material/list';
 import { SliderComponent } from './components/slider/slider.component';
 import { RestPageComponent } from './components/rest-page/rest-page.component';
 
-
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { ToastComponent } from './components/toast/toast.component';
 import { PreloaderComponent } from './components/preloader/preloader.component';
 import { AboutComponent } from './components/about/about.component';
+import { SharedModule } from '@app/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -52,7 +52,8 @@ import { AboutComponent } from './components/about/about.component';
     ReactiveFormsModule,
     MatDialogModule,
     MatListModule,
-    CarouselModule
+    CarouselModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent],

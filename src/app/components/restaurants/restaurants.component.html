@@ -8,7 +8,9 @@
     <div class="b-filters">
       <button type="button" class="btn-open-filters" (click)="openFilters()">
         <div>Поиск по фильтрам</div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/>
+        </svg>
       </button>
     </div>
 
@@ -16,13 +18,13 @@
       <aside class="b-rest__side-bar" (click)="closeFilters($event)">
         <div class="b-rest__side-bar__item">
           <h3 class="b-rest__side-bar__item-title">Кухня</h3>
-          <mat-selection-list 
-            class="l-filter" 
-            [(ngModel)]="filters.kitchen" 
+          <mat-selection-list
+            class="l-filter"
+            [(ngModel)]="filters.kitchen"
             (ngModelChange)="onFilerChange()"
           >
-            <mat-list-option 
-              class="l-filter__option" 
+            <mat-list-option
+              class="l-filter__option"
               *ngFor="let item of kitchen"
               [value]="item"
             >
@@ -31,14 +33,14 @@
           </mat-selection-list>
 
           <h3 class="b-rest__side-bar__item-title">Тип заведения</h3>
-          <mat-selection-list 
+          <mat-selection-list
             class="l-filter"
-            [(ngModel)]="filters.type" 
+            [(ngModel)]="filters.type"
             (ngModelChange)="onFilerChange()"
           >
-            <mat-list-option 
+            <mat-list-option
               *ngFor="let item of type"
-              class="l-filter__option" 
+              class="l-filter__option"
               [value]="item"
             >
               {{item}}
@@ -46,13 +48,13 @@
           </mat-selection-list>
 
           <h3 class="b-rest__side-bar__item-title">Особенности ресторана</h3>
-          <mat-selection-list 
+          <mat-selection-list
             class="l-filter"
-            [(ngModel)]="filters.features" 
+            [(ngModel)]="filters.features"
             (ngModelChange)="onFilerChange()"
           >
-            <mat-list-option 
-              class="l-filter__option" 
+            <mat-list-option
+              class="l-filter__option"
               *ngFor="let item of features"
               [value]="item"
             >
@@ -65,36 +67,17 @@
       <div class="b-results">
         <ul class="l-results">
           <li class="l-results__item" *ngFor="let item of restaurants">
-            <div class="l-results__item-content">
-              <div class="l-results__item-img">
-                <a [routerLink]="['/restaurants', item.id]" class="l-results__item-link">
-                  <img src="{{item.images[0]}}" title="{{item.name}}" alt="{{item.name}}">
-                </a>
-              </div>
-              <div class="l-results__item-info">
-                <div class="l-results__item-buttons">
-                  <a [routerLink]="['/restaurants', item.id]" class="l-results__item-title">{{item.name}}</a>
-                  <div class="b-buttons">
-                    <button class="btn-like" type="submit">
-                      <svg class="btn-like__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg>
-                      <p class="btn-like__text">Добавить в избранные</p>
-                    </button>
- 
-                  </div>
-                </div>
-                <p class="l-results__item-text">{{item.time}}</p>
-                <p class="l-results__item-text">{{item.kitchen}}</p>
-                <a href="{{item.menuLink}}" class="l-results__item-menu">Меню</a>
-                <a href="tel:{{item.phoneNumber}}" class="l-results__item-number">{{item.phoneNumber}}</a>
-              </div>
-            </div>
+            <app-restaurant-item
+              [item]="item"
+              [userdata]="userData"
+            ></app-restaurant-item>
           </li>
         </ul>
       </div>
     </div>
     <div class="b-to-top">
-      <a class="b-to-top__link" routerLink="restaurants" onclick="window.scroll(0,0);">
-        <img class="b-to-top__img" src="assets/button-up.svg" alt="button-up">
+      <a class="b-to-top__link" routerLink="/restaurants" onclick="window.scroll(0,0);">
+        <img class="b-to-top__img" src="assets/button-up.svg" alt="Up" title="Up">
       </a>
     </div>
   </div>

@@ -2,15 +2,15 @@ const fs = require('fs');
 const responseSender = require('../../../helpers/response-sender');
 
 const userFavoritesHandlerGet = (req, res) => {
-    const userEmail = req.query.email;
+    const { userEmail } = req.query;
 
     if (
         !userEmail
-        || Object.keys(req.query) !== 1
+        || Object.keys(req.query).length !== 1
     ) {
         return responseSender(res, 422, 'You\'ve missed something important...');
     }
-    
+
     const rawUsersData = fs.readFileSync('./BACKEND/DB/users.json');
     const rawReastaurantsData = fs.readFileSync('./BACKEND/DB/restaurants.json');
     const usersData = JSON.parse(rawUsersData);

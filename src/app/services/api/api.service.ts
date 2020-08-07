@@ -50,4 +50,17 @@ export class ApiService {
   }) {
     return this.httpClient.post(this.env.apiUrl + 'api/restaurants/filter', body)
   }
+
+  setFavouriteRestaurant(body: {
+    id: string;
+    userEmail: string;
+  }) {
+    return this.httpClient.post(this.env.apiUrl + 'api/user/favorites', body)
+  }
+
+  getFavouriteRestaurants(params: {
+    userEmail: string
+  }){
+    return this.httpClient.get(this.env.apiUrl + 'api/user/favorites', { params });
+  }
 }

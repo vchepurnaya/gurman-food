@@ -1,10 +1,10 @@
-const responseSender = (res, code, message, content = null) => {
+const responseSender = (res, code, message, content) => {
     const objToSend = {
         code,
         message
     };
 
-    if (content) {
+    if (typeof content !== undefined) {
         objToSend['content'] = content;
     }
 

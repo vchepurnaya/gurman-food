@@ -1,14 +1,12 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { ApiService } from '@app/services';
+import { ApiService, ToastService, PreloaderService } from '@app/services';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { EntryComponent } from '@app/components/entry/entry.component';
 import { Subject } from 'rxjs';
 import { finalize, takeUntil } from 'rxjs/operators';
 import { RegDefinition } from '@app/shared/interfaces';
-import { ToastService } from '@app/services/toast/toast.service';
-import { PreloaderService } from '@app/services/preloader/preloader.service';
 
 @Component({
   selector: 'app-regisration',
