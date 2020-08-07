@@ -78,6 +78,11 @@
   align-items: center;
   padding: 0 10px;
 
+  svg {
+    width: 24px;
+    fill: #000000;
+  }
+
   &:hover .btn-like__text {
     text-decoration: underline;
   }
