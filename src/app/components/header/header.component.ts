@@ -10,6 +10,7 @@ import { UserService } from '@app/services';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
   constructor(
     private dialog: MatDialog,
     public userService: UserService
@@ -29,5 +30,23 @@ export class HeaderComponent implements OnInit {
 
   openRegistrationForm() {
     this.dialog.open(RegisrationComponent, {panelClass: 'myapp-style-dialog'});
+  }
+
+  openHeaderMenu(): void {
+    const btnMenu = document.querySelector('.b-info');
+    btnMenu.classList.add('_open')
+  }
+
+  closeMenu($event): void {
+    const btnMenu = document.querySelector('.b-info');
+
+    if($event.target.classList.contains('b-info')){
+      btnMenu.classList.remove('_open')
+    }
+  }
+
+  closeHeaderMenu(): void {
+    const btnMenu = document.querySelector('.b-info');
+    btnMenu.classList.remove('_open')
   }
 }

@@ -115,4 +115,17 @@ export class RestaurantsComponent implements OnInit, OnDestroy {
           ({error}) => this.toastService.toPrintToast(error.code, error.message)
         )
   }
+
+  openFilters():void {
+    const btnOpen = document.querySelector('.b-rest__side-bar');
+    btnOpen.classList.toggle('_open')
+  }
+
+  closeFilters($event): void {
+    const btnMenu = document.querySelector('.b-rest__side-bar');
+
+    if($event.target.classList.contains('b-rest__side-bar')){
+      btnMenu.classList.remove('_open')
+    }
+  }
 }
