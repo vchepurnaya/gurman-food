@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class SearchBarComponent implements OnInit {
 
   searchtext: string = '';
+  kitchens: [];
 
   constructor() {
   }
@@ -16,5 +17,15 @@ export class SearchBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  encode(kitchen: string): string {
+    return encodeURI(kitchen)
+  }
+
+
+  // onKitchenSelect():void {
+  //   this.router.navigate(['/restaurants'], {
+  //     queryParams: filterValue
+  //   });
+  // }
 }
 
