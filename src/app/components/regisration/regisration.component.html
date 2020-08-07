@@ -106,6 +106,9 @@
     <mat-error *ngIf="registrationForm.controls.confirmPassword.hasError('required')">
       Заполните поле!
     </mat-error>
+    <mat-error *ngIf=" ">
+      Пароли не совпадают!
+    </mat-error>
   </mat-form-field>
 <!--
   <mat-dialog-content class="f-registration__line-confirm" *ngIf= "confirmPassword">*Пароли не совпадают*</mat-dialog-content>

@@ -42,6 +42,7 @@
   &-wrapper {
     background-color: white;
     padding-bottom: 10px;
+    border-radius: 12px;
   }
 
   &-images {
@@ -50,19 +51,20 @@
     display: flex;
     justify-content: center;
 
-      img {
-        width: 500px;
-        height: 300px;
-        font-size: 0;
+    img {
+      width: 500px;
+      height: 300px;
+      font-size: 0;
+      border-radius: 12px;
     }
   }
 }
 
 .btn-like, .btn-visited {
- display: flex;
- align-items: center;
- padding: 0 10px;
- border-right: 1px solid #8c8c8c;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border-right: 1px solid #8c8c8c;
 
   &__text {
     margin-left: 15px;
@@ -84,7 +86,6 @@
     text-decoration: underline;
   }
 }
-
 
 .btn-visited__text, .btn-like__text {
   font-size: 20px;
@@ -132,3 +133,258 @@
     border: 1px solid #e6e6e6;
   }
 }
+
+@include largeDesktops {
+  .b-restaurant__content {
+    &-info {
+      padding: 10px;
+    }
+
+    &-header {
+      margin-bottom: 10px;
+    }
+
+    &-title {
+      font-size: 30px;
+    }
+
+    &-kitchen {
+      font-size: 14px;
+    }
+
+    img {
+      width: 20px;
+    }
+
+    &-images {
+      padding: 10px 0;
+
+      img {
+        width: 350px;
+        height: 210px;
+      }
+    }
+  }
+
+  .btn-visited__text, .btn-like__text {
+    font-size: 14px;
+    margin-left: 5px;
+  }
+  .btn-like__icon, .btn-visited__icon {
+    width: 20px;
+  }
+
+  .l-info {
+    margin-top: 10px;
+
+    &__item {
+      &-text {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@include mediumDesktops {
+  .s-restaurant {
+    padding: 30px 0;
+  }
+  .b-restaurant__content {
+
+    &-title {
+      font-size: 25px;
+    }
+
+    &-images {
+      img {
+        width: 270px;
+        height: 200px;
+      }
+    }
+  }
+
+  .btn-like, .btn-visited {
+    &__text {
+      margin-left: 5px;
+    }
+  }
+}
+
+.btn-visited__text, .btn-like__text {
+  font-size: 13px;
+}
+
+.l-info {
+  &__item {
+    padding: 5px 0;
+    margin-left: 5px;
+
+    &-text {
+      margin-left: 3px;
+      padding-right: 5px;
+      font-size: 13px;
+    }
+  }
+}
+
+
+@include smallDesktops {
+  .b-restaurant__content {
+    &-images {
+      img {
+        width: 230px;
+        height: 200px;
+      }
+    }
+  }
+
+  .btn-like, .btn-visited {
+    &__text {
+      margin-left: 10px;
+    }
+  }
+}
+
+.btn-visited__text, .btn-like__text {
+  font-size: 14px;
+}
+
+.l-info {
+  &__item {
+    padding: 5px 0;
+    margin-left: 10px;
+
+    &-text {
+      margin-left: 15px;
+      padding-right: 10px;
+      font-size: 14px;
+    }
+  }
+}
+
+@include portaitTablets {
+  .b-restaurant__content {
+    &-images {
+      padding: 12px 0;
+
+      img {
+        width: 360px;
+        height: 220px;
+      }
+    }
+
+    .btn-like, .btn-visited {
+      &__text {
+        margin-left: 10px;
+      }
+    }
+
+    .l-info {
+      &__item {
+        padding: 5px 0;
+        margin-left: 10px;
+
+        &-text {
+          margin-left: 10px;
+          padding-right: 10px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  @include landscapePhones {
+    .b-restaurant__content {
+      &-images {
+        padding: 9px 0;
+
+        img {
+          width: 280px;
+          height: 200px;
+        }
+      }
+    }
+  }
+
+  @include mPhones {
+    .b-restaurant__content {
+      &-header {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      &-kitchen {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      &-title {
+        margin-bottom: 10px;
+      }
+
+      &-images {
+        padding: 15px 0;
+
+        img {
+          width: 430px;
+          height: 230px;
+        }
+      }
+
+      .btn-like, .btn-visited {
+        &__text {
+          margin-left: 10px;
+        }
+      }
+
+      .l-info {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        &__item {
+          padding: 5px 0;
+          margin-left: 10px;
+
+          &-text {
+            margin-left: 10px;
+            padding-right: 10px;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+
+
+    @include sPhones {
+      .b-restaurant__content {
+        &-images {
+          padding: 10px 0;
+
+          img {
+            width: 340px;
+            height: 210px;
+          }
+        }
+      }
+    }
+
+    @include xsPhones {
+      .b-restaurant__content {
+        &-images {
+          padding: 10px 0;
+
+          img {
+            width: 320px;
+            height: 210px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+

@@ -65,10 +65,10 @@ export class RestPageComponent implements OnInit, OnDestroy {
       0: {
         items: 1
       },
-      400: {
+      480: {
         items: 2
       },
-      740: {
+      768: {
         items: 3
       },
       940: {
