@@ -1,0 +1,43 @@
+@import "abstracts/variables.scss";
+@import "abstracts/mixins.scss";
+
+.s-user {
+
+  .b-user {
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+
+    .b-information {
+      display: inline-block;
+      width: 800px;
+      height: 300px;
+      background-color: $mainColor;
+      padding: 20px 20px 0;
+
+      &__part {
+        font-size: 20px;
+        &:nth-child(n+2) {
+          margin-top: 50px;
+        }
+      }
+      &__section{
+        margin: 10px 0;
+
+        a{
+          border-bottom: 2px solid;
+        }
+        &-title {
+          font-size: 20px;
+          color: #8c8c8c;
+        }
+        &-info {
+          display: inline-block;
+          font-size: 18px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
