@@ -2,12 +2,10 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { finalize, takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
-import { UserService } from '@app/services';
+import { UserService, ToastService, PreloaderService } from '@app/services';
 import { MatDialog } from '@angular/material/dialog';
 import { ApiService } from '@app/services';
 import { RegDefinition } from '@app/shared/interfaces';
-import { ToastService } from '@app/services/toast/toast.service';
-import { PreloaderService } from '@app/services/preloader/preloader.service';
 
 @Component({
   selector: 'app-entry',

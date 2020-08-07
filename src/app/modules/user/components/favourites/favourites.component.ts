@@ -1,11 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { RestaurantsDefinition } from '@app/shared/interfaces';
+import { ApiService, ToastService, UserService, PreloaderService } from '@app/services';
 import { finalize, takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
-import { RestaurantsDefinition } from '@app/shared/interfaces';
-import { ApiService } from '@app/services';
-import { PreloaderService } from '@app/services/preloader/preloader.service';
-import { ToastService } from '@app/services';
-import { UserService } from '@app/services';
 
 @Component({
   selector: 'app-favourites',

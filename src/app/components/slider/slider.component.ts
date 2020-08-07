@@ -1,11 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ApiService } from '@app/services';
+import { ApiService, ToastService, PreloaderService } from '@app/services';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { RestaurantsDefinition, RestaurantsResult } from '@app/shared/interfaces';
 import { finalize, takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
-import { ToastService } from '@app/services/toast/toast.service';
-import { PreloaderService } from '@app/services/preloader/preloader.service';
 
 
 @Component({

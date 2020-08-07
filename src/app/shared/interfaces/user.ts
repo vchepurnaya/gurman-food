@@ -4,4 +4,5 @@ export interface UserDataDefinition {
     id: string;
     login: string;
     email: string;
+    favorites: string[];
 }

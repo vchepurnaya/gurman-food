@@ -1,9 +1,8 @@
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { RestaurantsDefinition } from '@app/shared/interfaces';
-import { ApiService, ToastService, UserService } from '@app/services';
+import { ApiService, ToastService, UserService, PreloaderService } from '@app/services';
 import { finalize, takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
-import { PreloaderService } from '@app/services/preloader/preloader.service';
 
 @Component({
   selector: 'app-restaurant-item',
@@ -12,9 +11,9 @@ import { PreloaderService } from '@app/services/preloader/preloader.service';
 })
 export class RestaurantItemComponent implements OnInit, OnDestroy {
   @Input() item: RestaurantsDefinition = null;
-  private destroy$ = new Subject();
   userEmail: string = null;
-
+  isInFavourites = false;
+  private destroy$ = new Subject();
 
   constructor(
     public userService: UserService,
@@ -26,8 +25,10 @@ export class RestaurantItemComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.userService.usersData$
+      .pipe(takeUntil(this.destroy$))
       .subscribe(res => {
         if (res) {
+          console.log(res);
           this.userEmail = res.email
         }
       })
@@ -42,12 +43,12 @@ export class RestaurantItemComponent implements OnInit, OnDestroy {
         finalize(() => this.preloaderService.hide()),
         takeUntil(this.destroy$)
       )
-      .subscribe(res => {
-        console.log(res)
+      .subscribe((res: { code: number, message: string; content: boolean; }) => {
+        this.isInFavourites = res.content
+        this.toastService.toPrintToast(res.code, res.message)
       },
         ({error}) => this.toastService.toPrintToast(error.code, error.message)
       )
-
   }
 
   ngOnDestroy(): void {
