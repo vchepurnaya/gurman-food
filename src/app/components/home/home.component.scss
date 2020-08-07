@@ -1,1 +1,103 @@
+@import "abstracts/variables.scss";
+@import "abstracts/mixins.scss";
 
+.s-best {
+  padding-top: 30px;
+}
+
+.b-best:last-child {
+  padding-top: 30px;
+}
+
+
+.b-best__title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+  margin-bottom: 15px;
+}
+
+.b-best__info-text {
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.b-best__info-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.b-best__info-text {
+  margin-top: 10px;
+}
+
+.b-best__info-img {
+  width: 32.3333%;
+  height: 350px;
+  background-size: cover;
+
+  &+img {
+    margin-left: 5px;
+  }
+}
+
+@include largeDesktops {
+  .b-best__title {
+    font-size: 30px;
+  }
+
+  .b-best__info-text {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .b-best__info-title {
+    font-size: 25px;
+  }
+
+  .b-best__info-img {
+    height: 250px;
+  }
+}
+
+@include mediumDesktops {
+  .b-best__title {
+    font-size: 25px;
+  }
+
+  .b-best__info-text {
+    font-size: 12px;
+  }
+
+  .b-best__info-title {
+    font-size: 20px;
+  }
+
+  .b-best__info-img {
+    height: 200px;
+  }
+}
+
+@include portaitTablets {
+  .b-best__info-img {
+    height: 150px;
+  }
+}
+
+@include landscapePhones {
+  .b-best__title {
+    font-size: 20px;
+  }
+}
+
+@include mPhones {
+  .b-best__info-img {
+    height: 100px;
+  }
+
+  .b-best__info-text {
+    font-size: 10px;
+  }
+}
