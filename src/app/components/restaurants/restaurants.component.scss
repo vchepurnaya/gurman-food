@@ -154,7 +154,7 @@
   }
 
   .l-results__item {
-    
+
     &-info {
       padding: 10px;
     }
@@ -266,6 +266,12 @@
 
   .btn-like__text {
     display: block;
+  }
+}
+
+@include portaitTablets {
+  .b-to-top {
+    display: none;
   }
 }
 

@@ -1,1 +1,26 @@
-<p>info works!</p>
+<section class="s-user">
+  <div class="container">
+    <div class="b-user">
+      <div class="b-information">
+        <h4 class="b-information__part">Личные данные</h4>
+        <hr>
+        <div class="b-information__section">
+          <span class="b-information__section-title">Имя: </span>
+          <p class="b-information__section-info">{{userFirstName}}</p>
+        </div>
+        <div class="b-information__section">
+          <span class="b-information__section-title">Фамилия: </span>
+          <p class="b-information__section-info">{{userLastName}}</p>
+        </div>
+        <h4 class="b-information__part">Контактная информация</h4>
+        <hr>
+        <div class="b-information__section">
+          <span class="b-information__section-title">Email: </span>
+          <a class="b-information__section-info" href="mailto: {{userEmail}}">
+            {{userEmail}}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

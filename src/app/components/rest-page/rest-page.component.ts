@@ -5,6 +5,8 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { RestaurantsDefinition } from '@app/shared/interfaces';
 import { Subject } from 'rxjs';
 import { finalize, takeUntil } from 'rxjs/operators';
+import { OwlOptions } from 'ngx-owl-carousel-o';
+
 
 
 @Component({
@@ -49,5 +51,30 @@ export class RestPageComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.destroy$.next(true);
     this.destroy$.complete();
+  }
+
+  customOptions: OwlOptions = {
+    loop: false,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: false,
+    navSpeed: 700,
+    navText: ['Prev', 'Next'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      480: {
+        items: 2
+      },
+      768: {
+        items: 3
+      },
+      940: {
+        items: 3
+      }
+    },
+    nav: true
   }
 }
