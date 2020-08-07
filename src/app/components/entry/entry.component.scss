@@ -1,4 +1,5 @@
 @import "abstracts/variables.scss";
+@import "abstracts/mixins.scss";
 
 .f-entry {
   width: 500px;
@@ -7,6 +8,7 @@
   padding: 50px;
   border: 3px solid #000;
   border-radius: 0;
+  overflow-y: scroll;
 
   &__text {
 
@@ -51,5 +53,52 @@
   background-color: black;
   color: $mainColor;
   font-size: 20px;
+}
+
+@include largeDesktops {
+  .f-entry {
+    padding: 25px;
+    width: 350px;
+
+    &__text-enty {
+      font-size: 20px;
+    }
+
+    &__input {
+      font-size: 18px;
+    }
+
+    &__field {
+      font-size: 20px;
+    }
+
+    &__btn-entry {
+      font-size: 20px;
+    }
+  }
+}
+
+@include landscapePhones {
+  .f-entry {
+    padding: 15px;
+    width: 300px;
+    font-size: 22px;
+
+    &__text-enty {
+      font-size: 18px;
+    }
+
+    &__input {
+      font-size: 16px;
+    }
+
+    &__field {
+      font-size: 18px;
+    }
+
+    &__btn-entry {
+      font-size: 18px;
+    }
+  }
 }
 
